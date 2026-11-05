@@ -1,0 +1,4443 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>共通テスト 化学基礎・生物基礎 満点対策教材</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: study binder — sticky index on the left, one reading column; chemistry in cobalt, biology in moss, highlighter-pen emphasis */
+:root {
+  --paper: #f5f6f8;
+  --surface: #ffffff;
+  --ink: #1a1e26;
+  --muted: #5a6372;
+  --rule: #d8dce3;
+  --chem: #2747a6;
+  --chem-soft: #e7ecf9;
+  --bio: #2c7449;
+  --bio-soft: #e2f0e7;
+  --gen: #4a5363;
+  --gen-soft: #eceef2;
+  --hl: #fde68a;
+  --trap: #9a4f00;
+  --trap-soft: #fdf0d8;
+  --font-display: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
+  --font-body: "BIZ UDPGothic", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", "Noto Sans JP", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --acc: var(--gen);
+  --acc-soft: var(--gen-soft);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #12151b; --surface: #1a1e26; --ink: #e7eaf0; --muted: #9ca5b4; --rule: #2d333e;
+    --chem: #93abff; --chem-soft: #1c2541; --bio: #84d2a1; --bio-soft: #172d22;
+    --gen: #b4bccb; --gen-soft: #232832; --hl: rgba(250, 204, 21, 0.28);
+    --trap: #f3b75e; --trap-soft: #35270f; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #12151b; --surface: #1a1e26; --ink: #e7eaf0; --muted: #9ca5b4; --rule: #2d333e;
+  --chem: #93abff; --chem-soft: #1c2541; --bio: #84d2a1; --bio-soft: #172d22;
+  --gen: #b4bccb; --gen-soft: #232832; --hl: rgba(250, 204, 21, 0.28);
+  --trap: #f3b75e; --trap-soft: #35270f; color-scheme: dark;
+}
+[data-subj="chem"] { --acc: var(--chem); --acc-soft: var(--chem-soft); }
+[data-subj="bio"] { --acc: var(--bio); --acc-soft: var(--bio-soft); }
+[data-subj="gen"] { --acc: var(--gen); --acc-soft: var(--gen-soft); }
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(64px + env(safe-area-inset-top, 0px)); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  background: var(--paper); color: var(--ink);
+  font-family: var(--font-body); font-size: 15.5px; line-height: 1.85;
+  -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
+  z-index: 10; background: var(--surface);
+}
+
+/* top bar */
+.topbar {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+  background: var(--surface); border-bottom: 1px solid var(--rule);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.topbar-in { display: flex; align-items: center; gap: 12px; min-height: 56px; max-width: 1180px; margin: 0 auto; }
+.brand { font-family: var(--font-display); font-weight: 700; font-size: 15px; letter-spacing: 0.02em; margin: 0; flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.brand b { font-weight: 900; }
+.btn {
+  font: inherit; font-size: 13px; font-family: var(--font-display); font-weight: 700;
+  border: 1px solid var(--rule); background: var(--paper); color: var(--ink);
+  border-radius: 8px; padding: 6px 12px; cursor: pointer; white-space: nowrap; line-height: 1.5;
+}
+.btn:hover { border-color: var(--ink); }
+.btn:focus-visible, a:focus-visible, summary:focus-visible, input:focus-visible { outline: 2px solid var(--chem); outline-offset: 2px; }
+.nav-btn { display: none; }
+
+.shell {
+  display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 48px;
+  max-width: 1180px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 96px;
+}
+
+/* sidebar */
+.side {
+  position: sticky; top: calc(56px + env(safe-area-inset-top, 0px));
+  align-self: start; max-height: calc(100vh - 56px - env(safe-area-inset-top, 0px));
+  overflow-y: auto; padding-block: 28px 28px;
+}
+.nav-group + .nav-group { margin-top: 22px; }
+.nav-h {
+  margin: 0 0 6px; font-family: var(--font-display); font-weight: 700; font-size: 12px;
+  letter-spacing: 0.12em; color: var(--acc);
+}
+.side ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 1px; }
+.side a {
+  display: flex; align-items: center; gap: 10px; padding: 5px 8px; border-radius: 6px;
+  color: var(--muted); text-decoration: none; font-size: 13.5px; line-height: 1.45;
+}
+.side a:hover { color: var(--ink); background: var(--gen-soft); }
+.side a.on { color: var(--ink); background: var(--acc-soft); font-weight: 700; }
+.nav-tile {
+  flex: none; width: 22px; height: 22px; display: grid; place-items: center;
+  border: 1.5px solid var(--acc); color: var(--acc); border-radius: 4px;
+  font-family: var(--font-mono); font-size: 11px; font-weight: 600;
+}
+
+/* hero */
+.hero { padding-block: 44px 8px; max-width: 760px; }
+.hero h1 {
+  font-family: var(--font-display); font-weight: 900; font-size: clamp(26px, 4.4vw, 38px);
+  line-height: 1.3; margin: 0 0 14px; text-wrap: balance; letter-spacing: 0.01em;
+}
+.hero h1 .chem { color: var(--chem); }
+.hero h1 .bio { color: var(--bio); }
+.lede { margin: 0; color: var(--muted); max-width: 60ch; }
+.facts { display: flex; flex-wrap: wrap; gap: 10px 28px; margin: 22px 0 0; padding: 0; list-style: none; }
+.facts li { display: flex; align-items: baseline; gap: 8px; color: var(--muted); font-size: 13px; }
+.facts b { font-family: var(--font-mono); font-size: 24px; color: var(--ink); font-variant-numeric: tabular-nums; }
+
+/* sections */
+main { min-width: 0; }
+.unit { max-width: 760px; padding-top: 56px; }
+.unit + .unit { border-top: 1px solid var(--rule); margin-top: 56px; }
+.unit-head { display: flex; gap: 16px; align-items: center; margin-bottom: 18px; }
+.tile {
+  flex: none; width: 60px; height: 60px; border: 2px solid var(--acc); background: var(--acc-soft);
+  border-radius: 6px; display: grid; grid-template-rows: 1fr auto; padding: 4px 6px; color: var(--acc);
+}
+.tile-n { font-family: var(--font-display); font-weight: 900; font-size: 26px; line-height: 1; align-self: center; justify-self: center; }
+.tile-s { font-size: 9.5px; letter-spacing: 0.1em; text-align: center; line-height: 1.2; font-family: var(--font-display); font-weight: 700; }
+.kicker { margin: 0; font-size: 12px; letter-spacing: 0.12em; color: var(--acc); font-family: var(--font-display); font-weight: 700; }
+.unit h2 { margin: 0; font-family: var(--font-display); font-weight: 900; font-size: clamp(22px, 3.4vw, 28px); line-height: 1.35; text-wrap: balance; }
+.unit-body > p:first-child { font-size: 16.5px; color: var(--ink); }
+.unit-body h3 {
+  font-family: var(--font-display); font-weight: 700; font-size: 18.5px; line-height: 1.5;
+  margin: 40px 0 10px; display: flex; gap: 10px; align-items: baseline; text-wrap: balance;
+}
+.unit-body > h3::before, .unit-body > .q > h3::before {
+  content: ""; flex: none; width: 9px; height: 9px; background: var(--acc); border-radius: 2px; transform: translateY(-2px);
+}
+.exam-q > h3::before { display: none; }
+.unit-body p { margin: 10px 0; }
+.unit-body ul, .unit-body ol { padding-left: 1.4em; margin: 10px 0; }
+.unit-body li { margin: 4px 0; }
+.unit-body li > ul { margin: 4px 0; }
+.unit-body li::marker { color: var(--acc); }
+strong { font-weight: 700; background: linear-gradient(transparent 58%, var(--hl) 58%); padding: 0 1px; }
+sub, sup { line-height: 0; }
+
+/* tables */
+.tbl { overflow-x: auto; margin: 14px 0 18px; border: 1px solid var(--rule); border-radius: 8px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 14px; line-height: 1.6; font-variant-numeric: tabular-nums; }
+th, td { padding: 8px 12px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--rule); }
+th { background: var(--acc-soft); font-family: var(--font-display); font-weight: 700; font-size: 13px; white-space: nowrap; color: var(--ink); }
+tr:last-child td { border-bottom: 0; }
+td + td, th + th { border-left: 1px solid var(--rule); }
+tbody tr:hover td { background: color-mix(in srgb, var(--acc-soft) 45%, transparent); }
+
+/* formula */
+.formula {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 12px;
+  margin: 16px 0; padding: 18px 16px; border-radius: 8px; background: var(--surface); border: 1px solid var(--rule);
+  font-family: var(--font-display); font-weight: 700; font-size: 17px;
+}
+.frac { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; text-align: center; }
+.frac > span { padding: 1px 6px; }
+.frac > span + span { border-top: 1.5px solid var(--ink); }
+.frac.sm { font-size: 0.82em; }
+.fnote { font-size: 13px; color: var(--muted); font-weight: 500; }
+
+/* trap */
+.trap {
+  background: var(--trap-soft); color: var(--trap); border-radius: 4px; padding: 1px 7px;
+  font-family: var(--font-display); font-size: 12.5px; letter-spacing: 0.04em; white-space: nowrap;
+}
+
+/* problem cards */
+.q {
+  background: var(--surface); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 16px 20px; margin: 16px 0;
+}
+.q > p:first-child { margin-top: 0; }
+.exam-q { padding: 4px 22px 18px; margin: 22px 0; }
+.exam-q > h3 { margin-top: 18px; }
+.qno {
+  display: inline-block; font-family: var(--font-display); font-weight: 900; font-size: 13px;
+  color: var(--surface); background: var(--acc); border-radius: 5px; padding: 1px 9px; margin-right: 8px;
+  line-height: 1.7; white-space: nowrap;
+}
+.exam-q > h3 .qno { font-size: 14px; }
+@counter-style maru { system: fixed; symbols: "①" "②" "③" "④" "⑤" "⑥" "⑦" "⑧"; suffix: " "; }
+.exam .q ol { list-style: maru; padding-left: 1.8em; }
+.exam .q ol li::marker { color: var(--acc); font-weight: 700; }
+.q blockquote { margin: 0; }
+
+/* answers */
+details.ans { margin: 12px 0 0; }
+details.ans > summary {
+  list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-display); font-weight: 700; font-size: 13px; color: var(--acc);
+  border: 1.5px solid var(--acc); border-radius: 999px; padding: 3px 14px 3px 10px;
+}
+details.ans > summary::-webkit-details-marker { display: none; }
+details.ans > summary::before { content: "＋"; font-size: 12px; }
+details.ans[open] > summary::before { content: "－"; }
+details.ans[open] > summary { background: var(--acc); color: var(--surface); }
+.sum-open { display: none; }
+details.ans[open] .sum-open { display: inline; }
+details.ans[open] .sum-closed { display: none; }
+.ans-body { margin-top: 10px; padding: 12px 16px; background: var(--acc-soft); border-radius: 8px; font-size: 14.5px; line-height: 1.8; }
+.ans-body p { margin: 4px 0; }
+.ans-head { font-family: var(--font-display); font-weight: 900; font-size: 17px; display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; }
+.ans-label { font-size: 11px; letter-spacing: 0.14em; color: var(--acc); border: 1px solid var(--acc); border-radius: 4px; padding: 0 6px; font-weight: 700; }
+
+/* checklist */
+ul.checklist { list-style: none; padding: 0; display: grid; gap: 2px; }
+ul.checklist li { margin: 0; }
+.chk { display: flex; gap: 12px; align-items: flex-start; padding: 6px 10px; border-radius: 8px; cursor: pointer; }
+.chk:hover { background: var(--surface); }
+.chk input { flex: none; width: 18px; height: 18px; margin-top: 5px; accent-color: var(--chem); cursor: pointer; }
+.chk input:checked + span { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--muted); }
+.progress { display: flex; align-items: center; gap: 12px; margin: 8px 0 4px; font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.bar { flex: 1; height: 6px; background: var(--rule); border-radius: 999px; overflow: hidden; max-width: 280px; }
+.bar i { display: block; height: 100%; width: 0; background: var(--chem); transition: width .25s; }
+
+/* footer */
+.foot { max-width: 760px; margin-top: 64px; padding-top: 18px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 12.5px; }
+
+/* responsive */
+.scrim { display: none; }
+@media (max-width: 920px) {
+  .shell { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .nav-btn { display: inline-block; }
+  .side {
+    position: fixed; z-index: 30; top: 0; bottom: 0; left: 0; width: min(300px, 84vw); max-height: none;
+    background: var(--surface); border-right: 1px solid var(--rule);
+    padding: calc(20px + env(safe-area-inset-top, 0px)) 16px calc(20px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
+    transform: translateX(-105%); transition: transform .22s ease;
+  }
+  body.nav-open .side { transform: none; }
+  body.nav-open .scrim { display: block; position: fixed; inset: 0; z-index: 25; background: rgba(10, 12, 16, 0.4); }
+  .hero { padding-top: 28px; }
+  .unit { padding-top: 40px; }
+  .unit + .unit { margin-top: 40px; }
+}
+@media (max-width: 520px) {
+  body { font-size: 15px; }
+  .q { padding: 14px 14px; }
+  .exam-q { padding: 2px 14px 14px; }
+  .brand { font-size: 13.5px; }
+  .tile { width: 50px; height: 50px; }
+  .tile-n { font-size: 22px; }
+  th, td { padding: 7px 9px; }
+  .formula { font-size: 15px; }
+}
+@media (prefers-reduced-motion: reduce) { .side, .bar i { transition: none; } }
+</style>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <button class="btn nav-btn" id="navBtn" type="button" aria-controls="side" aria-expanded="false">目次</button>
+    <p class="brand"><b>共通テスト</b> 化学基礎・生物基礎 満点対策</p>
+    <button class="btn" id="toggleAll" type="button" aria-pressed="false">解答をすべて開く</button>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="side" id="side" aria-label="目次"><div class="nav-group" data-subj="gen"><p class="nav-h">はじめに</p><ul><li><a href="#guide" data-subj="gen"><span class="nav-tile">序</span><span>この教材の使い方</span></a></li></ul></div><div class="nav-group" data-subj="chem"><p class="nav-h">化学基礎</p><ul><li><a href="#chem-1" data-subj="chem"><span class="nav-tile">1</span><span>物質の構成</span></a></li><li><a href="#chem-2" data-subj="chem"><span class="nav-tile">2</span><span>原子の構造と周期表</span></a></li><li><a href="#chem-3" data-subj="chem"><span class="nav-tile">3</span><span>化学結合</span></a></li><li><a href="#chem-4" data-subj="chem"><span class="nav-tile">4</span><span>物質量と濃度</span></a></li><li><a href="#chem-5" data-subj="chem"><span class="nav-tile">5</span><span>化学反応式と量的関係</span></a></li><li><a href="#chem-6" data-subj="chem"><span class="nav-tile">6</span><span>酸と塩基</span></a></li><li><a href="#chem-7" data-subj="chem"><span class="nav-tile">7</span><span>酸化還元</span></a></li><li><a href="#chem-8" data-subj="chem"><span class="nav-tile">8</span><span>化学と人間生活</span></a></li><li><a href="#chem-drill" data-subj="chem"><span class="nav-tile">計</span><span>計算問題ドリル</span></a></li><li><a href="#chem-exam" data-subj="chem"><span class="nav-tile">演</span><span>共通テスト形式演習</span></a></li></ul></div><div class="nav-group" data-subj="bio"><p class="nav-h">生物基礎</p><ul><li><a href="#bio-1" data-subj="bio"><span class="nav-tile">1</span><span>生物の特徴</span></a></li><li><a href="#bio-2" data-subj="bio"><span class="nav-tile">2</span><span>遺伝子とその働き</span></a></li><li><a href="#bio-3" data-subj="bio"><span class="nav-tile">3</span><span>体内環境</span></a></li><li><a href="#bio-4" data-subj="bio"><span class="nav-tile">4</span><span>免疫</span></a></li><li><a href="#bio-5" data-subj="bio"><span class="nav-tile">5</span><span>植生と遷移</span></a></li><li><a href="#bio-6" data-subj="bio"><span class="nav-tile">6</span><span>生態系とその保全</span></a></li><li><a href="#bio-drill" data-subj="bio"><span class="nav-tile">計</span><span>計算問題ドリル</span></a></li><li><a href="#bio-exam" data-subj="bio"><span class="nav-tile">演</span><span>共通テスト形式演習</span></a></li></ul></div><div class="nav-group" data-subj="gen"><p class="nav-h">仕上げ</p><ul><li><a href="#final" data-subj="gen"><span class="nav-tile">✓</span><span>直前チェックリストと失点パターン集</span></a></li></ul></div></nav>
+  <div class="scrim" id="scrim"></div>
+  <main>
+    <div class="hero">
+      <h1>共通テスト <span class="chem">化学基礎</span>・<span class="bio">生物基礎</span><br>満点対策教材</h1>
+      <p class="lede">全範囲の要点整理、典型計算のドリル、共通テスト形式の実験・資料読解問題をひとつにまとめました。解答はすべて折りたたんであるので、自分で解いてから開いてください。</p>
+      <ul class="facts">
+        <li><b>14</b>単元の要点整理</li>
+        <li><b>45</b>問の計算ドリル</li>
+        <li><b>16</b>題の共通テスト形式演習</li>
+      </ul>
+    </div>
+    <section class="unit guide" id="guide" data-subj="gen"><header class="unit-head"><div class="tile" aria-hidden="true"><span class="tile-n">序</span><span class="tile-s">共通</span></div><div><p class="kicker">はじめに</p><h2>この教材の使い方</h2></div></header><div class="unit-body">
+<p>満点の条件は「知識の穴ゼロ」「計算ミスゼロ」「初見の実験・資料を読み切る力」の3つです。この教材は各単元を〈要点整理 → 計算ドリル → 共通テスト形式演習〉の順で鍛える構成になっています。</p>
+<h3>構成</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>部</th>
+<th>内容</th>
+<th>使い方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第1部 化学基礎 1〜8</td>
+<td>単元別の要点整理（知識問題対策）</td>
+<td>太字と表は丸暗記対象。ひっかけ注意は必ず確認</td>
+</tr>
+<tr>
+<td>化学基礎 計算ドリル</td>
+<td>典型計算27問（解答・解説つき）</td>
+<td>解説を見ずに解き、間違えた問題に印をつけて3周</td>
+</tr>
+<tr>
+<td>化学基礎 共通テスト形式演習</td>
+<td>実験・資料読解型のオリジナル問題</td>
+<td>時間を計って解く（1問3〜4分目安）</td>
+</tr>
+<tr>
+<td>第2部 生物基礎 1〜6</td>
+<td>単元別の要点整理</td>
+<td>化学基礎と同じ</td>
+</tr>
+<tr>
+<td>生物基礎 計算ドリル</td>
+<td>典型計算18問（解答・解説つき）</td>
+<td>同上</td>
+</tr>
+<tr>
+<td>生物基礎 共通テスト形式演習</td>
+<td>実験考察・グラフ読解型のオリジナル問題</td>
+<td>同上</td>
+</tr>
+<tr>
+<td>第3部 仕上げ</td>
+<td>直前チェックリストと失点パターン</td>
+<td>試験前日・当日の朝に確認</td>
+</tr>
+</tbody>
+</table></div>
+<h3>共通テストの特徴と対策の原則</h3>
+<ul>
+<li>化学基礎・生物基礎は各50点。基礎2科目を合わせて60分で解くため、1科目あたり約30分が目安。</li>
+<li>知識をそのまま問う問題より、<strong>実験・会話文・グラフ・表から読み取って判断する問題</strong>の比重が高い。知識は「読み取りの前提」として正確に持っておく必要がある。</li>
+<li>「誤りを含むものを選べ」「正しいものをすべて選べ（組合せ）」形式が多い。選択肢を一つずつ〇×判定する習慣をつける。</li>
+<li>計算は数値をマークする形式（例：a.bc × 10^-d）もある。有効数字と指数の扱いを丁寧に。</li>
+</ul>
+<h3>本番までの学習スケジュール（約10週間）</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>時期</th>
+<th>化学基礎</th>
+<th>生物基礎</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>11月1〜2週</td>
+<td>単元1〜3の要点整理、ドリル問1〜6</td>
+<td>単元1〜2の要点整理、ドリル問1〜12</td>
+</tr>
+<tr>
+<td>11月3〜4週</td>
+<td>単元4〜5、ドリル問7〜17</td>
+<td>単元3〜4、ドリル問13〜15</td>
+</tr>
+<tr>
+<td>12月1〜2週</td>
+<td>単元6〜8、ドリル問18〜27</td>
+<td>単元5〜6、ドリル問16〜18</td>
+</tr>
+<tr>
+<td>12月3〜4週</td>
+<td>共通テスト形式演習、過去問（本試・追試）</td>
+<td>共通テスト形式演習、過去問（本試・追試）</td>
+</tr>
+<tr>
+<td>1月〜本番</td>
+<td>間違えた問題だけ解き直し、第3部の確認</td>
+<td>同左</td>
+</tr>
+</tbody>
+</table></div>
+<p>過去問は大学入試センターが公開している共通テストの本試験・追試験を使ってください。この教材のオリジナル問題で形式に慣れたあと、過去問で時間配分を仕上げるのが効率的です。</p>
+<h3>化学基礎で使う原子量・定数（以下すべての問題で共通）</h3>
+<p>H = 1.0、C = 12、N = 14、O = 16、Na = 23、Mg = 24、Al = 27、S = 32、Cl = 35.5、K = 39、Ca = 40、Fe = 56、Cu = 64、Zn = 65、Ag = 108</p>
+<p>アボガドロ定数 6.0 × 10²³ /mol、0℃・1.013 × 10⁵ Pa（標準状態）での気体のモル体積 22.4 L/mol、log10 2 = 0.30、log10 3 = 0.48</p>
+</div></section>
+<section class="unit unit" id="chem-1" data-subj="chem"><header class="unit-head"><div class="tile" aria-hidden="true"><span class="tile-n">1</span><span class="tile-s">化基</span></div><div><p class="kicker">化学基礎 単元1</p><h2>物質の構成</h2></div></header><div class="unit-body">
+<p>この単元の得点源は「純物質か混合物か」「元素か単体か」「どの分離法を使うか」の3つの判別です。</p>
+<h3>物質の分類</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>分類</th>
+<th>定義</th>
+<th>例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>単体（純物質）</td>
+<td>1種類の元素からなる</td>
+<td>O₂、O₃、Fe、C（ダイヤモンド）、N₂（液体窒素）、Hg</td>
+</tr>
+<tr>
+<td>化合物（純物質）</td>
+<td>2種類以上の元素からなる</td>
+<td>H₂O（氷水も）、CO₂（ドライアイス）、NaCl、NH₃</td>
+</tr>
+<tr>
+<td>混合物</td>
+<td>2種類以上の純物質が混ざったもの</td>
+<td>空気、海水、石油、牛乳、塩酸、アンモニア水、食塩水、合金、ガラス</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>純物質は融点・沸点・密度が一定。混合物は組成により変わる。</li>
+<li class="has-trap"><strong class="trap">ひっかけ注意</strong>：塩酸は「HClの水溶液」なので混合物。氷水は状態が違うだけでH₂Oのみ → 純物質。</li>
+</ul>
+<h3>分離・精製</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>利用する性質</th>
+<th>代表例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ろ過</td>
+<td>粒子の大きさ（固体と液体）</td>
+<td>砂を含む水</td>
+</tr>
+<tr>
+<td>蒸留</td>
+<td>沸点の差</td>
+<td>海水 → 純水、ワイン → エタノール</td>
+</tr>
+<tr>
+<td>分留（分別蒸留）</td>
+<td>沸点の差（液体の混合物を複数に分ける）</td>
+<td>原油 → LPG・ナフサ・灯油・軽油、液体空気 → N₂（−196℃）とO₂（−183℃）</td>
+</tr>
+<tr>
+<td>再結晶</td>
+<td>温度による溶解度の差</td>
+<td>少量のNaClを含むKNO₃の精製</td>
+</tr>
+<tr>
+<td>抽出</td>
+<td>溶媒への溶けやすさの差</td>
+<td>ヨウ素水溶液からヘキサンでI₂を取り出す、お茶をいれる</td>
+</tr>
+<tr>
+<td>昇華法</td>
+<td>昇華しやすさ</td>
+<td>ヨウ素、ナフタレンの精製</td>
+</tr>
+<tr>
+<td>クロマトグラフィー</td>
+<td>ろ紙などへの吸着力の差</td>
+<td>水性ペンのインクの色素分離</td>
+</tr>
+</tbody>
+</table></div>
+<p>蒸留装置のチェックポイント（実験図の正誤問題で頻出）</p>
+<ul>
+<li>温度計の球部は<strong>枝付きフラスコの枝の付け根</strong>の高さ（蒸気の温度を測る）。</li>
+<li>沸騰石を入れる（突沸防止）。液量はフラスコの半分以下。</li>
+<li>リービッヒ冷却器の冷却水は<strong>下から入れて上から出す</strong>（冷却器内を水で満たすため）。</li>
+<li>受け器（三角フラスコ）は密栓しない（圧力が上がって危険）。アルミ箔などで軽くふたをする。</li>
+</ul>
+<h3>元素と単体の区別</h3>
+<p>「元素」は物質を構成する成分（原子の種類）、「単体」は実際に存在する物質を指します。</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>文</th>
+<th>意味</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>骨にはカルシウムが含まれる</td>
+<td>元素</td>
+<td>金属Caの塊が骨にあるわけではない</td>
+</tr>
+<tr>
+<td>水を電気分解すると水素と酸素が発生する</td>
+<td>単体</td>
+<td>気体H₂、O₂という物質</td>
+</tr>
+<tr>
+<td>水は水素と酸素からできている</td>
+<td>元素</td>
+<td>成分</td>
+</tr>
+<tr>
+<td>空気中には酸素が約21%含まれる</td>
+<td>単体</td>
+<td>気体O₂</td>
+</tr>
+<tr>
+<td>ひじきは鉄分を多く含む</td>
+<td>元素</td>
+<td>成分</td>
+</tr>
+</tbody>
+</table></div>
+<h3>同素体（S・C・O・Pで覚える）</h3>
+<p>同じ元素からなる単体で、性質が異なるもの同士。</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>元素</th>
+<th>同素体</th>
+<th>押さえる性質</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S</td>
+<td>斜方硫黄、単斜硫黄、ゴム状硫黄</td>
+<td>常温で安定なのは斜方硫黄</td>
+</tr>
+<tr>
+<td>C</td>
+<td>ダイヤモンド、黒鉛、フラーレン、カーボンナノチューブ</td>
+<td>黒鉛のみ電気を通す（ナノチューブも導電性あり）</td>
+</tr>
+<tr>
+<td>O</td>
+<td>酸素 O₂、オゾン O₃</td>
+<td>O₃は淡青色・特異臭・強い酸化力</td>
+</tr>
+<tr>
+<td>P</td>
+<td>黄リン（白リン）、赤リン</td>
+<td>黄リンは猛毒・空気中で自然発火 → 水中保存</td>
+</tr>
+</tbody>
+</table></div>
+<p class="has-trap"><strong class="trap">ひっかけ注意</strong>：同位体（¹H と ²H など）は「原子」の話。H₂OとD₂O、水と氷は同素体ではない。</p>
+<h3>成分元素の検出</h3>
+<p>炎色反応</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>元素</th>
+<th>Li</th>
+<th>Na</th>
+<th>K</th>
+<th>Ca</th>
+<th>Sr</th>
+<th>Ba</th>
+<th>Cu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>炎色</td>
+<td>赤</td>
+<td>黄</td>
+<td>赤紫</td>
+<td>橙赤</td>
+<td>紅（深赤）</td>
+<td>黄緑</td>
+<td>青緑</td>
+</tr>
+</tbody>
+</table></div>
+<p>語呂：「リアカー無き（Li赤・Na黄） K村（K赤紫） 動力（Cu青緑） 借るとう（Ca橙赤） するもくれない（Sr紅） 馬力（Ba黄緑）」</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>検出したい元素</th>
+<th>方法</th>
+<th>結果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cl</td>
+<td>硝酸銀AgNO₃水溶液を加える</td>
+<td>AgClの白色沈殿</td>
+</tr>
+<tr>
+<td>C</td>
+<td>燃焼して生じた気体を石灰水に通す</td>
+<td>白濁（CaCO₃が生成）</td>
+</tr>
+<tr>
+<td>H</td>
+<td>燃焼で生じた液体を硫酸銅(II)無水塩（白）につける</td>
+<td>青色（五水和物）になる → 水が生成＝Hを含む</td>
+</tr>
+<tr>
+<td>S</td>
+<td>加熱して生じた気体を酢酸鉛(II)紙につける</td>
+<td>黒変（PbS）</td>
+</tr>
+</tbody>
+</table></div>
+<h3>物質の三態と熱運動</h3>
+<ul>
+<li>固体 → 液体：<strong>融解</strong>、液体 → 固体：<strong>凝固</strong>、液体 → 気体：<strong>蒸発</strong>、気体 → 液体：<strong>凝縮</strong>、固体 → 気体：<strong>昇華</strong>、気体 → 固体：<strong>凝華</strong>。</li>
+<li>純物質を加熱すると、状態変化（融解・沸騰）の間は<strong>温度が一定</strong>。加えた熱は粒子間の引力を断ち切るのに使われる。</li>
+<li>粒子は温度に応じて熱運動をしている。拡散は熱運動による。</li>
+<li>絶対温度 T [K] = t [℃] + 273。絶対零度（0 K = −273℃）で熱運動は最も穏やかになる。</li>
+<li>状態変化・溶解は<strong>物理変化</strong>（物質そのものは変わらない）。燃焼・中和・さびは<strong>化学変化</strong>。</li>
+</ul>
+</div></section>
+<section class="unit unit" id="chem-2" data-subj="chem"><header class="unit-head"><div class="tile" aria-hidden="true"><span class="tile-n">2</span><span class="tile-s">化基</span></div><div><p class="kicker">化学基礎 単元2</p><h2>原子の構造と周期表</h2></div></header><div class="unit-body">
+<p>原子番号1〜20の電子配置を書けること、そしてイオン化エネルギー・原子半径・電気陰性度の周期的な傾向をグラフから読めることが満点の前提です。</p>
+<h3>原子の構造</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>粒子</th>
+<th>場所</th>
+<th>電荷</th>
+<th>質量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>陽子</td>
+<td>原子核</td>
+<td>+1</td>
+<td>約1（基準）</td>
+</tr>
+<tr>
+<td>中性子</td>
+<td>原子核</td>
+<td>0</td>
+<td>陽子とほぼ同じ</td>
+</tr>
+<tr>
+<td>電子</td>
+<td>原子核の周り</td>
+<td>−1</td>
+<td>陽子の約1/1840</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>原子番号 = 陽子の数</strong>（＝原子では電子の数）。<strong>質量数 = 陽子の数 + 中性子の数</strong>。</li>
+<li>原子の直径は約10⁻¹⁰ m、原子核は約10⁻¹⁵〜10⁻¹⁴ m（原子の約1/10万〜1/1万）。</li>
+<li>原子の質量はほぼ原子核の質量。電子の質量は無視できるほど小さい。</li>
+</ul>
+<h3>同位体と放射性同位体</h3>
+<ul>
+<li><strong>同位体</strong>：原子番号（陽子数）が同じで中性子数（質量数）が異なる原子。化学的性質はほぼ同じ。例：¹H・²H（D）・³H（T）、¹²C・¹³C・¹⁴C、³⁵Cl・³⁷Cl。</li>
+<li><strong>放射性同位体</strong>：原子核が不安定で放射線を出して別の原子核に変わる（壊変）。¹⁴Cの半減期は約5730年 → 遺跡などの年代測定に利用。</li>
+<li>半減期 T のとき、時間 t 後に残る割合は (1/2)^(t/T)。11460年後なら1/4。</li>
+</ul>
+<h3>イオンの電子数</h3>
+<ul>
+<li>陽イオン（価数 n）の電子数 = 原子番号 − n、陰イオンの電子数 = 原子番号 + n。</li>
+<li>例：Mg²⁺ は 12 − 2 = 10個、S²⁻ は 16 + 2 = 18個。</li>
+<li><strong>同じ電子配置のイオンは原子番号が大きいほど小さい</strong>（陽子が多く電子を強く引く）。<ul>
+<li>Ne型：O²⁻ ＞ F⁻ ＞ Na⁺ ＞ Mg²⁺ ＞ Al³⁺</li>
+<li>Ar型：S²⁻ ＞ Cl⁻ ＞ K⁺ ＞ Ca²⁺</li>
+</ul>
+</li>
+</ul>
+<h3>電子配置（原子番号1〜20）</h3>
+<p>電子殻は内側からK殻（最大2個）、L殻（8個）、M殻（18個）、N殻（32個）。n番目の殻の最大数は2n²。ただし原子番号19・20では、M殻が8個になった段階でN殻に入る。</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>原子番号</th>
+<th>元素</th>
+<th>K</th>
+<th>L</th>
+<th>M</th>
+<th>N</th>
+<th>価電子数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>H</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>He</td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Li</td>
+<td>2</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Be</td>
+<td>2</td>
+<td>2</td>
+<td></td>
+<td></td>
+<td>2</td>
+</tr>
+<tr>
+<td>5</td>
+<td>B</td>
+<td>2</td>
+<td>3</td>
+<td></td>
+<td></td>
+<td>3</td>
+</tr>
+<tr>
+<td>6</td>
+<td>C</td>
+<td>2</td>
+<td>4</td>
+<td></td>
+<td></td>
+<td>4</td>
+</tr>
+<tr>
+<td>7</td>
+<td>N</td>
+<td>2</td>
+<td>5</td>
+<td></td>
+<td></td>
+<td>5</td>
+</tr>
+<tr>
+<td>8</td>
+<td>O</td>
+<td>2</td>
+<td>6</td>
+<td></td>
+<td></td>
+<td>6</td>
+</tr>
+<tr>
+<td>9</td>
+<td>F</td>
+<td>2</td>
+<td>7</td>
+<td></td>
+<td></td>
+<td>7</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Ne</td>
+<td>2</td>
+<td>8</td>
+<td></td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Na</td>
+<td>2</td>
+<td>8</td>
+<td>1</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Mg</td>
+<td>2</td>
+<td>8</td>
+<td>2</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Al</td>
+<td>2</td>
+<td>8</td>
+<td>3</td>
+<td></td>
+<td>3</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Si</td>
+<td>2</td>
+<td>8</td>
+<td>4</td>
+<td></td>
+<td>4</td>
+</tr>
+<tr>
+<td>15</td>
+<td>P</td>
+<td>2</td>
+<td>8</td>
+<td>5</td>
+<td></td>
+<td>5</td>
+</tr>
+<tr>
+<td>16</td>
+<td>S</td>
+<td>2</td>
+<td>8</td>
+<td>6</td>
+<td></td>
+<td>6</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Cl</td>
+<td>2</td>
+<td>8</td>
+<td>7</td>
+<td></td>
+<td>7</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Ar</td>
+<td>2</td>
+<td>8</td>
+<td>8</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>19</td>
+<td>K</td>
+<td>2</td>
+<td>8</td>
+<td>8</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Ca</td>
+<td>2</td>
+<td>8</td>
+<td>8</td>
+<td>2</td>
+<td>2</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>価電子</strong>：最外殻電子のうち結合やイオン生成にかかわるもの。<strong>貴ガスの価電子数は0</strong>（最外殻電子数はHe 2、Ne・Ar 8）。</li>
+<li>語呂：「水兵リーベ僕の船 七曲がりシップスクラークか」</li>
+</ul>
+<h3>周期表</h3>
+<ul>
+<li>縦の列＝<strong>族</strong>（1〜18族）、横の行＝<strong>周期</strong>（第1〜第7周期）。同族元素は価電子数が同じで性質が似る。</li>
+<li><strong>典型元素</strong>：1・2・12〜18族（教科書により12族を遷移元素に含める）。同族で性質が似る。</li>
+<li><strong>遷移元素</strong>：3〜11（12）族。<strong>すべて金属</strong>。最外殻電子は1〜2個で、左右に並んだ元素同士も性質が似る。</li>
+<li>主な族名：1族（Hを除く）＝アルカリ金属、2族＝アルカリ土類金属、17族＝ハロゲン、18族＝貴ガス。</li>
+<li>金属元素は周期表の左下、非金属元素は右上（Hは非金属）。非金属元素は約20種類。</li>
+<li>メンデレーエフ（1869年）は元素を<strong>原子量の順</strong>に並べ、未発見元素の性質を予言した。現在の周期表は原子番号順。</li>
+</ul>
+<h3>周期的な傾向（グラフ問題の頻出点）</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>性質</th>
+<th>定義</th>
+<th>大きいのは</th>
+<th>小さいのは</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>イオン化エネルギー（第一）</td>
+<td>原子から電子1個を取り去って1価の陽イオンにするのに必要なエネルギー</td>
+<td>周期表の右上、<strong>貴ガスで極大（He最大）</strong></td>
+<td>左下、<strong>アルカリ金属で極小</strong></td>
+</tr>
+<tr>
+<td>電子親和力</td>
+<td>原子が電子1個を受け取って1価の陰イオンになるときに放出するエネルギー</td>
+<td><strong>ハロゲン</strong>で大</td>
+<td>貴ガス・2族で小</td>
+</tr>
+<tr>
+<td>電気陰性度</td>
+<td>共有結合で原子が共有電子対を引きつける強さ</td>
+<td><strong>F（最大）</strong> ＞ O ＞ Cl・N ＞ C ＞ H</td>
+<td>左下（アルカリ金属）</td>
+</tr>
+<tr>
+<td>原子半径</td>
+<td>—</td>
+<td>同族では下ほど大、同周期では左ほど大</td>
+<td>同周期では右ほど小（貴ガスを除く）</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>イオン化エネルギーが<strong>小さい</strong>ほど陽イオンになりやすい（＝陽性が強い、金属性が強い）。</li>
+<li>第一イオン化エネルギーは同周期で左から右へ大きくなるが、2族→13族（Be→B、Mg→Al）と15族→16族（N→O、P→S）でいったん小さくなる。グラフの「くぼみ」で元素を特定させる問題に注意。</li>
+<li>電気陰性度の主な値：F 4.0、O 3.4、Cl 3.2、N 3.0、C 2.6、H 2.2、Na 0.9。貴ガスは通常値を与えない。</li>
+</ul>
+</div></section>
+<section class="unit unit" id="chem-3" data-subj="chem"><header class="unit-head"><div class="tile" aria-hidden="true"><span class="tile-n">3</span><span class="tile-s">化基</span></div><div><p class="kicker">化学基礎 単元3</p><h2>化学結合</h2></div></header><div class="unit-body">
+<p>結合の種類は「金属＋非金属＝イオン結合、非金属同士＝共有結合、金属同士＝金属結合」で判定し、結晶の性質（融点・電気伝導性・硬さ）までセットで答えられるようにします。</p>
+<h3>結合と結晶の総まとめ</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>結晶</th>
+<th>結合する元素</th>
+<th>粒子間の結合</th>
+<th>融点</th>
+<th>電気伝導性</th>
+<th>硬さなど</th>
+<th>例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>イオン結晶</td>
+<td>金属＋非金属</td>
+<td>イオン結合（静電気的引力）</td>
+<td>高い</td>
+<td>固体×、融解液・水溶液〇</td>
+<td>硬いがもろい（たたくと割れる＝へき開）</td>
+<td>NaCl、CaO、CaCO₃、NH₄Cl</td>
+</tr>
+<tr>
+<td>共有結合の結晶</td>
+<td>非金属（C、Si）</td>
+<td>共有結合のみで巨大な立体網目</td>
+<td>非常に高い</td>
+<td>×（<strong>黒鉛のみ〇</strong>）</td>
+<td>非常に硬い（黒鉛はやわらかくはがれやすい）</td>
+<td>ダイヤモンド、黒鉛、Si、SiO₂（石英・水晶）</td>
+</tr>
+<tr>
+<td>分子結晶</td>
+<td>非金属</td>
+<td>分子内は共有結合、分子間は分子間力</td>
+<td>低い</td>
+<td>×</td>
+<td>やわらかい、昇華しやすいものあり</td>
+<td>氷、ドライアイス、ヨウ素、ナフタレン</td>
+</tr>
+<tr>
+<td>金属結晶</td>
+<td>金属</td>
+<td>金属結合（自由電子）</td>
+<td>一般に高い（Hgは液体）</td>
+<td>〇（固体でも）</td>
+<td>展性・延性、金属光沢、熱伝導性</td>
+<td>Fe、Cu、Al、Na</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>NH₄ClやNH₄NO₃は金属を含まないがイオン結晶（NH₄⁺がイオン）。</li>
+<li>電気伝導性の大きい金属：Ag ＞ Cu ＞ Au ＞ Al。電線にはCu・Alを使う。</li>
+<li>ガラスやアモルファスシリコンは粒子の配列が不規則な**非晶質（アモルファス）**で、一定の融点をもたない。</li>
+</ul>
+<h3>イオン結合と組成式</h3>
+<p>陽イオンと陰イオンの電荷の総和が0になる比で組成式を書きます。読み方は陰イオン → 陽イオンの順（例：塩化ナトリウム）。</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>多原子イオン</th>
+<th>化学式</th>
+<th>多原子イオン</th>
+<th>化学式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>アンモニウムイオン</td>
+<td>NH₄⁺</td>
+<td>硫酸イオン</td>
+<td>SO₄²⁻</td>
+</tr>
+<tr>
+<td>水酸化物イオン</td>
+<td>OH⁻</td>
+<td>炭酸イオン</td>
+<td>CO₃²⁻</td>
+</tr>
+<tr>
+<td>硝酸イオン</td>
+<td>NO₃⁻</td>
+<td>リン酸イオン</td>
+<td>PO₄³⁻</td>
+</tr>
+<tr>
+<td>酢酸イオン</td>
+<td>CH₃COO⁻</td>
+<td>炭酸水素イオン</td>
+<td>HCO₃⁻</td>
+</tr>
+<tr>
+<td>硫酸水素イオン</td>
+<td>HSO₄⁻</td>
+<td>オキソニウムイオン</td>
+<td>H₃O⁺</td>
+</tr>
+</tbody>
+</table></div>
+<p>例：硫酸アルミニウム Al₂(SO₄)₃、リン酸カルシウム Ca₃(PO₄)₂、炭酸水素ナトリウム NaHCO₃。</p>
+<h3>共有結合・電子式・分子の形</h3>
+<ul>
+<li>原子価（価標の数）：H 1、Cl 1、O 2、N 3、C 4。</li>
+<li><strong>共有電子対</strong>：結合に使われている電子対。<strong>非共有電子対</strong>：結合に使われていない電子対。</li>
+</ul>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>分子</th>
+<th>構造式</th>
+<th>共有電子対</th>
+<th>非共有電子対</th>
+<th>形</th>
+<th>極性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H₂</td>
+<td>H−H</td>
+<td>1</td>
+<td>0</td>
+<td>直線</td>
+<td>無極性</td>
+</tr>
+<tr>
+<td>Cl₂</td>
+<td>Cl−Cl</td>
+<td>1</td>
+<td>6</td>
+<td>直線</td>
+<td>無極性</td>
+</tr>
+<tr>
+<td>HCl</td>
+<td>H−Cl</td>
+<td>1</td>
+<td>3</td>
+<td>直線</td>
+<td>極性</td>
+</tr>
+<tr>
+<td>H₂O</td>
+<td>H−O−H</td>
+<td>2</td>
+<td>2</td>
+<td>折れ線</td>
+<td>極性</td>
+</tr>
+<tr>
+<td>NH₃</td>
+<td>NにHが3つ</td>
+<td>3</td>
+<td>1</td>
+<td>三角錐</td>
+<td>極性</td>
+</tr>
+<tr>
+<td>CH₄</td>
+<td>CにHが4つ</td>
+<td>4</td>
+<td>0</td>
+<td>正四面体</td>
+<td>無極性</td>
+</tr>
+<tr>
+<td>CO₂</td>
+<td>O=C=O</td>
+<td>4</td>
+<td>4</td>
+<td>直線</td>
+<td>無極性</td>
+</tr>
+<tr>
+<td>N₂</td>
+<td>N≡N</td>
+<td>3</td>
+<td>2</td>
+<td>直線</td>
+<td>無極性</td>
+</tr>
+<tr>
+<td>O₂</td>
+<td>O=O</td>
+<td>2</td>
+<td>4</td>
+<td>直線</td>
+<td>無極性</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>二重結合：O₂、CO₂、C₂H₄。三重結合：N₂、C₂H₂。</li>
+<li><strong>極性分子</strong>：結合に極性があり、分子の形で打ち消されない（H₂O、NH₃、HCl）。<strong>無極性分子</strong>：同じ原子同士の結合、または形が対称で極性が打ち消される（CO₂、CH₄、CCl₄）。</li>
+</ul>
+<h3>配位結合</h3>
+<ul>
+<li>一方の原子の非共有電子対を、もう一方が共有して生じる共有結合。</li>
+<li>NH₃ + H⁺ → NH₄⁺（正四面体）、H₂O + H⁺ → H₃O⁺（三角錐）。</li>
+<li><strong>生成後のNH₄⁺の4つのN−H結合は区別できない</strong>（性質がまったく同じ）。</li>
+<li>金属イオンに非共有電子対をもつ分子・イオンが配位結合したものを錯イオンという（例：[Cu(NH₃)₄]²⁺ 深青色）。</li>
+</ul>
+<h3>分子間力と沸点</h3>
+<ul>
+<li>分子間力（ファンデルワールス力など）は、構造が似た分子なら<strong>分子量が大きいほど強い</strong> → 沸点が高い。例：F₂ ＜ Cl₂ ＜ Br₂ ＜ I₂、CH₄ ＜ SiH₄ ＜ GeH₄。</li>
+<li>分子量が同程度なら極性分子のほうが沸点が高い。</li>
+<li><strong>水素結合</strong>：電気陰性度の大きいF・O・Nに結合したH原子が、別の分子のF・O・N原子と引き合う。HF、H₂O、NH₃は分子量が小さいのに沸点が異常に高い。</li>
+<li>結合の強さ：共有結合 ＞ 水素結合 ＞ ファンデルワールス力。</li>
+</ul>
+<h3>高分子化合物（概要）</h3>
+<ul>
+<li>小さな分子（単量体）が多数結合した巨大分子（重合体）。</li>
+<li>付加重合：ポリエチレン（エチレンから）、ポリ塩化ビニル、ポリスチレン。</li>
+<li>縮合重合：ポリエチレンテレフタラート（PET）、ナイロン。</li>
+</ul>
+</div></section>
+<section class="unit unit" id="chem-4" data-subj="chem"><header class="unit-head"><div class="tile" aria-hidden="true"><span class="tile-n">4</span><span class="tile-s">化基</span></div><div><p class="kicker">化学基礎 単元4</p><h2>物質量と濃度</h2></div></header><div class="unit-body">
+<p>すべての計算は「まず mol に直す」が原則です。質量・粒子数・気体の体積・濃度はすべて mol を経由して換算します。</p>
+<h3>原子量・分子量・式量</h3>
+<ul>
+<li>基準：<strong>¹²C原子1個の質量を12</strong>としたときの相対質量。</li>
+<li><strong>原子量</strong>＝各同位体の相対質量 × 存在比 の平均。例：Cl（³⁵Cl 75%、³⁷Cl 25%）→ 35 × 0.75 + 37 × 0.25 = 35.5。</li>
+<li><strong>分子量</strong>：分子を構成する原子の原子量の総和（H₂O = 18）。<strong>式量</strong>：イオン結晶・金属・イオンなど分子をもたない物質に使う（NaCl = 58.5）。</li>
+<li>電子の質量は無視できるので、Na⁺の式量はNaの原子量と同じ23。</li>
+</ul>
+<h3>物質量（mol）の換算</h3>
+<p>1 mol = 6.0 × 10²³ 個（アボガドロ定数 Nᴀ = 6.0 × 10²³ /mol）。</p>
+<div class="formula"><span>n [mol] =</span><span class="frac"><span>w [g]</span><span>M [g/mol]</span></span><span>=</span><span class="frac"><span>N [個]</span><span>6.0 × 10²³</span></span><span>=</span><span class="frac"><span>V [L]</span><span>22.4 [L/mol]</span></span><span class="fnote">（標準状態の気体）</span></div>
+<ul>
+<li>モル質量 = 原子量・分子量・式量に g/mol をつけたもの。</li>
+<li>22.4 L/mol は<strong>0℃・1.013 × 10⁵ Pa の気体</strong>にだけ使える。液体・固体や25℃の気体には使えない（問題文の条件を必ず確認）。</li>
+<li>気体の分子量 = 22.4 × 密度［g/L］（標準状態）。</li>
+<li>同温・同圧では気体の種類に関係なく<strong>体積比 = 物質量比</strong>（アボガドロの法則）。</li>
+<li>平均分子量：空気（N₂ : O₂ ≒ 4 : 1）= 28 × 0.8 + 32 × 0.2 ≒ 28.8 → 分子量が28.8より大きい気体は空気より重い（CO₂、Cl₂など）。</li>
+</ul>
+<h3>濃度</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>濃度</th>
+<th>定義</th>
+<th>単位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>質量パーセント濃度</td>
+<td>溶質の質量 ÷ <strong>溶液</strong>の質量 × 100</td>
+<td>%</td>
+</tr>
+<tr>
+<td>モル濃度</td>
+<td>溶質の物質量 ÷ <strong>溶液</strong>の体積</td>
+<td>mol/L</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li class="has-trap"><strong class="trap">ひっかけ注意</strong>：分母は「溶媒」ではなく「溶液」。水100 gに食塩25 gを溶かすと 25/125 × 100 = 20%。</li>
+<li>質量パーセント濃度 a%、密度 d [g/cm³]、モル質量 M の溶液のモル濃度（溶液1 L = 1000 cm³ で考える）：</li>
+</ul>
+<div class="formula"><span>C [mol/L] =</span><span class="frac"><span>1000 × d × <span class="frac sm"><span>a</span><span>100</span></span></span><span>M</span></span></div>
+<ul>
+<li>例：98%濃硫酸（d = 1.84）→ 1000 × 1.84 × 0.98 ÷ 98 = 18.4 mol/L。</li>
+<li>希釈しても溶質の物質量は変わらない：C₁V₁ = C₂V₂。</li>
+</ul>
+<h3>溶液の調製手順（実験問題で頻出）</h3>
+<p>0.100 mol/L 塩化ナトリウム水溶液 250 mL をつくる場合</p>
+<ol>
+<li>NaCl 0.0250 mol（58.5 × 0.0250 = 1.46 g）を電子天秤ではかり取る。</li>
+<li>ビーカーで少量の純水に溶かす。</li>
+<li>溶液を<strong>250 mLメスフラスコ</strong>に移し、ビーカーを純水ですすいだ液も入れる。</li>
+<li>標線まで純水を加え、栓をしてよく振り混ぜる。</li>
+</ol>
+<ul>
+<li class="has-trap"><strong class="trap">ひっかけ注意</strong>：「水250 mLに溶かす」は誤り（溶液の体積が250 mLにならない）。</li>
+<li><strong>水和物に注意</strong>：CuSO₄・5H₂O（式量250）を使う場合、1 molの結晶から CuSO₄ が1 mol得られる。はかり取る質量は 250 g/mol で計算する。</li>
+</ul>
+<h3>溶解度</h3>
+<ul>
+<li>固体の溶解度は「<strong>水100 g</strong>に溶ける溶質の最大質量［g］」で表すことが多い。</li>
+<li>飽和溶液では「溶質 : 水 : 溶液 = S : 100 : (100 + S)」の比が一定。冷却で析出する量はこの比で求める（計算ドリル参照）。</li>
+<li>溶解度曲線の傾きが大きい物質（KNO₃）は冷却による再結晶に向き、傾きが小さい物質（NaCl）は向かない。</li>
+</ul>
+</div></section>
+<section class="unit unit" id="chem-5" data-subj="chem"><header class="unit-head"><div class="tile" aria-hidden="true"><span class="tile-n">5</span><span class="tile-s">化基</span></div><div><p class="kicker">化学基礎 単元5</p><h2>化学反応式と量的関係</h2></div></header><div class="unit-body">
+<p><strong>係数の比 = 物質量の比 =（同温同圧の気体なら）体積の比</strong>です。質量の比ではない点が最大のひっかけです。</p>
+<h3>係数の決め方</h3>
+<ol>
+<li>最も複雑な物質の係数を1とおく。</li>
+<li>その物質に含まれる原子から順に、両辺で原子数をそろえる（O・Hは後回し）。</li>
+<li>分数が出たら全体を整数倍する。</li>
+</ol>
+<p>例：プロパンの燃焼　C₃H₈ + 5O₂ → 3CO₂ + 4H₂O</p>
+<p>複雑な場合は未定係数法（各係数をa、b、c…とおいて原子ごとに方程式を立てる）。</p>
+<h3>必修の反応式</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>反応</th>
+<th>化学反応式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>メタンの燃焼</td>
+<td>CH₄ + 2O₂ → CO₂ + 2H₂O</td>
+</tr>
+<tr>
+<td>エタノールの燃焼</td>
+<td>C₂H₅OH + 3O₂ → 2CO₂ + 3H₂O</td>
+</tr>
+<tr>
+<td>金属と酸</td>
+<td>Zn + 2HCl → ZnCl₂ + H₂、Mg + 2HCl → MgCl₂ + H₂</td>
+</tr>
+<tr>
+<td>アルミニウムと酸</td>
+<td>2Al + 6HCl → 2AlCl₃ + 3H₂</td>
+</tr>
+<tr>
+<td>石灰石と塩酸</td>
+<td>CaCO₃ + 2HCl → CaCl₂ + H₂O + CO₂</td>
+</tr>
+<tr>
+<td>炭酸水素ナトリウムの熱分解</td>
+<td>2NaHCO₃ → Na₂CO₃ + H₂O + CO₂</td>
+</tr>
+<tr>
+<td>過酸化水素の分解（MnO₂触媒）</td>
+<td>2H₂O₂ → 2H₂O + O₂</td>
+</tr>
+<tr>
+<td>石灰水の白濁</td>
+<td>Ca(OH)₂ + CO₂ → CaCO₃ + H₂O</td>
+</tr>
+<tr>
+<td>アンモニアの発生</td>
+<td>2NH₄Cl + Ca(OH)₂ → CaCl₂ + 2H₂O + 2NH₃</td>
+</tr>
+</tbody>
+</table></div>
+<h3>化学の基本法則</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>法則</th>
+<th>提唱者</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>質量保存の法則</td>
+<td>ラボアジエ</td>
+<td>反応の前後で物質の質量の総和は変わらない</td>
+</tr>
+<tr>
+<td>定比例の法則</td>
+<td>プルースト</td>
+<td>化合物を構成する元素の質量比は一定</td>
+</tr>
+<tr>
+<td>倍数比例の法則</td>
+<td>ドルトン</td>
+<td>2元素からなる複数の化合物で、一方の一定量と結合する他方の質量は簡単な整数比</td>
+</tr>
+<tr>
+<td>気体反応の法則</td>
+<td>ゲーリュサック</td>
+<td>反応・生成する気体の体積は同温同圧で簡単な整数比</td>
+</tr>
+<tr>
+<td>アボガドロの法則</td>
+<td>アボガドロ</td>
+<td>同温同圧・同体積の気体は同数の分子を含む</td>
+</tr>
+</tbody>
+</table></div>
+<h3>量的関係の解き方（4ステップ）</h3>
+<ol>
+<li>反応式を書く。</li>
+<li>与えられた量を mol に直す。</li>
+<li>係数比で求めたい物質の mol を出す。</li>
+<li>求められた単位（g、L、個）に直す。</li>
+</ol>
+<h3>過不足のある反応</h3>
+<ul>
+<li>両方の反応物を mol にし、<strong>係数で割った値が小さいほう（限定反応物）が全部反応</strong>する。生成物の量は限定反応物で決まる。</li>
+<li>反応後に残る物質（未反応の反応物）も答えられるように表を書く。</li>
+</ul>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th></th>
+<th>Mg</th>
+<th>2HCl</th>
+<th>→ MgCl₂</th>
+<th>H₂</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>反応前</td>
+<td>0.020</td>
+<td>0.030</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>変化量</td>
+<td>−0.015</td>
+<td>−0.030</td>
+<td>+0.015</td>
+<td>+0.015</td>
+</tr>
+<tr>
+<td>反応後</td>
+<td>0.005</td>
+<td>0</td>
+<td>0.015</td>
+<td>0.015</td>
+</tr>
+</tbody>
+</table></div>
+<p>（単位 mol。HCl 0.030 molが限定反応物）</p>
+<h3>グラフ問題の読み方</h3>
+<p>一方の量を一定にして他方を増やすと、生成量のグラフは<strong>折れ線</strong>になります。</p>
+<ul>
+<li>折れ点 = 2つの反応物が<strong>ちょうど過不足なく</strong>反応した点。</li>
+<li>折れ点より左：加えた物質がすべて反応（生成量は加えた量に比例）。</li>
+<li>折れ点より右：もう一方が尽きて生成量は一定。</li>
+<li>折れ点の座標から、濃度・原子量・係数比を逆算させる問題が頻出（共通テスト形式演習 問7参照）。</li>
+</ul>
+<h3>混合物の反応</h3>
+<p>成分ごとに未知数（x mol、y mol）をおき、「全体の量」と「生成物の量」で連立方程式を立てます。</p>
+<p>例：CH₄ x mol と C₂H₆ y mol の混合気体0.30 molを完全燃焼させると CO₂ 0.40 molが生じた → x + y = 0.30、x + 2y = 0.40 より x = 0.20、y = 0.10。</p>
+<h3>気体の体積変化</h3>
+<p>2CO + O₂ → 2CO₂ のように反応で気体の分子数が変わると、全体積も変わります。同温同圧なら体積をそのまま mol のように係数比で計算してよい。</p>
+</div></section>
+<section class="unit unit" id="chem-6" data-subj="chem"><header class="unit-head"><div class="tile" aria-hidden="true"><span class="tile-n">6</span><span class="tile-s">化基</span></div><div><p class="kicker">化学基礎 単元6</p><h2>酸と塩基</h2></div></header><div class="unit-body">
+<p>中和の量的関係は「<strong>酸の価数 × 酸の物質量 = 塩基の価数 × 塩基の物質量</strong>」で、酸・塩基の強弱には関係しません。強弱が効いてくるのは pH・指示薬・塩の液性です。</p>
+<h3>酸・塩基の定義</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>定義</th>
+<th>酸</th>
+<th>塩基</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>アレニウス</td>
+<td>水溶液中でH⁺（H₃O⁺）を生じる</td>
+<td>水溶液中でOH⁻を生じる</td>
+</tr>
+<tr>
+<td>ブレンステッド・ローリー</td>
+<td>H⁺を<strong>与える</strong></td>
+<td>H⁺を<strong>受け取る</strong></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>HCl + H₂O → H₃O⁺ + Cl⁻ では <strong>H₂Oは塩基</strong>。</li>
+<li>NH₃ + H₂O ⇄ NH₄⁺ + OH⁻ では <strong>H₂Oは酸</strong>。</li>
+<li>同じ物質でも反応によって酸にも塩基にもなる。</li>
+</ul>
+<h3>主な酸・塩基と価数</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th></th>
+<th>強</th>
+<th>弱</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1価の酸</td>
+<td>HCl、HNO₃（HBr、HI）</td>
+<td>CH₃COOH、HF</td>
+</tr>
+<tr>
+<td>2価の酸</td>
+<td>H₂SO₄</td>
+<td>(COOH)₂（シュウ酸）、H₂CO₃（CO₂ + H₂O）、H₂S</td>
+</tr>
+<tr>
+<td>3価の酸</td>
+<td>—</td>
+<td>H₃PO₄</td>
+</tr>
+<tr>
+<td>1価の塩基</td>
+<td>NaOH、KOH</td>
+<td>NH₃</td>
+</tr>
+<tr>
+<td>2価の塩基</td>
+<td>Ca(OH)₂、Ba(OH)₂</td>
+<td>Mg(OH)₂、Cu(OH)₂</td>
+</tr>
+<tr>
+<td>3価の塩基</td>
+<td>—</td>
+<td>Fe(OH)₃、Al(OH)₃</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li class="has-trap"><strong class="trap">ひっかけ注意</strong>：CH₃COOHはHを4個もつが<strong>1価</strong>。HFはハロゲン化水素だが<strong>弱酸</strong>。</li>
+<li>価数と強弱は無関係（H₃PO₄は3価だが弱酸）。</li>
+</ul>
+<h3>電離度と水素イオン濃度</h3>
+<ul>
+<li>電離度 α = 電離した酸（塩基）の物質量 ÷ 溶かした酸（塩基）の物質量。強酸・強塩基は α ≒ 1。</li>
+<li>[H⁺] = 酸のモル濃度 × 価数 × α、[OH⁻] = 塩基のモル濃度 × 価数 × α。</li>
+<li>水のイオン積：[H⁺][OH⁻] = 1.0 × 10⁻¹⁴ (mol/L)²（25℃）。</li>
+<li>pH = −log₁₀[H⁺]。[H⁺] = 1.0 × 10⁻ⁿ のとき pH = n。25℃で中性は pH 7。</li>
+<li>塩基性溶液は [OH⁻] から pOH を出し、pH = 14 − pOH。</li>
+</ul>
+<p>希釈と pH</p>
+<ul>
+<li>強酸を10倍に薄めると pH は1大きくなる（pH 2 → 3）。強塩基を10倍に薄めると pH は1小さくなる。</li>
+<li class="has-trap"><strong class="trap">ひっかけ注意</strong>：酸をいくら薄めても pH は7を超えない（7に近づくだけ）。</li>
+<li>弱酸は薄めると電離度が大きくなるため、10倍に薄めても pH の増加は1より小さい。</li>
+</ul>
+<p>身近な物質の pH の目安</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>物質</th>
+<th>pH</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>胃液</td>
+<td>1〜2</td>
+</tr>
+<tr>
+<td>レモン果汁</td>
+<td>約2</td>
+</tr>
+<tr>
+<td>食酢</td>
+<td>約3</td>
+</tr>
+<tr>
+<td>雨水（CO₂が溶けている）</td>
+<td>約5.6</td>
+</tr>
+<tr>
+<td>純水</td>
+<td>7</td>
+</tr>
+<tr>
+<td>血液</td>
+<td>約7.4</td>
+</tr>
+<tr>
+<td>海水</td>
+<td>約8</td>
+</tr>
+<tr>
+<td>セッケン水</td>
+<td>約10</td>
+</tr>
+<tr>
+<td>石灰水</td>
+<td>約12</td>
+</tr>
+</tbody>
+</table></div>
+<h3>中和反応と塩</h3>
+<ul>
+<li>H⁺ + OH⁻ → H₂O。酸の陰イオンと塩基の陽イオンからなる化合物を<strong>塩</strong>という。</li>
+<li>中和の量的関係（a、b：価数、C：モル濃度、V：体積）</li>
+</ul>
+<div class="formula"><span>a × C<sub>酸</sub> × V<sub>酸</sub> = b × C<sub>塩基</sub> × V<sub>塩基</sub></span></div>
+<p>塩の分類（化学式の形による分類で、液性とは無関係）</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>分類</th>
+<th>特徴</th>
+<th>例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>正塩</td>
+<td>酸のHも塩基のOHも残っていない</td>
+<td>NaCl、Na₂CO₃、CH₃COONa、NH₄Cl、Na₂SO₄</td>
+</tr>
+<tr>
+<td>酸性塩</td>
+<td>酸のHが残っている</td>
+<td>NaHCO₃、NaHSO₄</td>
+</tr>
+<tr>
+<td>塩基性塩</td>
+<td>塩基のOHが残っている</td>
+<td>MgCl(OH)、CuCl(OH)</td>
+</tr>
+</tbody>
+</table></div>
+<p>正塩の水溶液の液性（もとの酸・塩基の<strong>強いほうの性質</strong>を示す）</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>塩</th>
+<th>もとの酸</th>
+<th>もとの塩基</th>
+<th>液性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NaCl、KNO₃、Na₂SO₄</td>
+<td>強</td>
+<td>強</td>
+<td>中性</td>
+</tr>
+<tr>
+<td>CH₃COONa、Na₂CO₃</td>
+<td>弱</td>
+<td>強</td>
+<td>塩基性</td>
+</tr>
+<tr>
+<td>NH₄Cl、CuSO₄</td>
+<td>強</td>
+<td>弱</td>
+<td>酸性</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>酸性塩の液性：<strong>NaHSO₄は酸性、NaHCO₃は弱い塩基性</strong>。「酸性塩＝酸性」ではない。</li>
+<li><strong>弱酸の遊離</strong>：弱酸の塩 + 強酸 → 強酸の塩 + 弱酸。例：CH₃COONa + HCl → NaCl + CH₃COOH、CaCO₃ + 2HCl → CaCl₂ + H₂O + CO₂。</li>
+<li><strong>弱塩基の遊離</strong>：弱塩基の塩 + 強塩基 → 強塩基の塩 + 弱塩基。例：NH₄Cl + NaOH → NaCl + H₂O + NH₃。</li>
+</ul>
+<h3>中和滴定の器具</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>器具</th>
+<th>用途</th>
+<th>内部が純水でぬれているとき</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ホールピペット</td>
+<td>一定体積の溶液を正確にはかり取る</td>
+<td><strong>使う溶液で共洗い</strong></td>
+</tr>
+<tr>
+<td>ビュレット</td>
+<td>滴下した溶液の体積を測る</td>
+<td><strong>使う溶液で共洗い</strong></td>
+</tr>
+<tr>
+<td>メスフラスコ</td>
+<td>一定濃度の溶液を調製（希釈）</td>
+<td>そのまま使ってよい</td>
+</tr>
+<tr>
+<td>コニカルビーカー</td>
+<td>滴定の反応容器</td>
+<td>そのまま使ってよい</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>共洗いが必要な理由：水でぬれていると溶液が薄まり、はかり取る（滴下する）溶質の物質量が変わるため。</li>
+<li>メスフラスコ・コニカルビーカーは、入れる溶質の物質量が変わらないので水でぬれていてよい。</li>
+<li>体積を測る器具（ホールピペット・ビュレット・メスフラスコ）は<strong>加熱乾燥してはいけない</strong>（ガラスが変形し体積が狂う）。</li>
+<li>ビュレットの目盛りは液面の底（メニスカスの下面）を真横から読み、<strong>最小目盛りの1/10まで</strong>読む。</li>
+<li>滴定開始前に、ビュレットの先端部分まで液を満たす（気泡があると読み値が狂う）。</li>
+</ul>
+<h3>指示薬と滴定曲線</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>指示薬</th>
+<th>変色域（pH）</th>
+<th>色の変化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>メチルオレンジ</td>
+<td>3.1〜4.4</td>
+<td>赤 → 黄</td>
+</tr>
+<tr>
+<td>フェノールフタレイン</td>
+<td>8.0〜9.8</td>
+<td>無色 → 赤</td>
+</tr>
+</tbody>
+</table></div>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>組み合わせ</th>
+<th>中和点の液性</th>
+<th>使える指示薬</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>強酸 + 強塩基（HCl + NaOH）</td>
+<td>中性</td>
+<td>どちらも可</td>
+</tr>
+<tr>
+<td>弱酸 + 強塩基（CH₃COOH + NaOH）</td>
+<td>塩基性</td>
+<td><strong>フェノールフタレイン</strong></td>
+</tr>
+<tr>
+<td>強酸 + 弱塩基（HCl + NH₃）</td>
+<td>酸性</td>
+<td><strong>メチルオレンジ</strong></td>
+</tr>
+<tr>
+<td>弱酸 + 弱塩基</td>
+<td>—</td>
+<td>pH の急変がほとんどなく不適</td>
+</tr>
+</tbody>
+</table></div>
+<p>滴定曲線の読み方</p>
+<ul>
+<li>中和点付近で pH が急激に変化する（pHジャンプ）。ジャンプの範囲に変色域がある指示薬を選ぶ。</li>
+<li>曲線の<strong>始まりの pH</strong>で酸の強弱（強酸なら低い）、<strong>中和点までの滴下量</strong>で酸の物質量×価数がわかる。</li>
+<li>2価の酸を1価の塩基で滴定すると、同濃度・同体積の1価の酸に比べて中和に必要な量が2倍。</li>
+</ul>
+<h3>炭酸ナトリウムの二段階中和</h3>
+<p>Na₂CO₃水溶液を塩酸で滴定すると中和点が2つ現れます。</p>
+<ol>
+<li>第1中和点（フェノールフタレインが変色）：Na₂CO₃ + HCl → NaHCO₃ + NaCl</li>
+<li>第2中和点（メチルオレンジが変色）：NaHCO₃ + HCl → NaCl + H₂O + CO₂</li>
+</ol>
+<p>第1段階と第2段階で必要な塩酸の体積は等しい。</p>
+<h3>逆滴定</h3>
+<p>気体のNH₃を一定量の過剰な酸（硫酸など）に吸収させ、残った酸を NaOH で滴定する方法。</p>
+<p>酸が出したH⁺の総量 = NH₃が受け取った量 + NaOHが受け取った量</p>
+</div></section>
+<section class="unit unit" id="chem-7" data-subj="chem"><header class="unit-head"><div class="tile" aria-hidden="true"><span class="tile-n">7</span><span class="tile-s">化基</span></div><div><p class="kicker">化学基礎 単元7</p><h2>酸化還元</h2></div></header><div class="unit-body">
+<p>酸化還元の量的関係は「<strong>酸化剤が受け取る電子の物質量 = 還元剤が失う電子の物質量</strong>」です。半反応式を自分で組み立てられれば、暗記量は大きく減ります。</p>
+<h3>酸化・還元の定義</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th></th>
+<th>酸素</th>
+<th>水素</th>
+<th>電子</th>
+<th>酸化数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>酸化される</td>
+<td>受け取る</td>
+<td>失う</td>
+<td><strong>失う</strong></td>
+<td><strong>増加</strong></td>
+</tr>
+<tr>
+<td>還元される</td>
+<td>失う</td>
+<td>受け取る</td>
+<td><strong>受け取る</strong></td>
+<td><strong>減少</strong></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>酸化と還元は必ず同時に起こる。</li>
+<li><strong>酸化剤</strong>＝相手を酸化し、自身は<strong>還元される</strong>物質。<strong>還元剤</strong>＝相手を還元し、自身は<strong>酸化される</strong>物質。</li>
+</ul>
+<h3>酸化数のルール</h3>
+<ol>
+<li>単体中の原子は0。</li>
+<li>化合物中のHは+1、Oは−2（例外：H₂O₂のOは−1、NaHなど金属の水素化物のHは−1）。</li>
+<li>化合物全体の酸化数の総和は0、多原子イオンでは総和がイオンの価数。</li>
+<li>単原子イオンは価数がそのまま酸化数（Na⁺は+1、Cl⁻は−1）。化合物中のアルカリ金属は+1、2族は+2。</li>
+</ol>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>物質</th>
+<th>注目原子</th>
+<th>酸化数</th>
+<th>物質</th>
+<th>注目原子</th>
+<th>酸化数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H₂SO₄</td>
+<td>S</td>
+<td>+6</td>
+<td>KMnO₄</td>
+<td>Mn</td>
+<td>+7</td>
+</tr>
+<tr>
+<td>SO₂</td>
+<td>S</td>
+<td>+4</td>
+<td>MnO₂</td>
+<td>Mn</td>
+<td>+4</td>
+</tr>
+<tr>
+<td>H₂S</td>
+<td>S</td>
+<td>−2</td>
+<td>K₂Cr₂O₇</td>
+<td>Cr</td>
+<td>+6</td>
+</tr>
+<tr>
+<td>HNO₃</td>
+<td>N</td>
+<td>+5</td>
+<td>NH₃</td>
+<td>N</td>
+<td>−3</td>
+</tr>
+<tr>
+<td>NO₂</td>
+<td>N</td>
+<td>+4</td>
+<td>(COOH)₂</td>
+<td>C</td>
+<td>+3</td>
+</tr>
+<tr>
+<td>NO</td>
+<td>N</td>
+<td>+2</td>
+<td>Fe₃O₄</td>
+<td>Fe</td>
+<td>+8/3（平均）</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>酸化数が変化する原子を含む反応 = 酸化還元反応。<strong>中和反応・沈殿反応・CaCO₃の熱分解などは酸化還元反応ではない</strong>。</li>
+<li>単体が反応物か生成物にあれば、ほぼ確実に酸化還元反応。</li>
+</ul>
+<h3>半反応式の作り方（酸性条件）</h3>
+<p>KMnO₄（硫酸酸性）を例に</p>
+<ol>
+<li>反応物と生成物を書く：MnO₄⁻ → Mn²⁺</li>
+<li>Oの数を H₂O で合わせる：MnO₄⁻ → Mn²⁺ + 4H₂O</li>
+<li>Hの数を H⁺ で合わせる：MnO₄⁻ + 8H⁺ → Mn²⁺ + 4H₂O</li>
+<li>電荷を e⁻ で合わせる：MnO₄⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H₂O</li>
+</ol>
+<p>覚えるのは「何が何に変わるか」（下表の矢印の両端）だけです。</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>酸化剤</th>
+<th>半反応式</th>
+<th>変化の様子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>過マンガン酸カリウム（酸性）</td>
+<td>MnO₄⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H₂O</td>
+<td>赤紫 → ほぼ無色</td>
+</tr>
+<tr>
+<td>二クロム酸カリウム（酸性）</td>
+<td>Cr₂O₇²⁻ + 14H⁺ + 6e⁻ → 2Cr³⁺ + 7H₂O</td>
+<td>赤橙 → 緑</td>
+</tr>
+<tr>
+<td>過酸化水素（酸性）</td>
+<td>H₂O₂ + 2H⁺ + 2e⁻ → 2H₂O</td>
+<td></td>
+</tr>
+<tr>
+<td>希硝酸</td>
+<td>HNO₃ + 3H⁺ + 3e⁻ → NO + 2H₂O</td>
+<td>無色の気体</td>
+</tr>
+<tr>
+<td>濃硝酸</td>
+<td>HNO₃ + H⁺ + e⁻ → NO₂ + H₂O</td>
+<td>赤褐色の気体</td>
+</tr>
+<tr>
+<td>熱濃硫酸</td>
+<td>H₂SO₄ + 2H⁺ + 2e⁻ → SO₂ + 2H₂O</td>
+<td></td>
+</tr>
+<tr>
+<td>二酸化硫黄（H₂Sに対して）</td>
+<td>SO₂ + 4H⁺ + 4e⁻ → S + 2H₂O</td>
+<td>白濁（S）</td>
+</tr>
+<tr>
+<td>塩素</td>
+<td>Cl₂ + 2e⁻ → 2Cl⁻</td>
+<td></td>
+</tr>
+<tr>
+<td>オゾン（酸性）</td>
+<td>O₃ + 2H⁺ + 2e⁻ → O₂ + H₂O</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>還元剤</th>
+<th>半反応式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>過酸化水素</td>
+<td>H₂O₂ → O₂ + 2H⁺ + 2e⁻</td>
+</tr>
+<tr>
+<td>シュウ酸</td>
+<td>(COOH)₂ → 2CO₂ + 2H⁺ + 2e⁻</td>
+</tr>
+<tr>
+<td>硫化水素</td>
+<td>H₂S → S + 2H⁺ + 2e⁻</td>
+</tr>
+<tr>
+<td>二酸化硫黄</td>
+<td>SO₂ + 2H₂O → SO₄²⁻ + 4H⁺ + 2e⁻</td>
+</tr>
+<tr>
+<td>鉄(II)イオン</td>
+<td>Fe²⁺ → Fe³⁺ + e⁻</td>
+</tr>
+<tr>
+<td>スズ(II)イオン</td>
+<td>Sn²⁺ → Sn⁴⁺ + 2e⁻</td>
+</tr>
+<tr>
+<td>ヨウ化物イオン</td>
+<td>2I⁻ → I₂ + 2e⁻</td>
+</tr>
+<tr>
+<td>ナトリウム</td>
+<td>Na → Na⁺ + e⁻</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>H₂O₂とSO₂は相手によって酸化剤にも還元剤にもなる</strong>。KMnO₄・K₂Cr₂O₇に対しては還元剤、それ以外（KI、H₂Sなど）に対しては酸化剤として働くことが多い。</li>
+<li>全体の反応式は、2つの半反応式の e⁻ をそろえて足し、最後に省略されたイオン（K⁺、SO₄²⁻など）を加える。<ul>
+<li>例：2KMnO₄ + 5H₂O₂ + 3H₂SO₄ → K₂SO₄ + 2MnSO₄ + 8H₂O + 5O₂</li>
+</ul>
+</li>
+</ul>
+<h3>酸化還元滴定</h3>
+<ul>
+<li>KMnO₄ 滴定では<strong>硫酸</strong>で酸性にする。塩酸は Cl⁻ が KMnO₄ に酸化されるので不可、硝酸は自身が酸化剤なので不可。</li>
+<li>指示薬は不要。終点は<strong>KMnO₄の赤紫色が消えずにわずかに残った点</strong>。</li>
+<li>ヨウ素滴定ではデンプン水溶液を指示薬に使う（I₂があると青紫色）。</li>
+<li>計算：酸化剤の mol × 受け取る e⁻ の数 = 還元剤の mol × 失う e⁻ の数（MnO₄⁻ は5、H₂O₂ は2、(COOH)₂ は2、Fe²⁺ は1）。</li>
+</ul>
+<h3>金属のイオン化傾向</h3>
+<p>Li ＞ K ＞ Ca ＞ Na ＞ Mg ＞ Al ＞ Zn ＞ Fe ＞ Ni ＞ Sn ＞ Pb ＞ (H₂) ＞ Cu ＞ Hg ＞ Ag ＞ Pt ＞ Au</p>
+<p>語呂：「リッチに 貸そうかな まあ あてにすんな ひどすぎる 借金」</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>反応する相手</th>
+<th>反応する金属</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>常温の水</td>
+<td>Li、K、Ca、Na</td>
+<td>H₂を発生し水酸化物になる</td>
+</tr>
+<tr>
+<td>熱水</td>
+<td>Mg</td>
+<td></td>
+</tr>
+<tr>
+<td>高温の水蒸気</td>
+<td>Al、Zn、Fe</td>
+<td></td>
+</tr>
+<tr>
+<td>希塩酸・希硫酸（H⁺）</td>
+<td>H₂より左の金属</td>
+<td>Pbは表面にPbCl₂・PbSO₄ができてほとんど溶けない</td>
+</tr>
+<tr>
+<td>酸化力のある酸（硝酸・熱濃硫酸）</td>
+<td>Cu、Hg、Ag も溶ける</td>
+<td>H₂ではなく NO・NO₂・SO₂ が発生</td>
+</tr>
+<tr>
+<td>王水（濃硝酸：濃塩酸 = 1：3）</td>
+<td>Pt、Au も溶ける</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>不動態</strong>：Al・Fe・Ni は濃硝酸に入れると表面に緻密な酸化被膜ができて溶けない。</li>
+<li><strong>金属樹</strong>：イオン化傾向の大きい金属を小さい金属のイオンの水溶液に入れると、小さいほうの金属が析出。Zn を CuSO₄ 水溶液に入れると Cu が析出、Cu を AgNO₃ 水溶液に入れると Ag が析出（銀樹）し溶液は青くなる。</li>
+<li>空気中で：Li〜Naは常温で速やかに酸化、Mg〜Cu は加熱で酸化、Ag・Pt・Au は酸化されない。</li>
+</ul>
+<h3>電池</h3>
+<ul>
+<li>イオン化傾向の<strong>大きい金属が負極</strong>（電子を出す＝酸化される）、小さいほうが<strong>正極</strong>（電子を受け取る＝還元が起こる）。</li>
+<li>電子は導線を負極 → 正極へ流れる（電流は正極 → 負極）。</li>
+<li>起電力はイオン化傾向の差が大きいほど大きい。</li>
+</ul>
+<p>ダニエル電池　(−) Zn | ZnSO₄aq | CuSO₄aq | Cu (+)</p>
+<ul>
+<li>負極：Zn → Zn²⁺ + 2e⁻（Zn板が溶けて軽くなる）</li>
+<li>正極：Cu²⁺ + 2e⁻ → Cu（Cu板に銅が析出して重くなる）</li>
+<li>素焼き板（セロハン）：2つの水溶液がすぐに混ざるのを防ぎつつ、イオンを通して電気的なつながりを保つ。</li>
+<li>長持ちさせるには ZnSO₄ を薄く、CuSO₄ を濃くする。起電力は約1.1 V。</li>
+</ul>
+<p>実用電池</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>電池</th>
+<th>負極</th>
+<th>正極</th>
+<th>種類</th>
+<th>用途・特徴</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>マンガン乾電池</td>
+<td>Zn</td>
+<td>MnO₂</td>
+<td>一次電池</td>
+<td>リモコンなど</td>
+</tr>
+<tr>
+<td>アルカリマンガン乾電池</td>
+<td>Zn</td>
+<td>MnO₂</td>
+<td>一次電池</td>
+<td>電解液にKOH、大電流向き</td>
+</tr>
+<tr>
+<td>鉛蓄電池</td>
+<td>Pb</td>
+<td>PbO₂</td>
+<td>二次電池</td>
+<td>自動車のバッテリー。電解液は希硫酸。放電で両極ともPbSO₄が付着し質量増加</td>
+</tr>
+<tr>
+<td>リチウムイオン電池</td>
+<td>黒鉛（Liを含む）</td>
+<td>LiCoO₂など</td>
+<td>二次電池</td>
+<td>スマートフォン、電気自動車</td>
+</tr>
+<tr>
+<td>ニッケル水素電池</td>
+<td>水素吸蔵合金</td>
+<td>NiO(OH)</td>
+<td>二次電池</td>
+<td>ハイブリッド車</td>
+</tr>
+<tr>
+<td>燃料電池</td>
+<td>H₂</td>
+<td>O₂</td>
+<td>—</td>
+<td>生成物は水のみ。2H₂ + O₂ → 2H₂O</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>一次電池：充電できない。二次電池（蓄電池）：充電して繰り返し使える。</li>
+<li>リン酸形燃料電池：負極 H₂ → 2H⁺ + 2e⁻、正極 O₂ + 4H⁺ + 4e⁻ → 2H₂O。</li>
+</ul>
+<h3>金属の製錬</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>金属</th>
+<th>原料</th>
+<th>方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>鉄</td>
+<td>鉄鉱石（Fe₂O₃など）</td>
+<td>溶鉱炉でコークスから生じた CO で還元（Fe₂O₃ + 3CO → 2Fe + 3CO₂）→ 銑鉄（炭素約4%、硬くもろい）→ 転炉で O₂ を吹き込み炭素を減らして鋼（炭素0.02〜2%、粘り強い）</td>
+</tr>
+<tr>
+<td>銅</td>
+<td>黄銅鉱（CuFeS₂）</td>
+<td>溶鉱炉・転炉で粗銅 → <strong>電解精錬</strong>（粗銅を陽極、純銅を陰極、硫酸酸性の CuSO₄ 水溶液）で純度99.99%以上。Ag・Au は陽極の下に陽極泥として沈む</td>
+</tr>
+<tr>
+<td>アルミニウム</td>
+<td>ボーキサイト</td>
+<td>酸化アルミニウム（アルミナ）にし、氷晶石とともに<strong>溶融塩電解</strong>。水溶液の電解では得られない</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>イオン化傾向の大きい金属ほど単体を得るのが難しく、利用の歴史が新しい（Au・Cu → Fe → Al）。</li>
+<li>Al のリサイクルに必要なエネルギーは、ボーキサイトから製錬する場合の約3%。</li>
+</ul>
+<h3>身近な酸化還元</h3>
+<ul>
+<li>使い捨てカイロ：鉄粉の酸化で発熱。脱酸素剤：鉄粉が酸素を吸収。</li>
+<li>酸化防止剤：ビタミンC（アスコルビン酸）が自ら酸化されて食品の酸化を防ぐ。</li>
+<li>漂白剤：次亜塩素酸ナトリウム NaClO（塩素系）、過酸化水素（酸素系）は酸化作用で漂白・殺菌。</li>
+<li><strong>トタン</strong>（鋼板に Zn をめっき）：傷がついても Zn が先に酸化されて Fe を守る。<strong>ブリキ</strong>（鋼板に Sn をめっき）：傷がつくと Fe が先に腐食する。</li>
+</ul>
+</div></section>
+<section class="unit unit" id="chem-8" data-subj="chem"><header class="unit-head"><div class="tile" aria-hidden="true"><span class="tile-n">8</span><span class="tile-s">化基</span></div><div><p class="kicker">化学基礎 単元8</p><h2>化学と人間生活</h2></div></header><div class="unit-body">
+<p>身近な物質の用途と実験の安全は、正誤判定の小問で毎年のように問われます。「物質名 → 性質 → 用途」をセットで覚えます。</p>
+<h3>身近な物質と用途</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>物質</th>
+<th>性質</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>炭酸水素ナトリウム NaHCO₃</td>
+<td>加熱でCO₂を発生、弱塩基性</td>
+<td>ベーキングパウダー、胃腸薬、入浴剤</td>
+</tr>
+<tr>
+<td>炭酸カルシウム CaCO₃</td>
+<td>石灰石・大理石・貝殻の主成分</td>
+<td>セメント原料、チョーク</td>
+</tr>
+<tr>
+<td>酸化カルシウム CaO（生石灰）</td>
+<td>水と反応して発熱</td>
+<td>乾燥剤、発熱剤</td>
+</tr>
+<tr>
+<td>シリカゲル（SiO₂が主成分）</td>
+<td>多孔質で水を吸着</td>
+<td>乾燥剤</td>
+</tr>
+<tr>
+<td>次亜塩素酸ナトリウム NaClO</td>
+<td>強い酸化作用</td>
+<td>塩素系漂白剤、殺菌剤</td>
+</tr>
+<tr>
+<td>過酸化水素 H₂O₂（約3%水溶液）</td>
+<td>酸化作用</td>
+<td>オキシドール（消毒）</td>
+</tr>
+<tr>
+<td>エタノール C₂H₅OH</td>
+<td>揮発性、殺菌作用</td>
+<td>消毒用アルコール、燃料</td>
+</tr>
+<tr>
+<td>塩化カルシウム CaCl₂</td>
+<td>潮解性、凝固点を下げる</td>
+<td>乾燥剤、道路の融雪剤</td>
+</tr>
+<tr>
+<td>窒素 N₂</td>
+<td>反応性が低い</td>
+<td>食品の酸化防止の封入ガス、液体窒素は冷却剤</td>
+</tr>
+<tr>
+<td>アルゴン Ar</td>
+<td>反応性がきわめて低い</td>
+<td>電球・蛍光灯の封入ガス、溶接の保護ガス</td>
+</tr>
+<tr>
+<td>ヘリウム He</td>
+<td>軽く燃えない</td>
+<td>気球・飛行船</td>
+</tr>
+<tr>
+<td>ドライアイス CO₂</td>
+<td>昇華して冷却</td>
+<td>冷却剤</td>
+</tr>
+<tr>
+<td>アルミニウム Al</td>
+<td>軽い、表面の酸化被膜でさびにくい</td>
+<td>1円硬貨、アルミ缶、アルミ箔</td>
+</tr>
+<tr>
+<td>銅 Cu</td>
+<td>電気伝導性が大きい</td>
+<td>電線、合金の原料</td>
+</tr>
+<tr>
+<td>鉄 Fe</td>
+<td>強度が大きく安価</td>
+<td>建築材料（鋼）</td>
+</tr>
+</tbody>
+</table></div>
+<p>合金</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>合金</th>
+<th>主な成分</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ステンレス鋼</td>
+<td>Fe、Cr、Ni</td>
+<td>台所用品（さびにくい）</td>
+</tr>
+<tr>
+<td>黄銅（真ちゅう）</td>
+<td>Cu、Zn</td>
+<td>5円硬貨、楽器</td>
+</tr>
+<tr>
+<td>青銅</td>
+<td>Cu、Sn</td>
+<td>銅像、10円硬貨（Cu・Zn・Sn）</td>
+</tr>
+<tr>
+<td>白銅</td>
+<td>Cu、Ni</td>
+<td>50円・100円硬貨</td>
+</tr>
+<tr>
+<td>ジュラルミン</td>
+<td>Al、Cu、Mg</td>
+<td>航空機の機体</td>
+</tr>
+<tr>
+<td>はんだ</td>
+<td>Sn、Pb（鉛フリーは Sn、Ag、Cu）</td>
+<td>電子部品の接合</td>
+</tr>
+</tbody>
+</table></div>
+<p>プラスチック・セラミックス</p>
+<ul>
+<li>ポリエチレン（袋・容器）、ポリエチレンテレフタラート PET（ペットボトル・衣料繊維）、ポリ塩化ビニル（水道管）、ナイロン（衣料）。</li>
+<li>セラミックス：陶磁器・ガラス・セメントなど、無機物質を高温で処理したもの。ファインセラミックスは高純度の原料で精密につくる。</li>
+<li>ガラスは主成分が SiO₂ の非晶質で、一定の融点をもたない。</li>
+</ul>
+<h3>実験の安全と試薬の保存</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>場面</th>
+<th>正しい操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>においをかぐ</td>
+<td>直接かがず、手であおいでかぐ</td>
+</tr>
+<tr>
+<td>試験管の加熱</td>
+<td>口を人のいない方に向け、少し傾けて振りながら加熱</td>
+</tr>
+<tr>
+<td>濃硫酸の希釈</td>
+<td><strong>水に濃硫酸を少しずつ</strong>加えて冷やしながら混ぜる（逆は激しく発熱し危険）</td>
+</tr>
+<tr>
+<td>有毒気体（Cl₂、H₂S、NO₂など）</td>
+<td>ドラフト内で扱う</td>
+</tr>
+<tr>
+<td>薬品が皮膚についた</td>
+<td>ただちに多量の水で洗い流す</td>
+</tr>
+<tr>
+<td>廃液</td>
+<td>流しに捨てず、指定の容器に回収する</td>
+</tr>
+<tr>
+<td>保護具</td>
+<td>保護眼鏡（ゴーグル）を着用</td>
+</tr>
+</tbody>
+</table></div>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>試薬</th>
+<th>保存法</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Na、K</td>
+<td>石油（灯油）中</td>
+<td>水・酸素と激しく反応</td>
+</tr>
+<tr>
+<td>黄リン</td>
+<td>水中</td>
+<td>空気中で自然発火</td>
+</tr>
+<tr>
+<td>濃硝酸</td>
+<td>褐色びん、冷暗所</td>
+<td>光で分解</td>
+</tr>
+<tr>
+<td>NaOH（固体）</td>
+<td>密栓</td>
+<td>潮解性、CO₂を吸収</td>
+</tr>
+<tr>
+<td>NaOH水溶液</td>
+<td>ゴム栓（ガラス栓は不可）</td>
+<td>ガラスを侵し栓が固着する</td>
+</tr>
+<tr>
+<td>フッ化水素酸</td>
+<td>ポリエチレン容器</td>
+<td>ガラスを溶かす</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>「まぜるな危険」：塩素系漂白剤（NaClO）と酸性洗剤（塩酸を含む）を混ぜると有毒な Cl₂ が発生する。</li>
+</ul>
+<h3>測定値とデータの扱い</h3>
+<ul>
+<li>測定値は目盛りの最小目盛りの1/10まで読む。最後の桁には誤差を含む。</li>
+<li><strong>有効数字</strong>：掛け算・割り算の結果は、有効数字の桁数が最も少ない測定値に合わせる。足し算・引き算は、末位が最も高い位に合わせる。</li>
+<li>計算の途中は1桁多く残し、最後に丸める。</li>
+<li>グラフは測定点をなめらかな線（直線か曲線）で結び、点同士を折れ線でつながない。外れた点は誤差の可能性を考える。</li>
+</ul>
+</div></section>
+<section class="unit drill" id="chem-drill" data-subj="chem"><header class="unit-head"><div class="tile" aria-hidden="true"><span class="tile-n">計</span><span class="tile-s">化基</span></div><div><p class="kicker">化学基礎 計算</p><h2>計算問題ドリル</h2></div></header><div class="unit-body">
+<p>共通テストに出る計算の型を27問に絞りました。各問の解答・解説は問題の直後にあります。まず紙で解いてから確認し、間違えた問題は番号に印をつけて3周してください。原子量・定数は冒頭の「この教材の使い方」の値を使います。</p>
+<h3>A 原子量と物質量</h3>
+<article class="q"><p><span class="qno">問1</span> ホウ素には ¹⁰B（相対質量10.0）が20%、¹¹B（相対質量11.0）が80%存在する。ホウ素の原子量を求めよ。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>10.8</p><p>10.0 × 0.20 + 11.0 × 0.80 = 2.0 + 8.8 = 10.8</p></div></details></article>
+<article class="q"><p><span class="qno">問2</span> 塩素の原子量は35.5で、³⁵Cl（35.0）と³⁷Cl（37.0）からなる。(1) ³⁵Clの存在比［%］を求めよ。(2) Cl₂分子の質量の異なるものは何種類あるか。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>(1) 75%　(2) 3種類</p><p>(1) ³⁵Clの割合を x とすると 35.0x + 37.0(1 − x) = 35.5 → x = 0.75。</p><p>(2) ³⁵Cl−³⁵Cl（70）、³⁵Cl−³⁷Cl（72）、³⁷Cl−³⁷Cl（74）の3種類。</p></div></details></article>
+<article class="q"><p><span class="qno">問3</span> 二酸化炭素8.8 gについて、(1) 物質量、(2) 分子の数、(3) 標準状態での体積、(4) 含まれる酸素原子の数を求めよ。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>(1) 0.20 mol　(2) 1.2 × 10²³ 個　(3) 4.48 L（約4.5 L）　(4) 2.4 × 10²³ 個</p><p>CO₂ = 44 g/mol → 8.8 ÷ 44 = 0.20 mol。分子数 0.20 × 6.0 × 10²³。体積 0.20 × 22.4。O原子は分子1個に2個なので 0.40 mol 分。</p></div></details></article>
+<article class="q"><p><span class="qno">問4</span> 標準状態での密度が1.25 g/Lの気体の分子量を求めよ。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>28</p><p>1 molの質量 = 22.4 L × 1.25 g/L = 28 g。（N₂、CO、C₂H₄が該当）</p></div></details></article>
+<article class="q"><p><span class="qno">問5</span> 金属M 0.54 gを完全に酸化すると、酸化物M₂O₃が1.02 g得られた。Mの原子量を求めよ。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>27</p><p>結合したO = 1.02 − 0.54 = 0.48 g = 0.030 mol。M₂O₃ より M : O = 2 : 3 なので M = 0.030 × 2/3 = 0.020 mol。原子量 = 0.54 ÷ 0.020 = 27（Al）。</p></div></details></article>
+<article class="q"><p><span class="qno">問6</span> 水1.0 g（約1 mL）に含まれる水分子の数を求めよ。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>3.3 × 10²² 個</p><p>1.0 ÷ 18 × 6.0 × 10²³ ≒ 3.3 × 10²²</p></div></details></article>
+<h3>B 濃度と溶解度</h3>
+<article class="q"><p><span class="qno">問7</span> 水酸化ナトリウム2.0 gを水に溶かして250 mLにした。モル濃度を求めよ。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>0.20 mol/L</p><p>NaOH = 40 g/mol → 0.050 mol。0.050 ÷ 0.250 L = 0.20 mol/L。</p></div></details></article>
+<article class="q"><p><span class="qno">問8</span> 質量パーセント濃度36.5%、密度1.20 g/cm³の濃塩酸のモル濃度を求めよ。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>12.0 mol/L</p><p>溶液1 L（1000 cm³）= 1200 g。HCl = 1200 × 0.365 = 438 g = 12.0 mol。</p></div></details></article>
+<article class="q"><p><span class="qno">問9</span> 問8の濃塩酸から0.10 mol/Lの塩酸500 mLをつくるには、濃塩酸を何mLとればよいか。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>約4.2 mL</p><p>必要なHCl = 0.10 × 0.500 = 0.050 mol。0.050 ÷ 12.0 = 4.17 × 10⁻³ L。</p></div></details></article>
+<article class="q"><p><span class="qno">問10</span> 硫酸銅(II)五水和物CuSO₄・5H₂Oを用いて、0.10 mol/LのCuSO₄水溶液を200 mLつくる。必要な結晶の質量を求めよ。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>5.0 g</p><p>必要なCuSO₄ = 0.020 mol。結晶1 molからCuSO₄ 1 molが得られるので、結晶も0.020 mol。式量250 → 5.0 g。（CuSO₄の式量160で計算して3.2 gとするのは典型的な誤り）</p></div></details></article>
+<article class="q"><p><span class="qno">問11</span> 硝酸カリウムの溶解度（水100 gに溶ける最大質量）は60℃で109 g、20℃で32 gである。60℃の飽和水溶液100 gを20℃に冷却すると、何gの結晶が析出するか。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>約37 g</p><p>60℃の飽和溶液209 gを冷やすと 109 − 32 = 77 g析出する。100 gでは 77 × 100/209 ≒ 36.8 g。</p></div></details></article>
+<h3>C 化学反応の量的関係</h3>
+<article class="q"><p><span class="qno">問12</span> プロパンC₃H₈ 4.4 gを完全燃焼させた。(1) 必要な酸素の質量、(2) 生じるCO₂の質量、(3) 生じる水の質量を求めよ。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>(1) 16 g　(2) 13.2 g　(3) 7.2 g</p><p>C₃H₈ + 5O₂ → 3CO₂ + 4H₂O。C₃H₈ = 44 g/mol → 0.10 mol。O₂ 0.50 mol × 32、CO₂ 0.30 mol × 44、H₂O 0.40 mol × 18。</p><p>検算：4.4 + 16 = 13.2 + 7.2 = 20.4 g（質量保存）。</p></div></details></article>
+<article class="q"><p><span class="qno">問13</span> マグネシウム0.48 gに1.0 mol/L塩酸30 mLを加えた。(1) 発生する水素の標準状態での体積、(2) 反応せずに残る物質とその質量を求めよ。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>(1) 0.336 L（336 mL）　(2) Mgが0.12 g残る</p><p>Mg 0.020 mol、HCl 0.030 mol。Mg + 2HCl → MgCl₂ + H₂ では Mg 0.020 mol に HCl 0.040 mol が必要 → HCl が不足（限定反応物）。H₂ = 0.030 ÷ 2 = 0.015 mol。反応するMgも0.015 molなので残りは0.005 mol = 0.12 g。</p></div></details></article>
+<article class="q"><p><span class="qno">問14</span> 同温同圧で一酸化炭素20 mLと酸素20 mLを混合し、完全に反応させた。反応後の気体の体積を求めよ（同温同圧）。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>30 mL</p><p>2CO + O₂ → 2CO₂。CO 20 mLにO₂ 10 mLが反応し、CO₂ 20 mLが生成。O₂が10 mL残るので 20 + 10 = 30 mL。</p></div></details></article>
+<article class="q"><p><span class="qno">問15</span> メタンとエタンC₂H₆の混合気体0.30 molを完全燃焼させると、CO₂が0.40 mol生じた。(1) それぞれの物質量、(2) 燃焼に必要なO₂の物質量を求めよ。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>(1) CH₄ 0.20 mol、C₂H₆ 0.10 mol　(2) 0.75 mol</p><p>x + y = 0.30、x + 2y = 0.40。O₂：CH₄ + 2O₂、2C₂H₆ + 7O₂ より 0.20 × 2 + 0.10 × 3.5 = 0.75 mol。</p></div></details></article>
+<article class="q"><p><span class="qno">問16</span> 不純物（塩酸と反応しない）を含む石灰石5.0 gに十分な量の塩酸を加えると、標準状態で0.896 LのCO₂が発生した。石灰石中のCaCO₃の質量パーセントを求めよ。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>80%</p><p>CO₂ = 0.896 ÷ 22.4 = 0.040 mol = CaCO₃ 0.040 mol = 4.0 g（CaCO₃ = 100 g/mol）。4.0 ÷ 5.0 × 100 = 80%。</p></div></details></article>
+<article class="q"><p><span class="qno">問17</span> 炭酸水素ナトリウム8.4 gを完全に熱分解した。残る固体の質量を求めよ。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>5.3 g</p><p>2NaHCO₃ → Na₂CO₃ + H₂O + CO₂。NaHCO₃ = 84 g/mol → 0.10 mol → Na₂CO₃ 0.050 mol × 106 = 5.3 g。</p></div></details></article>
+<h3>D 酸と塩基</h3>
+<article class="q"><p><span class="qno">問18</span> 次の水溶液のpHを求めよ（25℃）。 (a) 0.010 mol/L 塩酸　(b) 0.050 mol/L 硫酸（完全に電離）　(c) 0.10 mol/L 酢酸（電離度0.010）　(d) 0.0050 mol/L 水酸化バリウム水溶液　(e) pH 3の塩酸を100倍に薄めた水溶液</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>(a) 2　(b) 1　(c) 3　(d) 12　(e) 5</p><p>(b) \[H⁺\] = 0.050 × 2 = 0.10。(c) \[H⁺\] = 0.10 × 0.010 = 1.0 × 10⁻³。(d) \[OH⁻\] = 0.0050 × 2 = 1.0 × 10⁻² → pOH 2 → pH 12。(e) \[H⁺\]が1/100 → pH 2大きくなる。</p></div></details></article>
+<article class="q"><p><span class="qno">問19</span> 0.10 mol/L 塩酸60 mLと0.10 mol/L 水酸化ナトリウム水溶液40 mLを混合した水溶液のpHを求めよ。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>1.7</p><p>H⁺ 6.0 × 10⁻³ mol、OH⁻ 4.0 × 10⁻³ mol → H⁺が2.0 × 10⁻³ mol残る。全体積100 mLなので \[H⁺\] = 2.0 × 10⁻² mol/L。pH = 2 − log 2 = 2 − 0.30 = 1.7。</p></div></details></article>
+<article class="q"><p><span class="qno">問20</span> 食酢を正確に10倍に薄め、その10.0 mLを0.100 mol/L NaOH水溶液で滴定すると7.20 mLで中和した。(1) もとの食酢中の酢酸のモル濃度、(2) 食酢の密度を1.0 g/cm³としたときの酢酸の質量パーセント濃度を求めよ。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>(1) 0.720 mol/L　(2) 4.32%</p><p>薄めた液の濃度 c：1 × c × 10.0 = 1 × 0.100 × 7.20 → c = 0.0720 mol/L。もとは10倍の0.720 mol/L。</p><p>食酢1 L = 1000 g 中の酢酸 = 0.720 × 60 = 43.2 g → 4.32%。</p></div></details></article>
+<article class="q"><p><span class="qno">問21</span> シュウ酸二水和物(COOH)₂・2H₂O 0.63 gを水に溶かして正確に100 mLとした。この10.0 mLを中和するのに水酸化ナトリウム水溶液12.5 mLを要した。NaOH水溶液のモル濃度を求めよ。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>0.080 mol/L</p><p>式量126 → 0.0050 mol → 0.050 mol/L。2 × 0.050 × 10.0 = 1 × c × 12.5 → c = 0.080 mol/L。</p><p>（NaOHは潮解性があり空気中のCO₂も吸収するので、質量をはかって正確な濃度の溶液はつくれない。そのため安定なシュウ酸の標準溶液で濃度を決める）</p></div></details></article>
+<article class="q"><p><span class="qno">問22</span> 炭酸ナトリウム水溶液10.0 mLを0.10 mol/L塩酸で滴定した。フェノールフタレインの変色までに8.0 mL、その後メチルオレンジを加えて変色するまでにさらに8.0 mLを要した。Na₂CO₃のモル濃度を求めよ。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>0.080 mol/L</p><p>第1段階 Na₂CO₃ + HCl → NaHCO₃ + NaCl で Na₂CO₃ = HCl = 0.10 × 8.0 × 10⁻³ = 8.0 × 10⁻⁴ mol。÷ 0.0100 L = 0.080 mol/L。</p></div></details></article>
+<article class="q"><p><span class="qno">問23</span> ある量のアンモニアを0.050 mol/L硫酸20.0 mLにすべて吸収させた。残った硫酸を0.10 mol/L NaOH水溶液で滴定すると12.0 mLを要した。吸収させたアンモニアの物質量を求めよ。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>8.0 × 10⁻⁴ mol</p><p>硫酸が出すH⁺ = 2 × 0.050 × 0.0200 = 2.0 × 10⁻³ mol。NaOH = 0.10 × 0.0120 = 1.2 × 10⁻³ mol。NH₃ = 2.0 × 10⁻³ − 1.2 × 10⁻³ = 8.0 × 10⁻⁴ mol。</p></div></details></article>
+<h3>E 酸化還元</h3>
+<article class="q"><p><span class="qno">問24</span> 濃度不明の過酸化水素水10.0 mLを硫酸酸性にし、0.020 mol/L KMnO₄水溶液を滴下すると16.0 mLで終点となった。H₂O₂のモル濃度を求めよ。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>0.080 mol/L</p><p>MnO₄⁻が受け取るe⁻ = 0.020 × 0.0160 × 5 = 1.6 × 10⁻³ mol。H₂O₂は1 molあたり2 molのe⁻を出す → 8.0 × 10⁻⁴ mol。÷ 0.0100 L = 0.080 mol/L。</p></div></details></article>
+<article class="q"><p><span class="qno">問25</span> 硫酸酸性で0.020 mol/L KMnO₄水溶液10.0 mLと過不足なく反応するFe²⁺の物質量を求めよ。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>1.0 × 10⁻³ mol</p><p>MnO₄⁻ 2.0 × 10⁻⁴ mol × 5 = 1.0 × 10⁻³ mol の e⁻。Fe²⁺ → Fe³⁺ + e⁻ なので Fe²⁺ も 1.0 × 10⁻³ mol。</p></div></details></article>
+<article class="q"><p><span class="qno">問26</span> Fe₂O₃ 1.6 kgをCOで完全に還元すると、鉄は何kg得られるか。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>1.12 kg</p><p>Fe₂O₃ = 160 g/mol → 10 mol → Fe 20 mol × 56 = 1120 g。</p></div></details></article>
+<article class="q"><p><span class="qno">問27</span> ダニエル電池を放電させると、亜鉛板の質量が0.65 g減少した。(1) 流れた電子の物質量、(2) 銅板の質量の変化を求めよ。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>(1) 0.020 mol　(2) 0.64 g増加</p><p>Zn 0.010 mol → Zn²⁺ + 2e⁻ で e⁻ 0.020 mol。正極 Cu²⁺ + 2e⁻ → Cu で Cu 0.010 mol = 0.64 g析出。</p></div></details></article>
+</div></section>
+<section class="unit exam" id="chem-exam" data-subj="chem"><header class="unit-head"><div class="tile" aria-hidden="true"><span class="tile-n">演</span><span class="tile-s">化基</span></div><div><p class="kicker">化学基礎 演習</p><h2>共通テスト形式演習</h2></div></header><div class="unit-body">
+<p>共通テストの出題形式（正誤の組合せ、データ・実験からの判断、数値マーク）を再現したオリジナル問題8題です。目標時間は全体で25分。解き終えてから各問の解答・解説を確認してください。</p>
+<article class="q exam-q"><h3><span class="qno">問1</span>化学結合と結晶（知識・正誤）</h3>
+<p>化学結合や結晶に関する記述として<strong>誤りを含むもの</strong>を、次の①〜⑤のうちから一つ選べ。</p>
+<ol>
+<li>黒鉛では、各炭素原子の価電子のうち3個が共有結合に使われ、残りの1個が平面に沿って動くことができるため、電気を通す。</li>
+<li>アンモニウムイオンの4つのN−H結合のうち1つは配位結合によってできたが、生成後は他の3つと区別できない。</li>
+<li>O²⁻、F⁻、Na⁺、Mg²⁺はいずれも同じ電子配置をもち、この中でイオン半径が最も大きいのはMg²⁺である。</li>
+<li>分子結晶は一般に融点が低く、ヨウ素やナフタレンのように昇華しやすいものもある。</li>
+<li>塩化ナトリウムの結晶は電気を通さないが、融解させると電気を通す。</li>
+</ol>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>③</p><p>同じ電子配置のイオンでは、原子番号が大きいほど原子核の正電荷が大きく電子を強く引きつけるため半径が小さい。最も大きいのはO²⁻、最も小さいのはMg²⁺。</p></div></details>
+</article><article class="q exam-q"><h3><span class="qno">問2</span>イオン化エネルギーの周期性（資料読解）</h3>
+<p>次の表は原子番号1〜20の元素の第一イオン化エネルギー［kJ/mol］である。</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>原子番号</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>値</td>
+<td>1312</td>
+<td>2372</td>
+<td>520</td>
+<td>899</td>
+<td>801</td>
+<td>1086</td>
+<td>1402</td>
+<td>1314</td>
+<td>1681</td>
+<td>2081</td>
+</tr>
+</tbody>
+</table></div>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>原子番号</th>
+<th>11</th>
+<th>12</th>
+<th>13</th>
+<th>14</th>
+<th>15</th>
+<th>16</th>
+<th>17</th>
+<th>18</th>
+<th>19</th>
+<th>20</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>値</td>
+<td>496</td>
+<td>738</td>
+<td>578</td>
+<td>787</td>
+<td>1012</td>
+<td>1000</td>
+<td>1251</td>
+<td>1521</td>
+<td>419</td>
+<td>590</td>
+</tr>
+</tbody>
+</table></div>
+<p>表から読み取れる記述ⓐ〜ⓒの正誤の組合せとして正しいものを、下の①〜⑧のうちから一つ選べ。</p>
+<ul>
+<li>ⓐ 同じ周期の元素の中では、貴ガスの第一イオン化エネルギーが最も大きい。</li>
+<li>ⓑ 原子番号3〜10の元素では、原子番号が大きくなるにつれて第一イオン化エネルギーは常に大きくなる。</li>
+<li>ⓒ 同族元素では、原子番号が大きいほど第一イオン化エネルギーが小さい。</li>
+</ul>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th></th>
+<th>①</th>
+<th>②</th>
+<th>③</th>
+<th>④</th>
+<th>⑤</th>
+<th>⑥</th>
+<th>⑦</th>
+<th>⑧</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ⓐ</td>
+<td>正</td>
+<td>正</td>
+<td>正</td>
+<td>正</td>
+<td>誤</td>
+<td>誤</td>
+<td>誤</td>
+<td>誤</td>
+</tr>
+<tr>
+<td>ⓑ</td>
+<td>正</td>
+<td>正</td>
+<td>誤</td>
+<td>誤</td>
+<td>正</td>
+<td>正</td>
+<td>誤</td>
+<td>誤</td>
+</tr>
+<tr>
+<td>ⓒ</td>
+<td>正</td>
+<td>誤</td>
+<td>正</td>
+<td>誤</td>
+<td>正</td>
+<td>誤</td>
+<td>正</td>
+<td>誤</td>
+</tr>
+</tbody>
+</table></div>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>③</p><p>ⓐ 第1周期He、第2周期Ne（2081）、第3周期Ar（1521）がそれぞれ最大 → 正。</p><p>ⓑ Be（899）→ B（801）、N（1402）→ O（1314）で減少している → 誤。</p><p>ⓒ Li 520 ＞ Na 496 ＞ K 419、Be 899 ＞ Mg 738 ＞ Ca 590、He ＞ Ne ＞ Ar → 正。</p><p>「常に」「すべて」を含む選択肢は例外を一つ探せば判定できる。</p></div></details>
+</article><article class="q exam-q"><h3><span class="qno">問3</span>滴定データから酸を特定する（実験考察）</h3>
+<p>濃度がいずれも0.10 mol/Lの酸X・Yの水溶液を10.0 mLずつとり、0.10 mol/L水酸化ナトリウム水溶液で滴定した結果を次に示す。</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th></th>
+<th>滴下前のpH</th>
+<th>中和点までの滴下量</th>
+<th>中和点のpH</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>酸X</td>
+<td>約2.9</td>
+<td>10.0 mL</td>
+<td>約8.7</td>
+</tr>
+<tr>
+<td>酸Y</td>
+<td>約1</td>
+<td>20.0 mL</td>
+<td>約7</td>
+</tr>
+</tbody>
+</table></div>
+<p>(1) X・Yの組合せとして最も適当なものを一つ選べ。</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th></th>
+<th>①</th>
+<th>②</th>
+<th>③</th>
+<th>④</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X</td>
+<td>塩酸</td>
+<td>酢酸</td>
+<td>酢酸</td>
+<td>塩酸</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>硫酸</td>
+<td>硫酸</td>
+<td>シュウ酸</td>
+<td>酢酸</td>
+</tr>
+</tbody>
+</table></div>
+<p>(2) Xの滴定の指示薬として適当なものはどれか。① メチルオレンジのみ　② フェノールフタレインのみ　③ どちらでもよい</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>(1) ②　(2) ②</p><p>X：滴下量10.0 mL → 1価の酸。滴下前のpHが3に近く（強酸なら1）、中和点が塩基性 → 弱酸の酢酸。</p><p>Y：滴下量20.0 mL → 2価の酸。滴下前のpHが約1と低く、中和点が中性 → 強酸の硫酸。シュウ酸は弱酸で中和点が塩基性になる。</p><p>(2) 中和点が塩基性側にあるので、変色域8.0〜9.8のフェノールフタレイン。</p></div></details>
+</article><article class="q exam-q"><h3><span class="qno">問4</span>金属のイオン化傾向（実験考察）</h3>
+<p>金属A〜Dは、Ag、Cu、Mg、Znのいずれかである。次の実験を行った。</p>
+<ul>
+<li>実験1：A〜Dを希塩酸に入れると、AとBは気体を発生して溶けたが、CとDは変化しなかった。</li>
+<li>実験2：AをBのイオンを含む水溶液に入れると、Aの表面にBが析出した。</li>
+<li>実験3：CをDの硝酸塩の水溶液に入れると、Cの表面にDが析出し、水溶液が青色になった。</li>
+</ul>
+<p>(1) イオン化傾向の大きい順に並べたものを選べ。 ① A ＞ B ＞ C ＞ D　② B ＞ A ＞ C ＞ D　③ A ＞ B ＞ D ＞ C　④ B ＞ A ＞ D ＞ C</p>
+<p>(2) BとCを電極とし、それぞれをそのイオンを含む水溶液に浸して素焼き板で仕切った電池をつくった。放電で質量が増加する電極と、そのとき電極で起こる反応の組合せとして正しいものを選べ。 ① B、酸化　② B、還元　③ C、酸化　④ C、還元</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>(1) ①　(2) ④</p><p>実験1：A・BはH₂より大（Mg、Zn）、C・Dは小（Cu、Ag）。実験2：AのほうがBより大 → A＝Mg、B＝Zn。実験3：Cu²⁺の青色が生じた → C＝Cu、D＝Ag。</p><p>(2) Zn（B）とCu（C）はダニエル電池。正極Cuで Cu²⁺ + 2e⁻ → Cu（還元）が起こり、Cuが析出して質量が増える。</p></div></details>
+</article><article class="q exam-q"><h3><span class="qno">問5</span>グラフの折れ点から読み取る（数値マーク）</h3>
+<p>濃度不明の塩酸40.0 mLずつに、質量を変えたマグネシウムを加え、発生した水素の体積（標準状態）を測定した。</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Mgの質量［g］</th>
+<th>0.060</th>
+<th>0.120</th>
+<th>0.180</th>
+<th>0.240</th>
+<th>0.300</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H₂の体積［mL］</td>
+<td>56</td>
+<td>112</td>
+<td>168</td>
+<td>224</td>
+<td>224</td>
+</tr>
+</tbody>
+</table></div>
+<p>(1) Mgがすべて反応している範囲のデータから、Mgの原子量を有効数字2桁で求めよ。　［ア］［イ］</p>
+<p>(2) 塩酸のモル濃度を求めよ。　［ウ］.［エ］［オ］ mol/L</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>(1) 24　(2) 0.50 mol/L</p><p>(1) 0.120 gで H₂ 112 mL = 5.00 × 10⁻³ mol。Mg + 2HCl → MgCl₂ + H₂ より Mg も 5.00 × 10⁻³ mol。原子量 = 0.120 ÷ 0.00500 = 24。</p><p>(2) 0.240 g以上で H₂ が一定 → 塩酸がすべて反応。H₂ 224 mL = 0.0100 mol → HCl 0.0200 mol。0.0200 ÷ 0.0400 L = 0.50 mol/L。</p><p>表をグラフにすると、0.240 gで折れる折れ線になる。折れ点の手前では比例、折れ点以降は一定。</p></div></details>
+</article><article class="q exam-q"><h3><span class="qno">問6</span>オキシドールの濃度決定（実験・会話文）</h3>
+<p>生徒A：市販のオキシドールの過酸化水素濃度を調べよう。10倍に薄めた液10.0 mLを硫酸で酸性にして、0.020 mol/L KMnO₄水溶液で滴定したら17.6 mLで終点になったよ。</p>
+<p>生徒B：終点はどうやって判断したの？</p>
+<p>(1) 終点の判断として最も適当なものを選べ。 ① 溶液が赤紫色から無色に変わった点　② 滴下したKMnO₄の赤紫色が消えずにわずかに残った点　③ 溶液が青紫色になった点　④ 気体の発生が始まった点</p>
+<p>(2) オキシドール中のH₂O₂の質量パーセント濃度を求めよ（密度1.0 g/cm³）。　［カ］.［キ］%</p>
+<p>(3) 硫酸の代わりに塩酸で酸性にして同じ実験を行うと、求めたH₂O₂の濃度は真の値と比べてどうなるか。 ① 大きくなる　② 小さくなる　③ 変わらない</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>(1) ②　(2) 3.0%　(3) ①</p><p>(1) 終点前は MnO₄⁻ がすぐに Mn²⁺（ほぼ無色）になる。H₂O₂ がなくなると赤紫色が残る。</p><p>(2) e⁻ = 0.020 × 0.0176 × 5 = 1.76 × 10⁻³ mol → H₂O₂ = 8.8 × 10⁻⁴ mol（10.0 mL中）→ 薄めた液 0.088 mol/L → 原液 0.88 mol/L。1 L（1000 g）中 0.88 × 34 ≒ 29.9 g → 約3.0%。</p><p>(3) Cl⁻ も KMnO₄ に酸化されるため KMnO₄ の滴下量が増え、H₂O₂ を多く見積もる。</p></div></details>
+</article><article class="q exam-q"><h3><span class="qno">問7</span>加熱による質量変化（探究）</h3>
+<p>炭酸水素ナトリウムと、加熱しても変化しない炭酸ナトリウムの混合物10.0 gを十分に加熱したところ、残った固体の質量は6.90 gであった。混合物中の炭酸水素ナトリウムの質量パーセントとして最も近いものを選べ。</p>
+<p>① 31%　② 50%　③ 69%　④ 84%</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>④</p><p>2NaHCO₃（168 g）→ Na₂CO₃（106 g）+ H₂O + CO₂ で、NaHCO₃ 168 gあたり62 g減少する。減少量 3.10 g → NaHCO₃ = 3.10 × 168/62 = 8.40 g → 84%。</p><p>「減少した質量 = 出ていった H₂O と CO₂」と考えるのがコツ。①の31%は減少量の割合で、典型的なひっかけ。</p></div></details>
+</article><article class="q exam-q"><h3><span class="qno">問8</span>実験操作（正しいものの組合せ）</h3>
+<p>中和滴定の操作に関する次の記述ア〜オのうち、適当なものを過不足なく含むものを選べ。</p>
+<ul>
+<li>ア ホールピペットが純水でぬれていたので、はかり取る溶液で共洗いしてから使った。</li>
+<li>イ メスフラスコが純水でぬれていたので、加熱乾燥してから使った。</li>
+<li>ウ コニカルビーカーが純水でぬれていたが、そのまま使った。</li>
+<li>エ ビュレットの目盛りを、液面の上端に目線を合わせて読んだ。</li>
+<li>オ 濃硫酸を薄めるとき、濃硫酸に純水を少しずつ加えた。</li>
+</ul>
+<p>① ア・ウ　② ア・イ・ウ　③ ウ・エ　④ ア・エ　⑤ イ・オ</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>①</p><p>イ：体積を測る器具は加熱すると変形するので不可（メスフラスコはぬれたままでよい）。エ：液面の底（メニスカスの下面）を読む。オ：純水に濃硫酸を少しずつ加える。</p></div></details>
+</article></div></section>
+<section class="unit unit" id="bio-1" data-subj="bio"><header class="unit-head"><div class="tile" aria-hidden="true"><span class="tile-n">1</span><span class="tile-s">生基</span></div><div><p class="kicker">生物基礎 単元1</p><h2>生物の特徴</h2></div></header><div class="unit-body">
+<p>この単元の失点の多くは「原核生物か真核生物か」の判別と「酵素・ATP・光合成・呼吸」の用語の取り違えです。例外になる生物（酵母は真核、シアノバクテリアは原核で光合成）を確実に覚えます。</p>
+<h3>生物の共通性</h3>
+<ul>
+<li>からだが<strong>細胞</strong>でできている（細胞膜で外界と仕切られる）。</li>
+<li>遺伝情報として<strong>DNA</strong>をもつ。</li>
+<li><strong>ATP</strong>を使ってエネルギーのやりとりをする（代謝）。</li>
+<li>体内の状態を一定に保つ（恒常性）。</li>
+<li>自己と同じ構造をもつ個体をつくる（生殖）。</li>
+<li>共通性は、すべての生物が共通の祖先から<strong>進化</strong>したことによる。生物の多様性は進化の過程で生じた。類縁関係を樹形で表したものを<strong>系統樹</strong>という。</li>
+<li><strong>ウイルス</strong>は細胞構造をもたず、自分だけでは代謝も増殖もできない → 一般に生物とはみなされない（遺伝物質としてDNAかRNAをもつ）。</li>
+</ul>
+<h3>原核細胞と真核細胞</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th></th>
+<th>原核細胞</th>
+<th>真核細胞</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>核膜（核）</td>
+<td>なし（DNAは細胞質基質中）</td>
+<td>あり</td>
+</tr>
+<tr>
+<td>ミトコンドリア・葉緑体</td>
+<td>なし</td>
+<td>あり（葉緑体は植物・藻類）</td>
+</tr>
+<tr>
+<td>細胞膜・リボソーム・DNA</td>
+<td>あり</td>
+<td>あり</td>
+</tr>
+<tr>
+<td>細胞壁</td>
+<td>あり</td>
+<td>植物・菌類はあり、動物はなし</td>
+</tr>
+<tr>
+<td>大きさ</td>
+<td>1〜10 µm 程度</td>
+<td>10〜100 µm 程度</td>
+</tr>
+<tr>
+<td>生物の例</td>
+<td>大腸菌、乳酸菌、納豆菌（枯草菌）、<strong>シアノバクテリア（ネンジュモ、ユレモ、イシクラゲ）</strong></td>
+<td>動物、植物、<strong>酵母（菌類）</strong>、カビ、キノコ、ゾウリムシ、アメーバ、ミドリムシ</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li class="has-trap"><strong class="trap">ひっかけ注意</strong>：酵母・カビ・キノコは菌類で<strong>真核生物</strong>。シアノバクテリアは<strong>原核生物</strong>だが葉緑体なしで光合成を行う。</li>
+</ul>
+<h3>細胞の構造（真核細胞）</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>構造</th>
+<th>はたらき</th>
+<th>動物</th>
+<th>植物</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>核</td>
+<td>DNAを含み、細胞の活動を支配。酢酸オルセインや酢酸カーミンで赤く染まる</td>
+<td>〇</td>
+<td>〇</td>
+</tr>
+<tr>
+<td>ミトコンドリア</td>
+<td>呼吸の場。ATPを合成</td>
+<td>〇</td>
+<td>〇</td>
+</tr>
+<tr>
+<td>葉緑体</td>
+<td>光合成の場。クロロフィルを含む</td>
+<td>×</td>
+<td>〇</td>
+</tr>
+<tr>
+<td>液胞</td>
+<td>物質の貯蔵、浸透圧の調節。花の色素（アントシアン）を含むことも</td>
+<td>小さい</td>
+<td>発達</td>
+</tr>
+<tr>
+<td>細胞膜</td>
+<td>物質の出入りを調節</td>
+<td>〇</td>
+<td>〇</td>
+</tr>
+<tr>
+<td>細胞壁</td>
+<td>細胞の保護・形の保持（主成分セルロース）</td>
+<td>×</td>
+<td>〇</td>
+</tr>
+<tr>
+<td>細胞質基質</td>
+<td>細胞小器官の間を満たす。さまざまな化学反応の場</td>
+<td>〇</td>
+<td>〇</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>ミトコンドリアと葉緑体は独自のDNAをもち、分裂して増える。</li>
+<li>核と細胞膜を除く部分をまとめて細胞質という。</li>
+</ul>
+<h3>大きさと観察</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>対象</th>
+<th>大きさの目安</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ヒトの卵</td>
+<td>約140 µm（肉眼でぎりぎり見える）</td>
+</tr>
+<tr>
+<td>ゾウリムシ</td>
+<td>約200 µm</td>
+</tr>
+<tr>
+<td>ヒトの赤血球</td>
+<td>約8 µm</td>
+</tr>
+<tr>
+<td>葉緑体</td>
+<td>約5〜10 µm</td>
+</tr>
+<tr>
+<td>大腸菌</td>
+<td>約2〜3 µm</td>
+</tr>
+<tr>
+<td>ミトコンドリア</td>
+<td>幅約0.5 µm、長さ1〜数 µm</td>
+</tr>
+<tr>
+<td>インフルエンザウイルス</td>
+<td>約0.1 µm（100 nm）</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>分解能（見分けられる2点間の最小距離）：肉眼約0.1 mm、光学顕微鏡約0.2 µm、電子顕微鏡約0.2 nm。</li>
+<li>単位：1 mm = 1000 µm、1 µm = 1000 nm。</li>
+<li>光学顕微鏡の操作：最初は低倍率で。ピントは<strong>対物レンズとプレパラートを離しながら</strong>合わせる。視野内の像は上下左右が逆なので、右上の像を中央に移すにはプレパラートを右上へ動かす。高倍率にすると視野は狭く暗くなる。</li>
+</ul>
+<h3>代謝とATP</h3>
+<ul>
+<li>代謝：生体内の化学反応全体。<strong>同化</strong>（単純な物質から複雑な物質を合成、エネルギーを吸収：光合成など）と<strong>異化</strong>（複雑な物質を分解、エネルギーを放出：呼吸など）。</li>
+<li><strong>ATP（アデノシン三リン酸）</strong>＝アデニン（塩基）＋リボース（糖）＋リン酸3個。アデニン＋リボース＝アデノシン。</li>
+<li>リン酸どうしの結合（高エネルギーリン酸結合）が切れて ATP → ADP＋リン酸 となるときにエネルギーを放出し、生命活動（筋収縮、物質合成、能動輸送、発光など）に使われる。</li>
+<li>ATPは「エネルギーの通貨」。生物はATPを蓄えておくのではなく、つねに合成と分解を繰り返している。</li>
+</ul>
+<h3>酵素</h3>
+<ul>
+<li>主成分は<strong>タンパク質</strong>。化学反応を促進する生体触媒で、反応の前後で自身は変化しない（くり返し使える）。</li>
+<li><strong>基質特異性</strong>：酵素ごとに作用する物質（基質）が決まっている。</li>
+<li>細胞内（呼吸・光合成の酵素）でも細胞外（消化酵素：アミラーゼ、ペプシン、トリプシン、リパーゼ）でもはたらく。</li>
+<li>高温ではタンパク質の立体構造が変化してはたらきを失う。最適温度は35〜40℃付近のものが多い。最適pHは酵素によって異なる（ペプシン約2、だ液アミラーゼ約7、トリプシン約8）。</li>
+<li>カタラーゼ：2H₂O₂ → 2H₂O＋O₂ を促進（肝臓や植物の細胞に多い）。無機触媒の酸化マンガン(IV)も同じ反応を促進するが、煮沸しても失活しない。</li>
+</ul>
+<h3>光合成と呼吸</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th></th>
+<th>光合成</th>
+<th>呼吸</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>場所</td>
+<td>葉緑体</td>
+<td>主にミトコンドリア（細胞質基質から始まる）</td>
+</tr>
+<tr>
+<td>代謝の種類</td>
+<td>同化</td>
+<td>異化</td>
+</tr>
+<tr>
+<td>反応</td>
+<td>光エネルギーを使って ATP をつくり、そのエネルギーで CO₂ と H₂O から有機物（糖）を合成。O₂を放出</td>
+<td>有機物を O₂ を使って CO₂ と H₂O に分解し、取り出したエネルギーで ATP を合成</td>
+</tr>
+<tr>
+<td>エネルギー</td>
+<td>光エネルギー → 化学エネルギー（有機物）</td>
+<td>化学エネルギー（有機物）→ ATP</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>呼吸と燃焼の違い：燃焼は一気に熱と光を出す。呼吸は酵素によって段階的に進み、エネルギーの一部を ATP に蓄える（残りは熱）。</li>
+<li>植物も呼吸を行う（昼夜を問わず）。</li>
+<li>光合成を行う独立栄養生物（植物・藻類・シアノバクテリア）と、他の生物がつくった有機物を取り入れる従属栄養生物（動物・菌類・多くの細菌）。</li>
+</ul>
+<h3>細胞内共生説</h3>
+<ul>
+<li><strong>ミトコンドリア</strong>は好気性細菌、<strong>葉緑体</strong>はシアノバクテリアが、別の細胞に取り込まれて共生したことに由来するという説。</li>
+<li>根拠：独自のDNAをもつ、二重膜で囲まれている、細胞内で分裂によって増える。</li>
+<li>動物細胞と植物細胞の共通祖先がミトコンドリアを取り込み、その後、植物の祖先がさらにシアノバクテリアを取り込んだと考えられている。</li>
+</ul>
+</div></section>
+<section class="unit unit" id="bio-2" data-subj="bio"><header class="unit-head"><div class="tile" aria-hidden="true"><span class="tile-n">2</span><span class="tile-s">生基</span></div><div><p class="kicker">生物基礎 単元2</p><h2>遺伝子とその働き</h2></div></header><div class="unit-body">
+<p>DNAの塩基の相補性、細胞周期とDNA量の変化、転写・翻訳の3つが計算・考察問題の土台です。研究史は「誰が・何を使って・何を明らかにしたか」をセットで覚えます。</p>
+<h3>DNAの構造</h3>
+<ul>
+<li>構成単位は<strong>ヌクレオチド</strong>＝リン酸＋糖（<strong>デオキシリボース</strong>）＋塩基。</li>
+<li>塩基は A（アデニン）、T（チミン）、G（グアニン）、C（シトシン）の4種類。</li>
+<li>2本のヌクレオチド鎖が塩基で結合した<strong>二重らせん構造</strong>。<strong>AとT、GとCが相補的に対合</strong>する。</li>
+<li>二本鎖DNAでは A = T、G = C（<strong>シャルガフの規則</strong>）。A + G = T + C = 50%。</li>
+<li>遺伝情報は**塩基の並び順（塩基配列）**として保持される。</li>
+<li>10塩基対で約3.4 nm（らせん1回転）。</li>
+</ul>
+<h3>研究史</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>年</th>
+<th>研究者</th>
+<th>材料・方法</th>
+<th>明らかにしたこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1865</td>
+<td>メンデル</td>
+<td>エンドウの交配</td>
+<td>遺伝の法則（遺伝要素の存在）</td>
+</tr>
+<tr>
+<td>1928</td>
+<td>グリフィス</td>
+<td>肺炎球菌のS型（病原性）とR型、マウス</td>
+<td>加熱殺菌したS型の何かがR型をS型に変える（<strong>形質転換</strong>）</td>
+</tr>
+<tr>
+<td>1944</td>
+<td>エイブリー</td>
+<td>肺炎球菌の抽出液を酵素処理</td>
+<td>形質転換を起こす物質は<strong>DNA</strong>（DNA分解酵素で処理すると起こらない）</td>
+</tr>
+<tr>
+<td>1949頃</td>
+<td>シャルガフ</td>
+<td>多くの生物のDNAの塩基組成</td>
+<td>A = T、G = C</td>
+</tr>
+<tr>
+<td>1952</td>
+<td>ハーシーとチェイス</td>
+<td>T₂ファージ（タンパク質を³⁵S、DNAを³²Pで標識）と大腸菌</td>
+<td>菌内に入って子ファージをつくらせるのは<strong>DNA</strong>（遺伝子の本体はDNA）</td>
+</tr>
+<tr>
+<td>1950年代初め</td>
+<td>ウィルキンス、フランクリン</td>
+<td>X線回折</td>
+<td>DNAがらせん構造であることを示すデータ</td>
+</tr>
+<tr>
+<td>1953</td>
+<td>ワトソンとクリック</td>
+<td>上記のデータをもとにモデル</td>
+<td><strong>二重らせん構造</strong></td>
+</tr>
+<tr>
+<td>1958</td>
+<td>メセルソンとスタール</td>
+<td>¹⁵Nと¹⁴Nを含む培地で大腸菌を培養、密度で分離</td>
+<td><strong>半保存的複製</strong></td>
+</tr>
+</tbody>
+</table></div>
+<h3>遺伝子・DNA・染色体・ゲノム</h3>
+<ul>
+<li><strong>遺伝子</strong>：DNAのうち、タンパク質のアミノ酸配列などの情報をもつ部分。<strong>DNAの全領域が遺伝子ではない</strong>（ヒトでは翻訳される部分はゲノムの約1〜2%）。</li>
+<li><strong>染色体</strong>：真核生物でDNAがヒストンというタンパク質に巻きついて折りたたまれたもの。</li>
+<li><strong>ゲノム</strong>：その生物が生命活動を営むのに必要な最小限の遺伝情報の1セット（配偶子がもつ1組分）。体細胞は父母由来の2セットをもつ。</li>
+<li>ヒトゲノム：約30億塩基対、遺伝子数約2万個。</li>
+<li>同じ個体の体細胞はすべて同じゲノムをもつ（赤血球など核を失った細胞を除く）。</li>
+</ul>
+<h3>DNAの複製と細胞周期</h3>
+<ul>
+<li><strong>半保存的複製</strong>：2本鎖がほどけ、それぞれの鎖を鋳型に相補的な新しい鎖がつくられる。新しいDNAは「もとの鎖1本＋新しい鎖1本」。</li>
+<li>細胞周期：<strong>間期</strong>（G₁期 → S期 → G₂期）→ <strong>分裂期（M期）</strong>（前期 → 中期 → 後期 → 終期）。</li>
+</ul>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>時期</th>
+<th>できごと</th>
+<th>細胞1個あたりのDNA量（G₁期を2とする）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>G₁期（DNA合成準備期）</td>
+<td>細胞の成長</td>
+<td>2</td>
+</tr>
+<tr>
+<td>S期（DNA合成期）</td>
+<td><strong>DNAの複製</strong></td>
+<td>2 → 4</td>
+</tr>
+<tr>
+<td>G₂期（分裂準備期）</td>
+<td>分裂の準備</td>
+<td>4</td>
+</tr>
+<tr>
+<td>前期</td>
+<td>染色体が凝縮して太く短くなる、核膜が消える</td>
+<td>4</td>
+</tr>
+<tr>
+<td>中期</td>
+<td>染色体が<strong>赤道面</strong>に並ぶ（観察に最適）</td>
+<td>4</td>
+</tr>
+<tr>
+<td>後期</td>
+<td>染色体が縦裂面で分かれて両極へ移動</td>
+<td>4</td>
+</tr>
+<tr>
+<td>終期</td>
+<td>核膜が現れ、細胞質が分裂</td>
+<td>4 → 2</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>体細胞分裂で生じた2つの娘細胞は、もとの細胞と同じ遺伝情報をもつ。</li>
+<li>細胞質分裂：動物細胞はくびれて分かれる、植物細胞は細胞板ができて仕切られる。</li>
+<li>分裂をやめた細胞はG₁期から細胞周期を離れた状態（G₀期）にある（神経細胞など）。</li>
+</ul>
+<p>体細胞分裂の観察（タマネギの根端）</p>
+<ol>
+<li><strong>固定</strong>：酢酸アルコールなどに浸し、細胞の活動を止めて形を保つ。</li>
+<li><strong>解離</strong>：約60℃の希塩酸に浸し、細胞どうしを離れやすくする。</li>
+<li><strong>染色</strong>：酢酸オルセイン（または酢酸カーミン）で核・染色体を赤く染める。</li>
+<li><strong>押しつぶし</strong>：カバーガラスの上から押して細胞を一層に広げる。</li>
+</ol>
+<ul>
+<li>根端付近（根冠のすぐ上）に分裂組織がある。間期の細胞が最も多く観察される（間期が最も長いため）。</li>
+</ul>
+<h3>遺伝情報の発現</h3>
+<p><strong>セントラルドグマ</strong>：DNA →（転写）→ RNA →（翻訳）→ タンパク質</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th></th>
+<th>DNA</th>
+<th>RNA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>糖</td>
+<td>デオキシリボース</td>
+<td>リボース</td>
+</tr>
+<tr>
+<td>塩基</td>
+<td>A、T、G、C</td>
+<td>A、<strong>U（ウラシル）</strong>、G、C</td>
+</tr>
+<tr>
+<td>構造</td>
+<td>二本鎖</td>
+<td>一本鎖</td>
+</tr>
+<tr>
+<td>主な種類</td>
+<td>—</td>
+<td>mRNA（伝令RNA）、tRNA（転移RNA）、rRNA</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>転写</strong>：DNAの一方の鎖を鋳型に、相補的な塩基をもつmRNAが合成される（核内）。DNAのAに対してはUが対応する。</li>
+<li><strong>翻訳</strong>：mRNAの<strong>連続する3塩基（コドン）</strong>が1つのアミノ酸を指定する。tRNAが<strong>アンチコドン</strong>でコドンと対合し、アミノ酸を運ぶ。リボソームでアミノ酸がつながりタンパク質ができる。</li>
+<li>アミノ酸は20種類、コドンは4³ = 64通り。翻訳の開始を示す開始コドン（AUG、メチオニン）と、アミノ酸を指定しない終止コドン（UAA、UAG、UGA）がある。</li>
+<li>変換の例：DNA鋳型鎖 TAC → mRNA AUG → tRNAアンチコドン UAC。</li>
+<li>タンパク質の性質はアミノ酸配列で決まる。塩基1個の置換でアミノ酸が変わると、性質が変わることがある（鎌状赤血球症など）。</li>
+</ul>
+<h3>遺伝子の発現と細胞の分化</h3>
+<ul>
+<li>多細胞生物の体細胞はすべて同じゲノムをもつが、<strong>細胞ごとに発現する遺伝子が異なる</strong>ことで、異なる形・はたらきをもつ細胞に分化する。<ul>
+<li>すべての細胞で発現：呼吸の酵素など生存に必要な遺伝子。</li>
+<li>特定の細胞でのみ発現：インスリン（すい臓ランゲルハンス島B細胞）、クリスタリン（水晶体）、ヘモグロビン（赤血球になる細胞）。</li>
+</ul>
+</li>
+<li><strong>だ腺染色体</strong>（ユスリカやショウジョウバエの幼虫）：巨大な染色体で、ところどころに<strong>パフ</strong>（膨らんだ部分）がある。パフでは<strong>転写が盛ん</strong>（RNA合成）で、パフの位置は発生の時期によって変わる → 時期によって発現する遺伝子が変わる。ピロニン（RNA）で赤桃色に、メチルグリーン（DNA）で青緑色に染まる。</li>
+<li>分化した細胞もゲノムをすべて保持していることは、核移植実験や <strong>iPS細胞</strong>（山中伸弥、体細胞に数個の遺伝子を導入して多能性をもたせた細胞）から示される。</li>
+</ul>
+</div></section>
+<section class="unit unit" id="bio-3" data-subj="bio"><header class="unit-head"><div class="tile" aria-hidden="true"><span class="tile-n">3</span><span class="tile-s">生基</span></div><div><p class="kicker">生物基礎 単元3</p><h2>体内環境</h2></div></header><div class="unit-body">
+<p>体内環境は「何が変化を感知し（受容）→ どこが中枢になり（間脳視床下部）→ 神経とホルモンのどちらで → どの器官がどう応答するか」の流れで整理します。血糖・体温・体液濃度の3つの調節はこの流れで書けるようにします。</p>
+<h3>体液と恒常性</h3>
+<ul>
+<li>体液：<strong>血液</strong>（血管内）、<strong>組織液</strong>（細胞の周り、血しょうが毛細血管からしみ出たもの）、<strong>リンパ液</strong>（リンパ管内）。</li>
+<li>体液がつくる環境を<strong>体内環境</strong>という。体内環境を一定の範囲に保つ性質が<strong>恒常性（ホメオスタシス）</strong>。</li>
+<li>組織液の大部分は毛細血管に戻り、一部はリンパ管に入ってリンパ液となる。リンパ管は鎖骨下静脈で血管に合流する。</li>
+</ul>
+<h3>血液の成分</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>成分</th>
+<th>核</th>
+<th>数（血液1 mm³中）</th>
+<th>はたらき</th>
+<th>つくられる場所</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>赤血球</td>
+<td>なし</td>
+<td>約400万〜500万</td>
+<td>ヘモグロビンでO₂を運搬</td>
+<td>骨髄（古くなると脾臓・肝臓で破壊）</td>
+</tr>
+<tr>
+<td>白血球</td>
+<td>あり</td>
+<td>約4000〜9000</td>
+<td>食作用・免疫</td>
+<td>骨髄</td>
+</tr>
+<tr>
+<td>血小板</td>
+<td>なし</td>
+<td>約20万〜40万</td>
+<td>血液凝固</td>
+<td>骨髄</td>
+</tr>
+<tr>
+<td>血しょう（液体成分、約55%）</td>
+<td>—</td>
+<td>—</td>
+<td>水（約90%）、タンパク質（アルブミンなど）、グルコース（約0.1%）、無機塩類。栄養分・CO₂・老廃物・ホルモンの運搬</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<h3>血液凝固</h3>
+<ol>
+<li>血管が傷つくと<strong>血小板</strong>が集まり、傷口をふさぐ。</li>
+<li>血小板などから放出される凝固因子のはたらきで、血しょう中のフィブリノーゲンから<strong>フィブリン</strong>（繊維状のタンパク質）ができる。</li>
+<li>フィブリンが血球をからめて<strong>血ぺい</strong>をつくり、出血を止める。</li>
+<li>傷が修復されると、フィブリンが分解されて血ぺいが溶ける（<strong>線溶</strong>、フィブリン溶解）。</li>
+</ol>
+<ul>
+<li>採血した血液を静置すると血ぺいと<strong>血清</strong>（淡黄色の液体）に分かれる。</li>
+<li>血管内で血液が固まると血栓となり、血流を妨げる（脳梗塞・心筋梗塞の原因）。</li>
+</ul>
+<h3>酸素の運搬（酸素解離曲線）</h3>
+<ul>
+<li>ヘモグロビンは、O₂濃度（分圧）が高い肺胞で O₂ と結合して<strong>酸素ヘモグロビン</strong>になり、O₂濃度が低い組織で O₂ を放す。</li>
+<li>CO₂濃度が高いほど O₂ を放しやすい（曲線が右にずれる）→ 活発に呼吸する組織で多くの O₂ を渡せる。</li>
+<li>計算：組織で放出したO₂の割合 =（肺胞での酸素ヘモグロビンの割合 − 組織での割合）÷ 肺胞での割合（生物基礎 計算ドリル参照）。</li>
+</ul>
+<h3>循環系</h3>
+<ul>
+<li>ヒトの心臓は<strong>2心房2心室</strong>。右心房に**洞房結節（ペースメーカー）**があり、自動的に拍動のリズムをつくる。</li>
+<li><strong>体循環</strong>：左心室 → 大動脈 → 全身 → 大静脈 → 右心房。<strong>肺循環</strong>：右心室 → <strong>肺動脈</strong> → 肺 → <strong>肺静脈</strong> → 左心房。</li>
+<li class="has-trap"><strong class="trap">ひっかけ注意</strong>：肺動脈を流れるのは<strong>静脈血</strong>（O₂が少ない）、肺静脈を流れるのは<strong>動脈血</strong>（O₂が多い）。</li>
+<li><strong>閉鎖血管系</strong>（脊椎動物、ミミズなど環形動物）：動脈と静脈が毛細血管でつながる。<strong>開放血管系</strong>（昆虫・エビなど節足動物、貝など軟体動物）：毛細血管がなく、血液が組織の間に流れ出る。</li>
+<li>静脈には逆流を防ぐ弁がある。</li>
+</ul>
+<h3>肝臓</h3>
+<ul>
+<li>約50万個の<strong>肝小葉</strong>からなる。小腸・ひ臓からの血液は<strong>肝門脈</strong>を通って肝臓に入る。</li>
+</ul>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>はたらき</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>血糖量の調節</td>
+<td>グルコースを<strong>グリコーゲン</strong>として貯蔵し、必要に応じて分解して血中に放出</td>
+</tr>
+<tr>
+<td>尿素の合成</td>
+<td>アミノ酸の分解で生じた有害な<strong>アンモニアを尿素</strong>に変える</td>
+</tr>
+<tr>
+<td>解毒</td>
+<td>アルコールや薬物などを分解</td>
+</tr>
+<tr>
+<td>胆汁の生成</td>
+<td>胆汁は脂肪の消化を助ける。古い赤血球のヘモグロビンの分解産物（<strong>ビリルビン</strong>）を含む。胆のうに蓄えられ十二指腸へ</td>
+</tr>
+<tr>
+<td>血しょうタンパク質の合成</td>
+<td>アルブミン、フィブリノーゲンなど</td>
+</tr>
+<tr>
+<td>体温の維持</td>
+<td>多くの化学反応で熱を発生</td>
+</tr>
+</tbody>
+</table></div>
+<h3>腎臓</h3>
+<ul>
+<li>構造と機能の単位は<strong>ネフロン（腎単位）</strong>＝<strong>腎小体</strong>（糸球体＋ボーマンのう）＋<strong>細尿管（腎細管）</strong>。腎臓1個に約100万個。</li>
+<li><strong>ろ過</strong>：糸球体からボーマンのうへ、血球と<strong>タンパク質以外</strong>の血しょう成分がこし出され<strong>原尿</strong>になる（1日約170 L）。</li>
+<li><strong>再吸収</strong>：細尿管で<strong>グルコースはほぼ100%</strong>、水・無機塩類は必要量が毛細血管へ戻る。<strong>集合管</strong>でも水が再吸収される。尿は1日約1.5 L → 水の約99%が再吸収される。</li>
+<li>尿素は再吸収されにくいので濃縮される。<strong>イヌリン</strong>（植物由来の多糖）は、ろ過されるが再吸収も分泌もされない → 原尿量の測定に使う。</li>
+<li>濃縮率 = 尿中の濃度 ÷ 血しょう中の濃度。原尿量 = 尿量 × イヌリンの濃縮率。</li>
+<li>健康な人の尿にグルコースは出ない。血糖値が高すぎて再吸収しきれないと尿中に出る（糖尿）。</li>
+</ul>
+<h3>自律神経系</h3>
+<ul>
+<li>中枢は<strong>間脳の視床下部</strong>。意思とは無関係に内臓・血管などのはたらきを調節する。</li>
+<li><strong>交感神経</strong>：脊髄から出る。活動時・緊張時にはたらく。末端から主に<strong>ノルアドレナリン</strong>を分泌。</li>
+<li><strong>副交感神経</strong>：中脳・延髄・脊髄の下部から出る。休息時にはたらく。末端から<strong>アセチルコリン</strong>を分泌。</li>
+<li>多くの器官は両方の神経に支配され、<strong>拮抗的</strong>にはたらく。</li>
+</ul>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>器官</th>
+<th>交感神経</th>
+<th>副交感神経</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>瞳孔</td>
+<td>拡大</td>
+<td>縮小</td>
+</tr>
+<tr>
+<td>心臓の拍動</td>
+<td>促進</td>
+<td>抑制</td>
+</tr>
+<tr>
+<td>気管支</td>
+<td>拡張</td>
+<td>収縮</td>
+</tr>
+<tr>
+<td>胃・腸のぜん動</td>
+<td>抑制</td>
+<td>促進</td>
+</tr>
+<tr>
+<td>消化液の分泌</td>
+<td>抑制</td>
+<td>促進</td>
+</tr>
+<tr>
+<td>排尿（ぼうこう）</td>
+<td>抑制</td>
+<td>促進</td>
+</tr>
+<tr>
+<td>立毛筋</td>
+<td>収縮</td>
+<td>分布しない</td>
+</tr>
+<tr>
+<td>汗腺</td>
+<td>分泌促進</td>
+<td>分布しない</td>
+</tr>
+<tr>
+<td>皮膚の血管</td>
+<td>収縮</td>
+<td>分布しない</td>
+</tr>
+<tr>
+<td>副腎髄質</td>
+<td>アドレナリン分泌促進</td>
+<td>分布しない</td>
+</tr>
+</tbody>
+</table></div>
+<h3>内分泌系とホルモン</h3>
+<ul>
+<li><strong>ホルモン</strong>：内分泌腺から<strong>血液中</strong>に分泌され、特定の<strong>標的器官（標的細胞）</strong>の<strong>受容体</strong>に結合して作用する。微量で効き、効果は神経より遅いが持続的。</li>
+<li>外分泌腺（汗腺・消化腺）は排出管をもち、体外や消化管に分泌する。内分泌腺は排出管をもたない。</li>
+</ul>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>内分泌腺</th>
+<th>ホルモン</th>
+<th>主なはたらき</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>視床下部</td>
+<td>放出ホルモン・放出抑制ホルモン</td>
+<td>脳下垂体前葉のホルモン分泌を調節</td>
+</tr>
+<tr>
+<td>脳下垂体前葉</td>
+<td>成長ホルモン</td>
+<td>成長促進、血糖値を上げる</td>
+</tr>
+<tr>
+<td>脳下垂体前葉</td>
+<td>甲状腺刺激ホルモン（TSH）</td>
+<td>チロキシンの分泌促進</td>
+</tr>
+<tr>
+<td>脳下垂体前葉</td>
+<td>副腎皮質刺激ホルモン（ACTH）</td>
+<td>糖質コルチコイドの分泌促進</td>
+</tr>
+<tr>
+<td>脳下垂体後葉</td>
+<td>バソプレシン</td>
+<td>集合管での水の再吸収促進（尿量減少）、血圧上昇</td>
+</tr>
+<tr>
+<td>甲状腺</td>
+<td>チロキシン</td>
+<td>代謝（化学反応）の促進</td>
+</tr>
+<tr>
+<td>副甲状腺</td>
+<td>パラトルモン</td>
+<td>血液中のCa²⁺濃度を上げる</td>
+</tr>
+<tr>
+<td>副腎髄質</td>
+<td>アドレナリン</td>
+<td>血糖値を上げる（グリコーゲン分解）、心拍数増加</td>
+</tr>
+<tr>
+<td>副腎皮質</td>
+<td>糖質コルチコイド</td>
+<td>血糖値を上げる（タンパク質から糖をつくる）</td>
+</tr>
+<tr>
+<td>副腎皮質</td>
+<td>鉱質コルチコイド</td>
+<td>Na⁺の再吸収とK⁺の排出を促進</td>
+</tr>
+<tr>
+<td>すい臓ランゲルハンス島A細胞</td>
+<td>グルカゴン</td>
+<td>血糖値を上げる（グリコーゲン分解）</td>
+</tr>
+<tr>
+<td>すい臓ランゲルハンス島B細胞</td>
+<td><strong>インスリン</strong></td>
+<td>血糖値を下げる（<strong>唯一の血糖値低下ホルモン</strong>）</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>バソプレシンは<strong>視床下部の神経分泌細胞</strong>でつくられ、軸索を通って脳下垂体後葉から分泌される。</li>
+<li><strong>負のフィードバック</strong>：結果が原因側を抑える調節。例：チロキシンが増えすぎると、視床下部・脳下垂体前葉に作用してTRH・TSHの分泌を抑え、チロキシンが減る。</li>
+</ul>
+<h3>血糖値の調節</h3>
+<p>血糖値（血液中のグルコース濃度）は空腹時に約0.1%（100 mg/100 mL）に保たれます。</p>
+<p>高血糖のとき</p>
+<ol>
+<li>すい臓ランゲルハンス島B細胞が高血糖を直接感知する。視床下部も感知し、<strong>副交感神経</strong>を通じてB細胞を刺激する。</li>
+<li>B細胞から<strong>インスリン</strong>が分泌される。</li>
+<li>細胞へのグルコースの取り込みと呼吸での消費が促進され、肝臓・筋肉でグリコーゲンの合成が促進される → 血糖値が下がる。</li>
+</ol>
+<p>低血糖のとき</p>
+<ol>
+<li>視床下部が低血糖を感知する（A細胞も直接感知する）。</li>
+<li><strong>交感神経</strong> → 副腎髄質から<strong>アドレナリン</strong>、すい臓A細胞から<strong>グルカゴン</strong> → 肝臓のグリコーゲン分解。</li>
+<li>視床下部 → 脳下垂体前葉（副腎皮質刺激ホルモン）→ 副腎皮質から<strong>糖質コルチコイド</strong> → タンパク質から糖をつくる。</li>
+</ol>
+<p>糖尿病</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th></th>
+<th>1型糖尿病</th>
+<th>2型糖尿病</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>原因</td>
+<td>免疫細胞がB細胞を破壊（自己免疫疾患）→ インスリンがほとんど分泌されない</td>
+<td>インスリン分泌量の低下や、標的細胞がインスリンに反応しにくくなる。生活習慣が関係</td>
+</tr>
+<tr>
+<td>食後のインスリン</td>
+<td>ほとんど増えない</td>
+<td>増えるが遅い・少ない、または十分出ても血糖値が下がりにくい</td>
+</tr>
+<tr>
+<td>治療</td>
+<td>インスリン注射</td>
+<td>食事・運動療法、薬など</td>
+</tr>
+</tbody>
+</table></div>
+<h3>体温の調節</h3>
+<p>中枢は視床下部。</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>寒いとき（体温を上げる）</th>
+<th>暑いとき（体温を下げる）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>交感神経 → 皮膚の血管収縮（放熱量減少）、立毛筋収縮</td>
+<td>交感神経 → 汗腺から発汗（気化熱で放熱）</td>
+</tr>
+<tr>
+<td>アドレナリン・チロキシン・糖質コルチコイドの分泌増加 → 肝臓・筋肉で代謝促進（発熱量増加）</td>
+<td>皮膚の血管が拡張（放熱量増加）</td>
+</tr>
+<tr>
+<td>心臓の拍動促進</td>
+<td>代謝を抑える</td>
+</tr>
+<tr>
+<td>骨格筋のふるえ（運動神経による）</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h3>体液の濃度（浸透圧）の調節</h3>
+<ul>
+<li>体液の塩分濃度が上がる（水分不足）→ 視床下部が感知 → 脳下垂体後葉から<strong>バソプレシン</strong>の分泌増加 → 集合管での水の再吸収促進 → 尿量が減り、体液濃度が下がる。のどの渇きも生じる。</li>
+<li>水を大量に飲むと逆にバソプレシンが減り、薄い尿が多量に出る。</li>
+</ul>
+</div></section>
+<section class="unit unit" id="bio-4" data-subj="bio"><header class="unit-head"><div class="tile" aria-hidden="true"><span class="tile-n">4</span><span class="tile-s">生基</span></div><div><p class="kicker">生物基礎 単元4</p><h2>免疫</h2></div></header><div class="unit-body">
+<p>免疫は「物理的・化学的防御 → 自然免疫 → 獲得免疫」の3段構えです。獲得免疫は**樹状細胞 → ヘルパーT細胞 → キラーT細胞（細胞性免疫）／B細胞（体液性免疫）**の流れを図にして書けるようにします。</p>
+<h3>物理的・化学的防御（異物の侵入を防ぐ）</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>防御</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>皮膚</td>
+<td>表面の<strong>角質層</strong>（死んだ細胞の層）がウイルスなどの侵入を防ぐ</td>
+</tr>
+<tr>
+<td>粘膜</td>
+<td>粘液で異物をとらえ、気管の繊毛運動で外へ送り出す</td>
+</tr>
+<tr>
+<td>化学的防御</td>
+<td>涙・だ液・汗の<strong>リゾチーム</strong>（細菌の細胞壁を分解）、<strong>ディフェンシン</strong>（細菌の細胞膜を破壊）、胃液の強い酸性、皮膚表面の弱酸性</td>
+</tr>
+<tr>
+<td>常在菌</td>
+<td>皮膚や腸の常在菌が病原体の増殖を抑える</td>
+</tr>
+</tbody>
+</table></div>
+<h3>自然免疫（生まれつき備わる、すばやく非特異的）</h3>
+<ul>
+<li><strong>食作用</strong>：好中球、マクロファージ、樹状細胞が異物を取り込んで分解する。</li>
+<li>食細胞は病原体に共通する特徴をトル様受容体（TLR）などで認識する。</li>
+<li><strong>NK細胞（ナチュラルキラー細胞）</strong>：ウイルス感染細胞やがん細胞を直接攻撃する。</li>
+<li><strong>炎症</strong>：マクロファージなどが出す物質で毛細血管が拡張し、食細胞が感染部位に集まる。発熱・発赤・はれ・痛みが生じる。</li>
+</ul>
+<h3>獲得免疫（適応免疫：特定の抗原に特異的、記憶をもつ）</h3>
+<p>リンパ球（T細胞・B細胞）がはたらきます。T細胞は骨髄でつくられ<strong>胸腺</strong>で成熟、B細胞は<strong>骨髄</strong>でつくられ骨髄で成熟します。</p>
+<ol>
+<li><strong>樹状細胞</strong>が抗原を取り込み、リンパ節へ移動して断片を細胞表面に示す（<strong>抗原提示</strong>）。</li>
+<li>その抗原に合う受容体をもつ<strong>ヘルパーT細胞</strong>が活性化し、増殖する。</li>
+<li>細胞性免疫：ヘルパーT細胞の助けで<strong>キラーT細胞</strong>が活性化・増殖し、感染細胞を直接攻撃して破壊する。ヘルパーT細胞はマクロファージも活性化し食作用を高める。</li>
+<li>体液性免疫：抗原を取り込んで提示した<strong>B細胞</strong>をヘルパーT細胞が活性化 → B細胞が増殖・分化して**形質細胞（抗体産生細胞）**になり、<strong>抗体</strong>を血液中に放出する。</li>
+<li>抗体が抗原に特異的に結合（<strong>抗原抗体反応</strong>）→ 抗原の毒性を弱め、食細胞に取り込まれやすくなる。</li>
+<li>増殖したT細胞・B細胞の一部は<strong>記憶細胞</strong>として長く残る。</li>
+</ol>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th></th>
+<th>細胞性免疫</th>
+<th>体液性免疫</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主役</td>
+<td>キラーT細胞</td>
+<td>B細胞 → 形質細胞 → 抗体</td>
+</tr>
+<tr>
+<td>攻撃の方法</td>
+<td>感染細胞を直接攻撃</td>
+<td>抗体が抗原に結合して無毒化</td>
+</tr>
+<tr>
+<td>主な対象</td>
+<td>ウイルス感染細胞、がん細胞、移植された他人の組織</td>
+<td>細菌、毒素、体液中のウイルス</td>
+</tr>
+<tr>
+<td>関連する現象</td>
+<td>移植の<strong>拒絶反応</strong>、ツベルクリン反応</td>
+<td>血清療法、アレルギー</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>抗体は<strong>免疫グロブリン</strong>というタンパク質。Y字形で、先端の<strong>可変部</strong>の構造が抗体ごとに異なり、特定の抗原と結合する。</li>
+<li>多様なリンパ球の中から、自分自身の成分に反応するものは成熟の過程で除かれたり、はたらきが抑えられたりする（<strong>免疫寛容</strong>）。</li>
+</ul>
+<h3>免疫記憶と二次応答</h3>
+<ul>
+<li>1回目の侵入（<strong>一次応答</strong>）：抗体ができるまで1週間程度かかり、量も少ない。</li>
+<li>2回目の同じ抗原の侵入（<strong>二次応答</strong>）：記憶細胞がすぐに増殖し、<strong>短時間で大量の</strong>抗体がつくられる。</li>
+<li class="has-trap"><strong class="trap">ひっかけ注意</strong>：別の抗原が初めて侵入した場合は、2回目の注射でも一次応答になる。グラフ問題では「どの抗原の2回目か」を必ず確認。</li>
+</ul>
+<h3>免疫と医療・疾患</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>項目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>予防接種（ワクチン）</td>
+<td>弱毒化・無毒化した病原体や毒素、mRNAなどを接種し、記憶細胞をつくらせて発病を防ぐ。ジェンナーの天然痘ワクチン（種痘）が始まり</td>
+</tr>
+<tr>
+<td>血清療法</td>
+<td>他の動物（ウマなど）につくらせた<strong>抗体を含む血清</strong>を注射して治療。ヘビ毒・破傷風（北里柴三郎）</td>
+</tr>
+<tr>
+<td>アレルギー</td>
+<td>無害な物質（花粉など：アレルゲン）に対して過敏な免疫反応。全身に急激に起こる重い症状を<strong>アナフィラキシーショック</strong>という</td>
+</tr>
+<tr>
+<td>自己免疫疾患</td>
+<td>自分の成分を抗原とみなして攻撃。関節リウマチ、1型糖尿病、重症筋無力症、バセドウ病</td>
+</tr>
+<tr>
+<td>免疫不全</td>
+<td><strong>HIV</strong>が<strong>ヘルパーT細胞</strong>に感染して破壊 → 獲得免疫がはたらかなくなる（<strong>エイズ</strong> AIDS）。健康なら発病しない病原体で発病する（日和見感染）</td>
+</tr>
+<tr>
+<td>拒絶反応</td>
+<td>他人の臓器を移植すると、キラーT細胞が移植片を攻撃。免疫抑制剤で抑える</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>ツベルクリン反応：結核菌の成分を皮内に注射し、細胞性免疫による炎症（赤くはれる）が起こるかで、結核菌に対する免疫記憶があるかを調べる。</li>
+</ul>
+</div></section>
+<section class="unit unit" id="bio-5" data-subj="bio"><header class="unit-head"><div class="tile" aria-hidden="true"><span class="tile-n">5</span><span class="tile-s">生基</span></div><div><p class="kicker">生物基礎 単元5</p><h2>植生と遷移</h2></div></header><div class="unit-body">
+<p>遷移の原動力は「土壌の形成」と「林床の光が弱くなること」の2つです。陽樹と陰樹の光合成曲線の違いから、なぜ陰樹林が極相になるのかを説明できれば、この単元の考察問題は解けます。</p>
+<h3>植生と森林の構造</h3>
+<ul>
+<li><strong>植生</strong>：ある地域に生育する植物の集まり。外観（<strong>相観</strong>）は、最も多く地表をおおう<strong>優占種</strong>で決まる。</li>
+<li>植生は<strong>森林</strong>・<strong>草原</strong>・<strong>荒原</strong>に大別される。</li>
+<li>発達した森林の<strong>階層構造</strong>：高木層 → 亜高木層 → 低木層 → 草本層 → 地表層（コケ植物など）。林冠（最上部）で光の多くが吸収され、林床の明るさは林冠の数%程度になる。</li>
+<li>土壌の層：落葉・落枝の層 → <strong>腐植層</strong>（落葉が分解された有機物を多く含み、団粒構造で保水性・通気性がよい）→ 岩石が風化した層 → 母岩。</li>
+</ul>
+<h3>光合成曲線</h3>
+<ul>
+<li><strong>見かけの光合成速度</strong> = 光合成速度 − 呼吸速度（測定できるのはCO₂吸収速度＝見かけの光合成速度）。</li>
+<li>光の強さ0のとき、CO₂放出速度 = <strong>呼吸速度</strong>。</li>
+<li><strong>光補償点</strong>：光合成速度と呼吸速度が等しくなり、見かけの光合成速度が0になる光の強さ。これより弱い光では生育できない。</li>
+<li><strong>光飽和点</strong>：それ以上光を強くしても光合成速度が増えなくなる光の強さ。</li>
+</ul>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th></th>
+<th>陽生植物（陽樹）</th>
+<th>陰生植物（陰樹の幼木を含む）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>呼吸速度</td>
+<td>大きい</td>
+<td>小さい</td>
+</tr>
+<tr>
+<td>光補償点</td>
+<td>高い</td>
+<td><strong>低い</strong>（弱い光でも生育できる）</td>
+</tr>
+<tr>
+<td>光飽和点</td>
+<td>高い</td>
+<td>低い</td>
+</tr>
+<tr>
+<td>強い光での光合成速度</td>
+<td>大きい（速く成長）</td>
+<td>小さい</td>
+</tr>
+<tr>
+<td>例</td>
+<td>ススキ、アカマツ、クロマツ、コナラ、シラカンバ</td>
+<td>アオキ、ベニシダ、スダジイ、タブノキ、ブナの幼木</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>同じ個体でも、日なたの葉（陽葉：厚く小さい）と日かげの葉（陰葉：薄く広い）で同様の違いが見られる。</li>
+</ul>
+<h3>遷移</h3>
+<ul>
+<li><strong>一次遷移</strong>：土壌がない場所（溶岩台地、新しい島）から始まる。長い時間（数百年以上）がかかる。</li>
+<li><strong>二次遷移</strong>：山火事跡・伐採跡・耕作放棄地など、<strong>土壌や種子・地下茎が残っている</strong>場所から始まる。一次遷移より速い。</li>
+</ul>
+<p>乾性遷移の典型的な流れ</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>段階</th>
+<th>主な植物</th>
+<th>環境の変化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>裸地</td>
+<td>—</td>
+<td>土壌なし、乾燥、栄養分乏しい</td>
+</tr>
+<tr>
+<td>荒原</td>
+<td>地衣類・コケ植物、ススキ・イタドリなどの<strong>先駆植物</strong></td>
+<td>岩石の風化と植物の遺体で土壌の形成が始まる</td>
+</tr>
+<tr>
+<td>草原</td>
+<td>ススキ、チガヤ</td>
+<td>土壌が厚くなり保水力が増す</td>
+</tr>
+<tr>
+<td>低木林</td>
+<td>ヤシャブシ、ヌルデ、アカメガシワ</td>
+<td></td>
+</tr>
+<tr>
+<td>陽樹林</td>
+<td>アカマツ、コナラ</td>
+<td>林床が暗くなり、<strong>陽樹の幼木が育たなくなる</strong>。耐陰性のある陰樹の幼木は育つ</td>
+</tr>
+<tr>
+<td>混交林</td>
+<td>陽樹と陰樹</td>
+<td>陰樹が成長して陽樹に置き換わる</td>
+</tr>
+<tr>
+<td>陰樹林（<strong>極相林</strong>）</td>
+<td>スダジイ、タブノキ、アラカシ（暖温帯）</td>
+<td>陰樹の幼木は林床でも育つので、陰樹林が維持される</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>**先駆種（パイオニア種）**の特徴：種子が小さく軽い（風で遠くへ運ばれる）、乾燥や貧栄養に強い、成長が速い。ヤシャブシやハンノキは窒素固定を行う細菌と共生する。</li>
+<li><strong>極相種</strong>の特徴：種子が大きく重い（栄養分が多く、暗い林床でも芽生えが育つ）、耐陰性が高い。</li>
+<li><strong>ギャップ更新</strong>：極相林で高木が倒れて林冠に穴（<strong>ギャップ</strong>）ができると、林床に光が届き、大きなギャップでは陽樹も生育できる。これにより極相林内にもモザイク状に陽樹が混じり、種の多様性が保たれる。</li>
+<li>湿性遷移：湖沼に土砂や植物の遺体が堆積 → 湿原 → 草原 → 森林へと進む。</li>
+<li>伊豆大島・三宅島・桜島などでは、溶岩の流出年代が異なる場所を比べることで、遷移の過程を推定できる（土壌が厚い場所ほど遷移が進んでいる）。</li>
+</ul>
+<h3>バイオーム</h3>
+<p>バイオーム（生物群系）は、その地域の植生とそこにすむ生物の集まりで、主に<strong>年平均気温と年降水量</strong>で決まります。</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>区分</th>
+<th>バイオーム</th>
+<th>気候</th>
+<th>主な植物</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>森林</td>
+<td>熱帯多雨林</td>
+<td>熱帯・多雨</td>
+<td>常緑広葉樹（フタバガキ）、つる植物・着生植物が多い、階層構造が発達</td>
+</tr>
+<tr>
+<td>森林</td>
+<td>亜熱帯多雨林</td>
+<td>亜熱帯・多雨</td>
+<td>ヘゴ（木生シダ）、ガジュマル、アコウ、河口にマングローブ（ヒルギ類）</td>
+</tr>
+<tr>
+<td>森林</td>
+<td>雨緑樹林</td>
+<td>熱帯・亜熱帯で雨季と乾季</td>
+<td>乾季に落葉するチーク</td>
+</tr>
+<tr>
+<td>森林</td>
+<td>照葉樹林</td>
+<td>暖温帯</td>
+<td>スダジイ、アラカシ、タブノキ、クスノキ、ヤブツバキ（葉が厚く光沢＝クチクラ層が発達）</td>
+</tr>
+<tr>
+<td>森林</td>
+<td>硬葉樹林</td>
+<td>夏に乾燥し冬に雨が多い温帯（地中海性気候）</td>
+<td>オリーブ、コルクガシ、ユーカリ（葉が硬く小さい）</td>
+</tr>
+<tr>
+<td>森林</td>
+<td>夏緑樹林</td>
+<td>冷温帯</td>
+<td>ブナ、ミズナラ、カエデ類（冬に落葉）</td>
+</tr>
+<tr>
+<td>森林</td>
+<td>針葉樹林</td>
+<td>亜寒帯</td>
+<td>シラビソ、コメツガ、エゾマツ、トドマツ</td>
+</tr>
+<tr>
+<td>草原</td>
+<td>サバンナ</td>
+<td>熱帯・少雨</td>
+<td>イネ科草本に低木（アカシアなど）が点在</td>
+</tr>
+<tr>
+<td>草原</td>
+<td>ステップ</td>
+<td>温帯・少雨</td>
+<td>イネ科草本（樹木はほとんどない）</td>
+</tr>
+<tr>
+<td>荒原</td>
+<td>砂漠</td>
+<td>極端な少雨</td>
+<td>サボテン、トウダイグサ（多肉植物）</td>
+</tr>
+<tr>
+<td>荒原</td>
+<td>ツンドラ</td>
+<td>寒帯</td>
+<td>地衣類・コケ植物（地下に永久凍土）</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>年降水量が多いと森林、少なくなるにつれて草原 → 荒原。同じ降水量でも気温で種類が変わる。</li>
+</ul>
+<p>日本のバイオーム</p>
+<ul>
+<li>日本は降水量が十分なので、極相はどこでも<strong>森林</strong>。分布は気温で決まる。</li>
+<li><strong>水平分布</strong>（緯度による）：沖縄・奄美 → 亜熱帯多雨林、九州〜関東の低地 → 照葉樹林、東北〜北海道南西部 → 夏緑樹林、北海道東北部 → 針葉樹林。</li>
+<li><strong>垂直分布</strong>（標高による、本州中部）：丘陵帯（〜約700 m）照葉樹林、山地帯（〜約1700 m）夏緑樹林、亜高山帯（〜約2500 m）針葉樹林、高山帯（<strong>森林限界</strong>より上）ハイマツの低木林、高山草原（お花畑：コマクサなど）。</li>
+<li>気温は標高が100 m上がるごとに約0.5〜0.6℃下がる。</li>
+<li><strong>暖かさの指数（WI）</strong>：月平均気温が5℃以上の月について「月平均気温 − 5」を合計した値。15〜45：針葉樹林、45〜85：夏緑樹林、85〜180：照葉樹林、180〜240：亜熱帯多雨林、240以上：熱帯多雨林。</li>
+</ul>
+</div></section>
+<section class="unit unit" id="bio-6" data-subj="bio"><header class="unit-head"><div class="tile" aria-hidden="true"><span class="tile-n">6</span><span class="tile-s">生基</span></div><div><p class="kicker">生物基礎 単元6</p><h2>生態系とその保全</h2></div></header><div class="unit-body">
+<p>生態系の問題は、食物網の中で「ある生物が減ると、直接食べる・食べられる関係にない生物にどう影響するか（間接効果）」を矢印でたどれるかが勝負です。人間活動の影響は用語と具体例をセットで覚えます。</p>
+<h3>生態系の構成</h3>
+<ul>
+<li><strong>生態系</strong> = 生物（生物群集）＋ 非生物的環境（光・温度・水・大気・土壌など）。</li>
+<li><strong>作用</strong>：非生物的環境が生物に影響を与えること（例：光が植物の成長に影響）。<strong>環境形成作用</strong>：生物が非生物的環境に影響を与えること（例：森林ができて林床が暗くなる、落葉で土壌ができる）。</li>
+<li><strong>生産者</strong>：光合成などで無機物から有機物をつくる（植物、藻類、シアノバクテリア）。</li>
+<li><strong>消費者</strong>：生産者がつくった有機物を直接・間接に取り入れる。一次消費者（植物食性動物）、二次消費者（動物食性動物）…。</li>
+<li><strong>分解者</strong>：遺体や排出物の有機物を無機物に分解する消費者（菌類・細菌）。</li>
+</ul>
+<h3>食物連鎖・食物網・生態ピラミッド</h3>
+<ul>
+<li>食べる・食べられるの直線的なつながり＝<strong>食物連鎖</strong>。実際には複雑な網目状＝<strong>食物網</strong>。</li>
+<li>食物連鎖の各段階＝<strong>栄養段階</strong>。</li>
+<li>栄養段階ごとの個体数や生物量（現存量）を積み上げた図＝<strong>生態ピラミッド</strong>。一般に上位ほど小さい。</li>
+<li class="has-trap"><strong class="trap">ひっかけ注意</strong>：個体数ピラミッドは逆転することがある（1本の樹木に多数の昆虫）。</li>
+</ul>
+<h3>種の多様性と生態系のバランス</h3>
+<ul>
+<li><strong>間接効果</strong>：ある生物が、直接関係しない生物に食物網を通じて影響を及ぼすこと。</li>
+<li><strong>キーストーン種</strong>：食物網の上位にあって、個体数は少なくても生態系のバランスに大きな影響をもつ種。<ul>
+<li>ペインの実験（岩礁海岸）：ヒトデを除去すると、ヒトデに食べられていたイガイ（ムラサキイガイ）が増えて岩場を独占し、フジツボ・カメノテ・藻類などが減って<strong>種数が減少</strong>した。</li>
+<li>ラッコ：ラッコが減少 → ウニが増加 → ケルプ（大型の海藻）が食べ尽くされる → ケルプの森にすむ魚などが減少。</li>
+</ul>
+</li>
+<li><strong>かく乱</strong>：台風・山火事・洪水・伐採など、生態系を変化させる外部からの作用。</li>
+<li>生態系は小さなかく乱を受けても元に戻る力（<strong>復元力</strong>）をもつが、大きなかく乱では元に戻らないことがある。</li>
+<li>中程度のかく乱が起こる場所では、多くの種が共存して種の多様性が高くなることがある（中規模かく乱説）。</li>
+<li>生物多様性の3つのレベル：<strong>遺伝的多様性</strong>（同種内の遺伝子の違い）、<strong>種多様性</strong>、<strong>生態系多様性</strong>。</li>
+</ul>
+<h3>物質の循環（概要）</h3>
+<ul>
+<li>炭素：大気中のCO₂ → 光合成で有機物 → 食物連鎖 → 呼吸・分解でCO₂に戻る。化石燃料の燃焼で大気中のCO₂が増加。</li>
+<li>窒素：根粒菌（マメ科植物と共生）、アゾトバクター、一部のシアノバクテリアなどが大気中のN₂をアンモニウムイオンに変える（窒素固定）。植物は土壌中のアンモニウムイオンや硝酸イオンを吸収してタンパク質などをつくる。</li>
+<li>エネルギーは生態系内を循環せず、最終的に熱として出ていく（物質は循環、エネルギーは流れる）。</li>
+</ul>
+<h3>人間活動と生態系</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>問題</th>
+<th>原因・しくみ</th>
+<th>影響・対策</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>地球温暖化</td>
+<td>化石燃料の燃焼、森林破壊によるCO₂の増加。メタンなどの温室効果ガス</td>
+<td>海水面上昇、生物の分布の変化、サンゴの白化</td>
+</tr>
+<tr>
+<td>水質汚濁と<strong>富栄養化</strong></td>
+<td>生活排水などで窒素・リンが流入</td>
+<td>植物プランクトンが異常増殖 → 海で<strong>赤潮</strong>、湖沼で<strong>アオコ（水の華）</strong>。分解でO₂が消費され魚が大量死</td>
+</tr>
+<tr>
+<td><strong>自然浄化</strong></td>
+<td>少量の有機物は、希釈や微生物の分解で取り除かれる</td>
+<td>浄化能力を超えると汚濁が進む</td>
+</tr>
+<tr>
+<td><strong>生物濃縮</strong></td>
+<td>分解・排出されにくい物質（DDT、PCB、有機水銀）が食物連鎖を通じて<strong>上位の栄養段階ほど高濃度</strong>に蓄積</td>
+<td>水俣病（メチル水銀）、猛禽類の繁殖低下</td>
+</tr>
+<tr>
+<td><strong>外来生物</strong></td>
+<td>人間によって本来の生息地以外に持ち込まれた生物</td>
+<td>在来種の捕食・競争・交雑。特定外来生物（オオクチバス、ブルーギル、マングース、アライグマ、オオキンケイギクなど）は外来生物法で飼育・運搬・放出などを規制</td>
+</tr>
+<tr>
+<td>生息地の分断・破壊</td>
+<td>道路・開発、森林伐採、熱帯林の減少</td>
+<td>個体群が小さくなり絶滅しやすくなる。生態系をつなぐ通路（コリドー）の設置</td>
+</tr>
+<tr>
+<td>里山の荒廃</td>
+<td>人が手を入れなくなる</td>
+<td>雑木林・水田・ため池などの適度なかく乱で維持されていた生物多様性が低下</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>絶滅危惧種</strong>はレッドリストにまとめられ、レッドデータブックに掲載される。</li>
+<li><strong>環境アセスメント</strong>（環境影響評価）：開発の前に環境への影響を調査・予測・評価する。</li>
+<li><strong>生態系サービス</strong>：人間が生態系から受ける恵み。供給サービス（食料・水・木材）、調整サービス（気候の調節、水質浄化）、文化的サービス（レクリエーション）、基盤サービス（光合成による酸素供給、土壌形成）。</li>
+</ul>
+</div></section>
+<section class="unit drill" id="bio-drill" data-subj="bio"><header class="unit-head"><div class="tile" aria-hidden="true"><span class="tile-n">計</span><span class="tile-s">生基</span></div><div><p class="kicker">生物基礎 計算</p><h2>計算問題ドリル</h2></div></header><div class="unit-body">
+<p>生物基礎の計算は「比をとる」「割合を出す」がほとんどです。式の立て方を型として覚えれば確実に取れる18問を並べました。</p>
+<h3>A 細胞と顕微鏡</h3>
+<article class="q"><p><span class="qno">問1</span> 対物ミクロメーター（1目盛り10 µm）の10目盛りと接眼ミクロメーターの25目盛りが一致した。(1) 接眼ミクロメーター1目盛りの長さ、(2) 接眼ミクロメーター15目盛り分の細胞の長さ、(3) 対物レンズを10倍から40倍に変えたときの接眼ミクロメーター1目盛りの長さを求めよ。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>(1) 4 µm　(2) 60 µm　(3) 1 µm</p><p>(1) 10 × 10 µm ÷ 25 = 4 µm。(2) 15 × 4 = 60 µm。(3) 倍率が4倍になると、1目盛りが示す実際の長さは1/4。</p><p>接眼ミクロメーターは接眼レンズに入れるので目盛りの見かけの大きさは変わらず、対物ミクロメーターは試料と一緒に拡大される。</p></div></details></article>
+<article class="q"><p><span class="qno">問2</span> 問1(1)の条件で、オオカナダモの葉緑体が原形質流動によって接眼ミクロメーター20目盛り分を10秒で移動した。移動速度を求めよ。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>8 µm/秒</p><p>20 × 4 µm = 80 µm を10秒 → 8 µm/秒。</p></div></details></article>
+<h3>B DNAと遺伝情報</h3>
+<article class="q"><p><span class="qno">問3</span> ある二本鎖DNAの塩基のうちAが30%であった。T、G、Cの割合を求めよ。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>T 30%、G 20%、C 20%</p><p>A = T = 30%。G + C = 40%、G = C = 20%。</p></div></details></article>
+<article class="q"><p><span class="qno">問4</span> ある二本鎖DNAのGとCの合計は全塩基の40%である。一方の鎖（鎖Ⅰ）ではAが28%、Gが15%であった。(1) 鎖ⅠのTとCの割合、(2) もう一方の鎖（鎖Ⅱ）のGの割合を求めよ。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>(1) T 32%、C 25%　(2) 25%</p><p>二本鎖の G + C が40%なら、それぞれの鎖でも G + C = 40%、A + T = 60%。鎖Ⅰ：T = 60 − 28 = 32%、C = 40 − 15 = 25%。</p><p>鎖Ⅱは鎖Ⅰと相補的なので、鎖ⅡのG = 鎖ⅠのC = 25%。</p><p>（二本鎖全体での割合と、片方の鎖での割合を混同しないことが最大のポイント）</p></div></details></article>
+<article class="q"><p><span class="qno">問5</span> ヒトの体細胞1個に含まれるDNA（約60億塩基対）をすべてつなげた長さを求めよ。10塩基対の長さを3.4 nmとする。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>約2 m</p><p>6.0 × 10⁹ ÷ 10 × 3.4 nm = 2.04 × 10⁹ nm = 2.04 m。</p><p>ゲノム1セット（約30億塩基対）なら約1 m。</p></div></details></article>
+<article class="q"><p><span class="qno">問6</span> 300個のアミノ酸からなるタンパク質の情報をもつmRNAの、翻訳される部分の塩基数を求めよ（終止コドンを含めない）。また、これに対応するDNAの領域は何塩基対か。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>900塩基、900塩基対</p><p>1アミノ酸 = 1コドン = 3塩基。DNAの一方の鎖が鋳型となるので、塩基対の数はmRNAの塩基数と同じ。</p><p>終止コドンを含めると903塩基。</p></div></details></article>
+<article class="q"><p><span class="qno">問7</span> ヒトゲノムは約30億塩基対で、遺伝子は約2万個である。1遺伝子あたり平均500個のアミノ酸を指定するとき、タンパク質のアミノ酸配列を指定する部分はゲノム全体の約何%か。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>約1%</p><p>2.0 × 10⁴ × 500 × 3 = 3.0 × 10⁷ 塩基対。3.0 × 10⁷ ÷ 3.0 × 10⁹ × 100 = 1.0%。</p></div></details></article>
+<article class="q"><p><span class="qno">問8</span> 塩基の並びでアミノ酸を指定するとき、2塩基の組合せでは20種類のアミノ酸を指定できない理由を、数で説明せよ。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>2塩基では 4² = 16 通りしかなく20種類に足りない。3塩基なら 4³ = 64 通りで足りる。</p></div></details></article>
+<h3>C 細胞周期</h3>
+<article class="q"><p><span class="qno">問9</span> 細胞周期が20時間の細胞集団から1000個を観察すると、間期900個、前期50個、中期20個、後期10個、終期20個だった。(1) 分裂期、(2) 中期の長さを求めよ。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>(1) 2時間　(2) 0.4時間（24分）</p><p>各時期の細胞数の割合は、その時期にかかる時間の割合に等しい（細胞が細胞周期のどの時期にもばらばらに分布している場合）。</p><p>分裂期 100/1000 × 20 = 2時間。中期 20/1000 × 20 = 0.4時間。</p></div></details></article>
+<article class="q"><p><span class="qno">問10</span> 培養細胞の数が60時間で1.0 × 10⁴個から8.0 × 10⁴個に増えた。細胞周期の長さを求めよ。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>20時間</p><p>8倍 = 2³ → 3回分裂。60 ÷ 3 = 20時間。</p></div></details></article>
+<article class="q"><p><span class="qno">問11</span> 細胞周期が20時間の細胞集団について、細胞1個あたりのDNA量（G₁期の細胞を2とする）を測定すると、DNA量2の細胞が600個、2より大きく4より小さい細胞が200個、4の細胞が200個だった。分裂期を1時間とするとき、G₁期・S期・G₂期の長さを求めよ。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>G₁期 12時間、S期 4時間、G₂期 3時間</p><p>DNA量2 = G₁期：600/1000 × 20 = 12時間。2〜4 = S期：4時間。4 = G₂期＋分裂期：4時間 → G₂期 = 4 − 1 = 3時間。</p><p>分裂期の終期で細胞質分裂が終わるまでDNA量は4のまま。</p></div></details></article>
+<article class="q"><p><span class="qno">問12</span> ¹⁵Nだけを含む培地で育てた大腸菌を¹⁴Nだけを含む培地に移して3回分裂させた。DNAを密度で分けたとき、重いDNA（¹⁵N/¹⁵N）・中間のDNA（¹⁵N/¹⁴N）・軽いDNA（¹⁴N/¹⁴N）の比を求めよ。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>重 : 中間 : 軽 = 0 : 1 : 3</p><p>分裂のたびにDNA分子数は2倍。もとの¹⁵N鎖2本は消えず、必ず別々の分子に1本ずつ残る → 中間は常に2分子。3回分裂で計8分子 → 中間2、軽い6。</p><p>n回分裂後は 中間 : 軽 = 2 : (2ⁿ − 2)。</p></div></details></article>
+<h3>D 体内環境</h3>
+<article class="q"><p><span class="qno">問13</span> 次の表は、ある人の血しょう・尿中の濃度［mg/mL］である。尿は毎分1.0 mL生成される。イヌリンは、ろ過されるが再吸収も分泌もされない。</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>物質</th>
+<th>血しょう</th>
+<th>尿</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>イヌリン</td>
+<td>0.10</td>
+<td>12</td>
+</tr>
+<tr>
+<td>尿素</td>
+<td>0.30</td>
+<td>20</td>
+</tr>
+<tr>
+<td>グルコース</td>
+<td>1.0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table></div>
+<p>(1) 毎分の原尿量、(2) 1日の原尿量、(3) 水の再吸収率、(4) 尿素の濃縮率と再吸収率を求めよ。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>(1) 120 mL　(2) 約173 L　(3) 約99%　(4) 濃縮率 約67、再吸収率 約44%</p><p>(1) イヌリンの濃縮率 = 12 ÷ 0.10 = 120 → 原尿量 = 尿量 × 120 = 120 mL/分。</p><p>(2) 120 mL × 60 × 24 = 172800 mL。</p><p>(3) (120 − 1.0) ÷ 120 × 100 ≒ 99.2%。</p><p>(4) 濃縮率 20 ÷ 0.30 ≒ 67。原尿中の尿素 = 120 mL × 0.30 = 36 mg、尿中 = 1.0 mL × 20 = 20 mg → 再吸収 16 mg → 16 ÷ 36 × 100 ≒ 44%。</p><p>グルコースは原尿にろ過されるが、尿中は0なので100%再吸収されている。</p></div></details></article>
+<article class="q"><p><span class="qno">問14</span> 肺胞では全ヘモグロビンの96%が、ある組織では36%が酸素ヘモグロビンであった。(1) 肺胞で酸素と結合していたヘモグロビンのうち、組織で酸素を放したものの割合を求めよ。(2) 血液100 mLにヘモグロビンが15 g含まれ、1 gのヘモグロビンは最大1.34 mLの酸素と結合する。この組織で血液100 mLあたり放出される酸素の量を求めよ。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>(1) 62.5%　(2) 約12 mL</p><p>(1) (96 − 36) ÷ 96 × 100 = 62.5%。分母は「100%」ではなく「肺胞での96%」。</p><p>(2) 最大結合量 15 × 1.34 = 20.1 mL。放出量は全ヘモグロビンの60%分 → 20.1 × 0.60 ≒ 12.1 mL。</p></div></details></article>
+<article class="q"><p><span class="qno">問15</span> 心臓の1回の拍出量が70 mL、心拍数が毎分70回のとき、毎分の拍出量を求めよ。全血液量を5.0 Lとすると、血液が全身を一巡するのにかかる時間は約何分か。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>4.9 L/分、約1分</p><p>70 × 70 = 4900 mL。5.0 ÷ 4.9 ≒ 1.0分。</p></div></details></article>
+<h3>E 植生・生態系</h3>
+<article class="q"><p><span class="qno">問16</span> ある植物の葉の、光の強さXでの見かけの光合成速度は10、暗黒での呼吸速度は4（単位：mg CO₂/100 cm²・時間）である。(1) 光の強さXでの光合成速度を求めよ。(2) 光の強さXで12時間、暗黒で12時間おいたとき、葉100 cm²あたりのCO₂の吸収量（差し引き）を求めよ。(3) 光補償点の光の強さで12時間、暗黒で12時間おくと、植物の有機物量は増えるか減るか。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>(1) 14　(2) 72 mg　(3) 減る</p><p>(1) 光合成速度 = 見かけの光合成速度 + 呼吸速度 = 10 + 4。</p><p>(2) 10 × 12 − 4 × 12 = 72 mg。</p><p>(3) 光補償点では見かけの光合成速度が0なので、明期は増減なし、暗期に呼吸で 4 × 12 = 48 mg分減る。</p></div></details></article>
+<article class="q"><p><span class="qno">問17</span> ある地点の月平均気温［℃］は、1月から順に 2、3、6、12、17、21、25、26、22、16、10、5 である。暖かさの指数を求め、この地点の極相となるバイオームを答えよ。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>110、照葉樹林</p><p>5℃以上の月（3〜12月）について (t − 5) を合計：1 + 7 + 12 + 16 + 20 + 21 + 17 + 11 + 5 + 0 = 110。85〜180なので照葉樹林。1・2月は5℃未満なので計算に入れない。</p></div></details></article>
+<article class="q"><p><span class="qno">問18</span> 海水中のDDTの濃度は0.00005 ppm、その海域の魚食性の鳥の体内では25 ppmであった。濃縮率を求めよ。また、標高0 mで年平均気温16℃の地域の、標高1500 m地点の年平均気温を求めよ（100 mにつき0.6℃低下）。</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>5.0 × 10⁵ 倍、7℃</p><p>25 ÷ 0.00005 = 500000。16 − 0.6 × 15 = 7℃（この気温は夏緑樹林〜針葉樹林の境界付近）。</p></div></details></article>
+</div></section>
+<section class="unit exam" id="bio-exam" data-subj="bio"><header class="unit-head"><div class="tile" aria-hidden="true"><span class="tile-n">演</span><span class="tile-s">生基</span></div><div><p class="kicker">生物基礎 演習</p><h2>共通テスト形式演習</h2></div></header><div class="unit-body">
+<p>生物基礎の共通テストは、対照実験の読み取り・グラフや表の比較・仮説の検証が中心です。オリジナル問題8題、目標時間は全体で25分。「何と何を比べると、何がわかるか」を毎回言葉にしてから選択肢を見てください。</p>
+<article class="q exam-q"><h3><span class="qno">問1</span>酵素の性質（対照実験）</h3>
+<p>3%過酸化水素水5 mLを入れた試験管A〜Eに、次のものを加えて気泡の発生を調べた。</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>試験管</th>
+<th>加えたもの</th>
+<th>結果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>ニワトリの肝臓片</td>
+<td>気泡が多く発生</td>
+</tr>
+<tr>
+<td>B</td>
+<td>煮沸した肝臓片</td>
+<td>発生しない</td>
+</tr>
+<tr>
+<td>C</td>
+<td>酸化マンガン(IV)</td>
+<td>気泡が多く発生</td>
+</tr>
+<tr>
+<td>D</td>
+<td>煮沸した酸化マンガン(IV)</td>
+<td>気泡が多く発生</td>
+</tr>
+<tr>
+<td>E</td>
+<td>石英砂</td>
+<td>発生しない</td>
+</tr>
+</tbody>
+</table></div>
+<p>さらに、気泡が出なくなったAに過酸化水素水を追加すると再び気泡が発生したが、肝臓片を追加しても発生しなかった。</p>
+<p>考察として<strong>適当なものを二つ</strong>選べ。</p>
+<ol>
+<li>Bで気泡が出なかったのは、煮沸によって肝臓片に含まれていた過酸化水素が失われたためである。</li>
+<li>AとBを比べると、肝臓に含まれる反応を促進する物質は、熱によってはたらきを失うことがわかる。</li>
+<li>CとDを比べると、酸化マンガン(IV)も高温ではたらきを失うことがわかる。</li>
+<li>Eは、A・Cで気泡が出たのが固体を加えた物理的な刺激によるものではないことを確かめるための実験である。</li>
+<li>Aで気泡が出なくなったのは、肝臓に含まれる酵素がはたらきを失ったためである。</li>
+</ol>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>②、④</p><p>① 過酸化水素は試験管の中の溶液に入っている。肝臓側の物質が失活したと考える。</p><p>③ Dでも気泡が出ているので、無機触媒は熱で失活しない。</p><p>⑤ 基質（H₂O₂）を追加すると再び反応したので、止まったのは基質がなくなったため。酵素は反応後も変化せずに残っている。</p></div></details>
+</article><article class="q exam-q"><h3><span class="qno">問2</span>細胞周期と薬剤（データ比較）</h3>
+<p>培養細胞に薬剤Xを24時間作用させ、細胞1個あたりのDNA量（G₁期の細胞を2とする）ごとの細胞の割合を調べた。</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>DNA量</th>
+<th>2</th>
+<th>2より大きく4より小さい</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>薬剤なし</td>
+<td>60%</td>
+<td>20%</td>
+<td>20%</td>
+</tr>
+<tr>
+<td>薬剤X</td>
+<td>10%</td>
+<td>5%</td>
+<td>85%</td>
+</tr>
+</tbody>
+</table></div>
+<p>また薬剤Xを作用させた細胞を顕微鏡で観察すると、染色体が凝縮して散らばったまま、両極へ移動していない細胞が多数見られた。薬剤Xのはたらきとして最も適当なものを選べ。</p>
+<ol>
+<li>DNAの複製を阻害する。</li>
+<li>細胞をG₁期で停止させる。</li>
+<li>分裂期の途中で、染色体が両極へ分かれる過程を阻害する。</li>
+<li>DNAを分解する。</li>
+</ol>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>③</p><p>DNA量4の細胞が増えた → 複製は完了しているので①・④は誤り。G₁期（DNA量2）で止まるならDNA量2の細胞が増えるはずなので②も誤り。</p><p>染色体が凝縮しているのに両極へ移動していない → 分裂期で止まっている。DNA量4にはG₂期と分裂期の両方が含まれるので、表だけでは区別できず、観察結果と合わせて判断する。</p></div></details>
+</article><article class="q exam-q"><h3><span class="qno">問3</span>遺伝情報の発現（資料読解）</h3>
+<p>ある遺伝子のDNAの鋳型鎖の塩基配列（左から転写される）と、コドン表の一部を示す。</p>
+<p>鋳型鎖：TAC AAG CCT TTT ACC ATT</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>コドン</th>
+<th>AUG</th>
+<th>UUC</th>
+<th>UUU</th>
+<th>GGA</th>
+<th>AAA</th>
+<th>UGG</th>
+<th>UAA</th>
+<th>UGA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>アミノ酸</td>
+<td>メチオニン</td>
+<td>フェニルアラニン</td>
+<td>フェニルアラニン</td>
+<td>グリシン</td>
+<td>リシン</td>
+<td>トリプトファン</td>
+<td>終止</td>
+<td>終止</td>
+</tr>
+</tbody>
+</table></div>
+<p>(1) この配列から合成されるペプチドのアミノ酸の数を選べ。① 4　② 5　③ 6</p>
+<p>(2) 鋳型鎖の左から6番目のGがAに置き換わった場合（変化ⓐ）と、15番目のCがTに置き換わった場合（変化ⓑ）の結果の組合せとして正しいものを選べ。</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th></th>
+<th>①</th>
+<th>②</th>
+<th>③</th>
+<th>④</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ⓐ</td>
+<td>変化なし</td>
+<td>変化なし</td>
+<td>アミノ酸が1つ変わる</td>
+<td>アミノ酸が1つ変わる</td>
+</tr>
+<tr>
+<td>ⓑ</td>
+<td>アミノ酸が1つ変わる</td>
+<td>ペプチドが短くなる</td>
+<td>ペプチドが短くなる</td>
+<td>アミノ酸が1つ変わる</td>
+</tr>
+</tbody>
+</table></div>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>(1) ②　(2) ②</p><p>mRNAは AUG UUC GGA AAA UGG UAA → メチオニン・フェニルアラニン・グリシン・リシン・トリプトファンの5個で終止。</p><p>ⓐ 鋳型 AAG → AAA、mRNA UUC → UUU。どちらもフェニルアラニンなので変化なし。</p><p>ⓑ 鋳型 ACC → ACT、mRNA UGG → UGA（終止コドン）。4個で翻訳が終わり短くなる。</p><p>鋳型鎖から直接アミノ酸を読まず、必ずmRNAに直してからコドン表を見る。</p></div></details>
+</article><article class="q exam-q"><h3><span class="qno">問4</span>腎臓のはたらき（表の読み取り）</h3>
+<p>ヒトの血しょう・原尿・尿に含まれる物質a〜cの濃度［%］を示す。</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>物質</th>
+<th>血しょう</th>
+<th>原尿</th>
+<th>尿</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>7.2</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>b</td>
+<td>0.1</td>
+<td>0.1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>c</td>
+<td>0.03</td>
+<td>0.03</td>
+<td>2.0</td>
+</tr>
+</tbody>
+</table></div>
+<p>a〜cの組合せとして正しいものを選べ。</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th></th>
+<th>①</th>
+<th>②</th>
+<th>③</th>
+<th>④</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>タンパク質</td>
+<td>タンパク質</td>
+<td>グルコース</td>
+<td>尿素</td>
+</tr>
+<tr>
+<td>b</td>
+<td>グルコース</td>
+<td>尿素</td>
+<td>タンパク質</td>
+<td>グルコース</td>
+</tr>
+<tr>
+<td>c</td>
+<td>尿素</td>
+<td>グルコース</td>
+<td>尿素</td>
+<td>タンパク質</td>
+</tr>
+</tbody>
+</table></div>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>①</p><p>a：原尿に出ていない → 糸球体でろ過されない大きな分子＝タンパク質。</p><p>b：ろ過されるが尿に出ない → すべて再吸収＝グルコース。</p><p>c：濃縮率 2.0 ÷ 0.03 ≒ 67 と大きい → 再吸収されにくい老廃物＝尿素。</p></div></details>
+</article><article class="q exam-q"><h3><span class="qno">問5</span>血糖値の調節（グラフ・表の比較）</h3>
+<p>健康な人X、糖尿病の人Y・Zがグルコースを含む水を飲んだあとの血糖値［mg/100 mL］とインスリン濃度（相対値）を示す。</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>時間［分］</th>
+<th>0</th>
+<th>30</th>
+<th>60</th>
+<th>90</th>
+<th>120</th>
+<th>180</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Xの血糖値</td>
+<td>90</td>
+<td>140</td>
+<td>120</td>
+<td>100</td>
+<td>90</td>
+<td>90</td>
+</tr>
+<tr>
+<td>Xのインスリン</td>
+<td>5</td>
+<td>50</td>
+<td>40</td>
+<td>20</td>
+<td>10</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Yの血糖値</td>
+<td>200</td>
+<td>300</td>
+<td>330</td>
+<td>320</td>
+<td>300</td>
+<td>270</td>
+</tr>
+<tr>
+<td>Yのインスリン</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Zの血糖値</td>
+<td>130</td>
+<td>220</td>
+<td>260</td>
+<td>240</td>
+<td>210</td>
+<td>170</td>
+</tr>
+<tr>
+<td>Zのインスリン</td>
+<td>10</td>
+<td>30</td>
+<td>60</td>
+<td>70</td>
+<td>60</td>
+<td>40</td>
+</tr>
+</tbody>
+</table></div>
+<p>次の記述ⓐ〜ⓒのうち、正しいものをすべて含む組合せを選べ。</p>
+<ul>
+<li>ⓐ Xでは血糖値の上昇に応じてインスリンが分泌され、血糖値は約2時間で元に戻っている。</li>
+<li>ⓑ Yはインスリンがほとんど分泌されず、インスリンを注射する治療が有効と考えられる。</li>
+<li>ⓒ Zはインスリンが分泌されていないため、血糖値が下がりにくい。</li>
+</ul>
+<p>① ⓐのみ　② ⓐ・ⓑ　③ ⓐ・ⓒ　④ ⓑ・ⓒ　⑤ ⓐ・ⓑ・ⓒ</p>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>②</p><p>Y：インスリンがほぼ増えない → B細胞が破壊された1型糖尿病の特徴。</p><p>Z：インスリンは健康な人より遅れて多く分泌されているのに血糖値が下がりにくい → 分泌のタイミングの遅れや、標的細胞の反応性の低下（2型糖尿病の特徴）。ⓒの「分泌されていない」は誤り。</p></div></details>
+</article><article class="q exam-q"><h3><span class="qno">問6</span>移植と免疫（実験考察）</h3>
+<p>系統の異なるマウスA・B・Cを用いて皮膚移植を行った。</p>
+<ul>
+<li>実験1：系統Aのマウスに系統Bの皮膚を移植すると、約10日で脱落した。</li>
+<li>実験2：実験1のマウスに再び系統Bの皮膚を移植すると、約5日で脱落した。</li>
+<li>実験3：実験1のマウスに系統Cの皮膚を移植すると、約10日で脱落した。</li>
+<li>実験4：生まれてすぐに胸腺を除去した系統Aのマウスに系統Bの皮膚を移植すると、脱落しなかった。</li>
+</ul>
+<p><strong>適当なものを二つ</strong>選べ。</p>
+<ol>
+<li>実験2で早く脱落したのは、実験1で生じた記憶細胞がはたらいたためである。</li>
+<li>実験3の結果は、免疫記憶が抗原の種類によらずはたらくことを示している。</li>
+<li>実験4から、拒絶反応にはB細胞がつくる抗体だけがはたらくことがわかる。</li>
+<li>実験4から、拒絶反応には胸腺で成熟するT細胞が必要であると考えられる。</li>
+<li>系統Aの皮膚を別の系統Aのマウスに移植すると、約10日で脱落する。</li>
+</ol>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>①、④</p><p>② 系統Cには初めて出会うので一次応答（約10日）。免疫記憶は抗原特異的。</p><p>③・④ 胸腺がないとT細胞が成熟しない。拒絶反応は主にキラーT細胞による細胞性免疫。</p><p>⑤ 同じ系統は遺伝的に同一で、非自己と認識されないので脱落しない。</p></div></details>
+</article><article class="q exam-q"><h3><span class="qno">問7</span>遷移（資料読解）</h3>
+<p>ある火山島で、溶岩が流れ出た年代の異なる地点P〜Sを調査した。</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>地点</th>
+<th>噴出からの年数</th>
+<th>土壌の厚さ</th>
+<th>林床の相対照度</th>
+<th>主な植物</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P</td>
+<td>約40年</td>
+<td>ほぼ0 cm</td>
+<td>100%</td>
+<td>コケ植物・地衣類がまばら</td>
+</tr>
+<tr>
+<td>Q</td>
+<td>約200年</td>
+<td>約5 cm</td>
+<td>約60%</td>
+<td>ススキ、ヤシャブシ</td>
+</tr>
+<tr>
+<td>R</td>
+<td>約600年</td>
+<td>約20 cm</td>
+<td>約10%</td>
+<td>オオシマザクラ（陽樹）、スダジイの幼木</td>
+</tr>
+<tr>
+<td>S</td>
+<td>約1500年</td>
+<td>約50 cm</td>
+<td>約3%</td>
+<td>スダジイ、タブノキ</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>適当なものを二つ</strong>選べ。</p>
+<ol>
+<li>噴出からの年数が長い地点ほど土壌が厚く、遷移が進んでいる。</li>
+<li>Sの林床では、陽樹の幼木が多く育っていると考えられる。</li>
+<li>Rでは林床が暗くなり、耐陰性の高い陰樹の幼木が育ちつつある。</li>
+<li>遷移が進むにつれて、林床の照度は高くなる。</li>
+<li>Pに最初に侵入する植物は、種子が大きく重いものが多い。</li>
+</ol>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>①、③</p><p>② 相対照度3%の林床では光補償点の高い陽樹の幼木は育たない。④ 照度は低くなっている。⑤ 先駆種は種子が小さく軽く、風で運ばれる。</p><p>「同じ島の年代の異なる地点を並べる＝時間の流れを空間で見る」という考え方は頻出。</p></div></details>
+</article><article class="q exam-q"><h3><span class="qno">問8</span>キーストーン種（実験考察）</h3>
+<p>岩礁海岸の区画から上位捕食者のヒトデを取り除き続け、固着性の生物の種数を調べた。対照区（ヒトデあり）の種数は5年間15種で変わらなかったが、除去区では1年後12種、3年後8種となり、イガイが岩場の大部分を覆った。</p>
+<p><strong>適当なものを二つ</strong>選べ。</p>
+<ol>
+<li>ヒトデはイガイを食べることで、イガイが岩場を独占するのを防いでいた。</li>
+<li>ヒトデを除くと種数が減ったのは、ヒトデが他のすべての生物の主な餌だったためである。</li>
+<li>この結果は、上位の捕食者が食物網を通じて間接的に種の多様性を保っていることを示す。</li>
+<li>対照区を設けなくても、除去区の結果だけで同じ結論が得られる。</li>
+</ol>
+<details class="ans"><summary><span class="sum-closed">解答・解説を見る</span><span class="sum-open">解答・解説</span></summary><div class="ans-body"><p class="ans-head"><span class="ans-label">解答</span>①、③</p><p>ヒトデのように、個体数が多くなくても生態系のバランスに大きく影響する種をキーストーン種という。</p><p>④ 種数の減少がヒトデの除去によるのか、気象など他の要因によるのかを区別するには対照区が必要。対照実験の意義はほぼ毎年問われる。</p></div></details>
+</article></div></section>
+<section class="unit check" id="final" data-subj="gen"><header class="unit-head"><div class="tile" aria-hidden="true"><span class="tile-n">✓</span><span class="tile-s">共通</span></div><div><p class="kicker">仕上げ</p><h2>直前チェックリストと失点パターン集</h2></div></header><div class="unit-body">
+<p>満点を逃す原因の大半は「知らなかった」ではなく「知っていたのに取り違えた」です。試験前日と当日の朝に、下のチェックリストをすべて即答できるか確認し、失点パターン表で自分の癖を再確認してください。</p>
+<h3>化学基礎 即答チェック</h3>
+<ul class="checklist">
+<li><label class="chk"><input id="final-c0" type="checkbox"/><span>塩酸・アンモニア水・空気・合金は混合物、氷水・ドライアイスは純物質と言える</span></label></li>
+<li><label class="chk"><input id="final-c1" type="checkbox"/><span>同素体を S・C・O・P で各2つ以上言える</span></label></li>
+<li><label class="chk"><input id="final-c2" type="checkbox"/><span>炎色反応 Li・Na・K・Ca・Sr・Ba・Cu の色を言える</span></label></li>
+<li><label class="chk"><input id="final-c3" type="checkbox"/><span>蒸留装置の温度計の位置と冷却水の向きを言える</span></label></li>
+<li><label class="chk"><input id="final-c4" type="checkbox"/><span>原子番号1〜20の電子配置と価電子数を書ける（貴ガスの価電子は0）</span></label></li>
+<li><label class="chk"><input id="final-c5" type="checkbox"/><span>イオン化エネルギーが最大・最小の族と、電気陰性度が最大の元素を言える</span></label></li>
+<li><label class="chk"><input id="final-c6" type="checkbox"/><span>同じ電子配置のイオンの大小（O²⁻ ＞ F⁻ ＞ Na⁺ ＞ Mg²⁺ ＞ Al³⁺）を言える</span></label></li>
+<li><label class="chk"><input id="final-c7" type="checkbox"/><span>H₂O・NH₃・CH₄・CO₂・N₂ の共有電子対・非共有電子対の数と形を言える</span></label></li>
+<li><label class="chk"><input id="final-c8" type="checkbox"/><span>4種類の結晶の融点・電気伝導性・例を言える（黒鉛の例外も）</span></label></li>
+<li><label class="chk"><input id="final-c9" type="checkbox"/><span>mol ⇔ g・個・L の換算と、質量% → モル濃度の換算式を書ける</span></label></li>
+<li><label class="chk"><input id="final-c10" type="checkbox"/><span>水和物から溶液をつくる計算で式量を取り違えない</span></label></li>
+<li><label class="chk"><input id="final-c11" type="checkbox"/><span>強酸3つ・強塩基4つと、CH₃COOHが1価、HFが弱酸であることを言える</span></label></li>
+<li><label class="chk"><input id="final-c12" type="checkbox"/><span>塩の液性（NaHSO₄ 酸性、NaHCO₃ 塩基性、NH₄Cl 酸性、CH₃COONa 塩基性）を言える</span></label></li>
+<li><label class="chk"><input id="final-c13" type="checkbox"/><span>共洗いする器具（ホールピペット・ビュレット）と、ぬれたままでよい器具を言える</span></label></li>
+<li><label class="chk"><input id="final-c14" type="checkbox"/><span>弱酸＋強塩基 → フェノールフタレイン、強酸＋弱塩基 → メチルオレンジを即答できる</span></label></li>
+<li><label class="chk"><input id="final-c15" type="checkbox"/><span>KMnO₄・K₂Cr₂O₇・H₂O₂・(COOH)₂ の半反応式を自分で組み立てられる</span></label></li>
+<li><label class="chk"><input id="final-c16" type="checkbox"/><span>KMnO₄ 滴定で塩酸・硝酸を使わない理由を言える</span></label></li>
+<li><label class="chk"><input id="final-c17" type="checkbox"/><span>イオン化傾向の順と、水・酸との反応性の区切りを言える</span></label></li>
+<li><label class="chk"><input id="final-c18" type="checkbox"/><span>ダニエル電池の負極・正極の反応と、質量が増える電極を言える</span></label></li>
+<li><label class="chk"><input id="final-c19" type="checkbox"/><span>鉄・銅・アルミニウムの製錬法を一言で言える</span></label></li>
+<li><label class="chk"><input id="final-c20" type="checkbox"/><span>試薬の保存法（Na・黄リン・濃硝酸・NaOH・フッ化水素酸）を言える</span></label></li>
+</ul>
+<h3>生物基礎 即答チェック</h3>
+<ul class="checklist">
+<li><label class="chk"><input id="final-c21" type="checkbox"/><span>原核生物（大腸菌・乳酸菌・シアノバクテリア）と真核生物（酵母・カビ）を区別できる</span></label></li>
+<li><label class="chk"><input id="final-c22" type="checkbox"/><span>細胞小器官のはたらきと、動物・植物での有無を言える</span></label></li>
+<li><label class="chk"><input id="final-c23" type="checkbox"/><span>ATPの構成（アデニン・リボース・リン酸3個）を言える</span></label></li>
+<li><label class="chk"><input id="final-c24" type="checkbox"/><span>酵素の性質（タンパク質、基質特異性、熱で失活、反応後も変化しない）を言える</span></label></li>
+<li><label class="chk"><input id="final-c25" type="checkbox"/><span>細胞内共生説の根拠を3つ言える</span></label></li>
+<li><label class="chk"><input id="final-c26" type="checkbox"/><span>DNA研究史（グリフィス、エイブリー、ハーシーとチェイス、ワトソンとクリック、メセルソンとスタール）を言える</span></label></li>
+<li><label class="chk"><input id="final-c27" type="checkbox"/><span>細胞周期の各時期のできごととDNA量の変化をグラフで描ける</span></label></li>
+<li><label class="chk"><input id="final-c28" type="checkbox"/><span>体細胞分裂の観察の4ステップ（固定・解離・染色・押しつぶし）と目的を言える</span></label></li>
+<li><label class="chk"><input id="final-c29" type="checkbox"/><span>DNAとRNAの違い（糖・塩基・本数）を言える</span></label></li>
+<li><label class="chk"><input id="final-c30" type="checkbox"/><span>鋳型鎖 → mRNA → アミノ酸を正しく変換できる</span></label></li>
+<li><label class="chk"><input id="final-c31" type="checkbox"/><span>だ腺染色体のパフの意味（転写が盛ん）を言える</span></label></li>
+<li><label class="chk"><input id="final-c32" type="checkbox"/><span>血球3種類の数・核の有無・はたらきを言える</span></label></li>
+<li><label class="chk"><input id="final-c33" type="checkbox"/><span>血液凝固の流れ（血小板 → フィブリン → 血ぺい）を言える</span></label></li>
+<li><label class="chk"><input id="final-c34" type="checkbox"/><span>肺動脈は静脈血、肺静脈は動脈血と即答できる</span></label></li>
+<li><label class="chk"><input id="final-c35" type="checkbox"/><span>肝臓のはたらき6つ、腎臓のろ過・再吸収の対象を言える</span></label></li>
+<li><label class="chk"><input id="final-c36" type="checkbox"/><span>交感神経・副交感神経の作用（瞳孔・心臓・消化管・気管支）を表で言える</span></label></li>
+<li><label class="chk"><input id="final-c37" type="checkbox"/><span>ホルモン表（分泌器官・ホルモン名・作用）を見ずに書ける</span></label></li>
+<li><label class="chk"><input id="final-c38" type="checkbox"/><span>血糖値を上げるホルモン4つと下げるホルモン1つを言える</span></label></li>
+<li><label class="chk"><input id="final-c39" type="checkbox"/><span>1型・2型糖尿病の違いをグラフで判断できる</span></label></li>
+<li><label class="chk"><input id="final-c40" type="checkbox"/><span>獲得免疫の流れ（樹状細胞 → ヘルパーT → キラーT／B細胞 → 形質細胞 → 抗体）を描ける</span></label></li>
+<li><label class="chk"><input id="final-c41" type="checkbox"/><span>一次応答と二次応答の違いと、別の抗原では一次応答になることを言える</span></label></li>
+<li><label class="chk"><input id="final-c42" type="checkbox"/><span>HIVが感染する細胞、自己免疫疾患の例、血清療法とワクチンの違いを言える</span></label></li>
+<li><label class="chk"><input id="final-c43" type="checkbox"/><span>陽生植物と陰生植物の光合成曲線の違いを描ける</span></label></li>
+<li><label class="chk"><input id="final-c44" type="checkbox"/><span>一次遷移と二次遷移の違い、遷移の順序と代表的な植物を言える</span></label></li>
+<li><label class="chk"><input id="final-c45" type="checkbox"/><span>先駆種と極相種の種子の特徴、ギャップ更新を説明できる</span></label></li>
+<li><label class="chk"><input id="final-c46" type="checkbox"/><span>11のバイオームと日本の水平分布・垂直分布を言える</span></label></li>
+<li><label class="chk"><input id="final-c47" type="checkbox"/><span>キーストーン種の例（ヒトデ、ラッコ）と間接効果を説明できる</span></label></li>
+<li><label class="chk"><input id="final-c48" type="checkbox"/><span>富栄養化・生物濃縮・外来生物の例を言える</span></label></li>
+</ul>
+<h3>失点パターンと対策</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>失点パターン</th>
+<th>よくある例</th>
+<th>対策</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>分母の取り違え</td>
+<td>質量%の分母を「溶媒」にする、酸素放出割合の分母を100%にする</td>
+<td>分母に何が来るかを式に書いてから計算</td>
+</tr>
+<tr>
+<td>単位・条件の見落とし</td>
+<td>25℃の気体に22.4 Lを使う、mLのままL単位の式に入れる</td>
+<td>問題文の温度・圧力・単位に下線を引く</td>
+</tr>
+<tr>
+<td>係数比と質量比の混同</td>
+<td>反応式の係数比を質量比として使う</td>
+<td>必ず mol を経由する</td>
+</tr>
+<tr>
+<td>価数の取り違え</td>
+<td>CH₃COOHを4価、H₂SO₄を1価として中和計算</td>
+<td>酸・塩基の価数表で確認</td>
+</tr>
+<tr>
+<td>水和物の式量</td>
+<td>CuSO₄・5H₂Oを160で計算</td>
+<td>「はかり取るものの式量」を使う</td>
+</tr>
+<tr>
+<td>二本鎖と一本鎖の混同</td>
+<td>片方の鎖の割合を二本鎖の割合として計算</td>
+<td>一本鎖の G＋C ＝ 二本鎖の G＋C を利用</td>
+</tr>
+<tr>
+<td>鋳型鎖から直接コドン表を読む</td>
+<td>DNAの TAC を AUG と読まずに表を引く</td>
+<td>必ず mRNA に変換してから</td>
+</tr>
+<tr>
+<td>原尿量の計算</td>
+<td>尿素の濃縮率で原尿量を求める</td>
+<td>原尿量はイヌリン（再吸収も分泌もされない物質）で</td>
+</tr>
+<tr>
+<td>対照実験の読み違え</td>
+<td>複数の条件が違う試験管同士を比べる</td>
+<td>「1か所だけ違う組」を探して比べる</td>
+</tr>
+<tr>
+<td>「すべて選べ」で取りこぼし</td>
+<td>正しい記述を1つ見つけて満足する</td>
+<td>全選択肢に〇×を書く</td>
+</tr>
+<tr>
+<td>「常に」「必ず」の見落とし</td>
+<td>例外がある記述を正しいとする</td>
+<td>例外を1つ探す習慣</td>
+</tr>
+<tr>
+<td>時間不足</td>
+<td>第1問の小問に時間をかけすぎる</td>
+<td>1問3分を超えたら印をつけて先へ。見直し時間を5分残す</td>
+</tr>
+</tbody>
+</table></div>
+<h3>当日の解き方</h3>
+<ol>
+<li>化学基礎・生物基礎のどちらから解くかを事前に決めておき、各科目約28分で切り替える。</li>
+<li>知識の小問は即答し、計算・考察問題に時間を回す。</li>
+<li>計算問題は、選択肢の数値の桁と有効数字を先に見てから計算すると無駄が減る。</li>
+<li>最後の数分で、マークのずれと「誤っているものを選べ」の読み違えがないか確認する。</li>
+</ol></div></section>
+    <p class="foot">演習問題はすべてこの教材のためのオリジナル問題です。仕上げには大学入試センターが公開している本試験・追試験の過去問を使ってください。</p>
+  </main>
+</div>
+
+<script>
+(function () {
+  var body = document.body;
+  var navBtn = document.getElementById('navBtn');
+  var scrim = document.getElementById('scrim');
+  function setNav(open) {
+    body.classList.toggle('nav-open', open);
+    navBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  navBtn.addEventListener('click', function () { setNav(!body.classList.contains('nav-open')); });
+  scrim.addEventListener('click', function () { setNav(false); });
+  document.querySelectorAll('.side a').forEach(function (a) { a.addEventListener('click', function () { setNav(false); }); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setNav(false); });
+
+  // open / close all answers
+  var toggle = document.getElementById('toggleAll');
+  var allOpen = false;
+  toggle.addEventListener('click', function () {
+    allOpen = !allOpen;
+    document.querySelectorAll('details.ans').forEach(function (d) { d.open = allOpen; });
+    toggle.textContent = allOpen ? '解答をすべて閉じる' : '解答をすべて開く';
+    toggle.setAttribute('aria-pressed', allOpen ? 'true' : 'false');
+  });
+
+  // scroll spy
+  var links = {};
+  document.querySelectorAll('.side a').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          Object.keys(links).forEach(function (k) { links[k].classList.toggle('on', k === en.target.id); });
+        }
+      });
+    }, { rootMargin: '-30% 0px -65% 0px' });
+    document.querySelectorAll('section.unit').forEach(function (s) { io.observe(s); });
+  }
+
+  // checklist with per-viewer memory
+  var KEY = 'kyotsu-kiso-checklist-v1';
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { saved = {}; }
+  var boxes = Array.prototype.slice.call(document.querySelectorAll('.checklist input[type=checkbox]'));
+  var lists = Array.prototype.slice.call(document.querySelectorAll('ul.checklist'));
+  lists.forEach(function (ul) {
+    var p = document.createElement('div');
+    p.className = 'progress';
+    p.innerHTML = '<div class="bar"><i></i></div><span></span>';
+    ul.parentNode.insertBefore(p, ul);
+    ul._progress = p;
+  });
+  function update() {
+    lists.forEach(function (ul) {
+      var bs = ul.querySelectorAll('input');
+      var n = 0;
+      bs.forEach(function (b) { if (b.checked) n++; });
+      ul._progress.querySelector('i').style.width = (bs.length ? n / bs.length * 100 : 0) + '%';
+      ul._progress.querySelector('span').textContent = n + ' / ' + bs.length + ' 項目クリア';
+    });
+  }
+  boxes.forEach(function (b) {
+    if (saved[b.id]) b.checked = true;
+    b.addEventListener('change', function () {
+      saved[b.id] = b.checked;
+      try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {}
+      update();
+    });
+  });
+  update();
+})();
+</script>
+
+</body></html>
